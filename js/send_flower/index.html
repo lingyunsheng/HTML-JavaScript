@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>talk in js-代理模式</title>
+    </head>
+    <body>
+        <script>
+            //object
+            //描述的方式对象是怎样出来的
+            //对象字面量 JSON Object
+            const xsj={
+                name:'徐士杰',
+                age:22,
+                yz:46,
+                single:true,
+                hometown:'绍兴',
+                room:1319,
+                //上面的属性
+                //函数功能function 匿名函数 target参数 对象的行为
+                //target形参
+                sendFlower:function(target){
+                   // console.log(target.name);
+                    target.receiveFlower(xsj);
+
+
+                }
+
+            };
+            const meimei={
+                name:'梅梅',
+                age:17,
+                mood:50,
+                receiveFlower:function(sender){
+                   // 如果mood 大于80 收花, 拒绝
+                   //if/else
+                   /* if(sender.yz < 85){
+                        console.log('收到了花，但是没空，不可能有空');
+                    }
+                    else{
+                        console.log('备胎排队一下');
+                    }*/
+                    if(sender.mood>85){
+                        console.log('收到了花');
+
+                    }
+                    else{
+                        console.log('拒绝收花');
+                    }
+                    
+                },
+                listenGoodMood: function(){
+                //心情不好
+                //定时器
+               // console.log('本公主谁都不想见');
+                setTimeout(function(){
+                    meimei.mood=89;
+                    meimei.receiveFlower();
+                    //console.log('本公主心情变好了')
+
+                },3000);
+
+                }
+            };
+            //送花 A->B A->C->B
+           // A 送花 sendFlower
+           // C 收花 转送给B
+            //B 收花 receiveFlower
+            const huahua={
+                name:'花花',
+                //与梅梅实现了同样的接口，就可以代理梅梅收花这个行为，此为代理模式
+                receiveFlower:function(sender){//===表示恒等 代理模式重点
+                    //心情好，再送
+               // meimei.receiveFlower(sender);
+               //huahua代理者监听meimei的心情
+               meimei.listenGoodMood();
+                }
+            };
+             
+            
+        </script>
+    </body>
+</html>

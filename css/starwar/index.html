@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <meta charset="utf8">
+
+        <title>星球大战，原力表现</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body{
+                background:url(./images/bg.jpg);
+            }
+            img {
+                width: 100%;
+
+            }
+            .starwars-demo{
+                height: 17em;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 34em;
+                /* 移到中间来呢？ */
+                transform:translate(-50%,-50%);
+                perspective:  800px;               /*启动3d效果  */
+                transform-style: preserve-3d;
+            }
+            /* 类名选择器 */
+            .star,.wars{
+                position: absolute;
+
+            }
+           
+            .star{
+                top: -0.75em;
+                animation:star 10s ease-out infinite;
+            }
+             /* 动作导演，animation声明一下元素动，keyframe 关键帧 */
+            @keyframes star {
+                0%{
+                      opacity: 0;/*透明度 1和0的区别 */
+                    transform: scale(1.5);
+                }
+                20%{
+                    opacity: 1;
+                    
+                }
+                89%{ /*frame */
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                100%{
+                    opacity: 0;
+                    transform: translateZ(-400em);
+                }
+                
+
+            }
+            .wars{
+                bottom: -0.5em;
+                animation:wars 10s ease-out infinite;
+            }
+            @keyframes wars{
+                0%{
+                    opacity: 1;
+                    transform: scale(1.5)
+                   
+                }
+                20%{
+                    opacity: 1;
+                
+
+                }
+                90%{
+                    opacity: 1;
+                    transform: scale(1)
+
+                }
+                100%{
+                    opacity: 0;
+                    transform:translateZ(-400em);
+
+                }
+            }
+
+        </style>
+        
+
+    </head>
+   
+      <body>
+
+        <div class="starwars-demo">
+          <img src="./images/star.svg" alt="" class="star">
+          <img src="./images/wars.svg" alt="" class="wars">
+        
+        </div>
+        <!-- <div class="startwars-demo"> -->
+            <!-- <img src="" alt="" class="star"> -->
+            <!-- <img src="" alt="" class="wars"> -->
+        <!-- </div> -->
+        <!-- 大于号是子元素 img*2是两个 -->
+    
+
+
+
+    </body>
+</html>

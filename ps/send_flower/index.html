@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>talk-in js</title>
+</head>
+<body>
+    <script>
+        const lyf={
+            name:'李易峰',
+            age:30,
+            address:'北京',
+            single:true,
+            yz:85,
+            sendFlower:function(target){
+                target.receiveFlower(lyf);
+            }
+        };
+        const ym={
+            name:'杨幂',
+            age:32,
+            mood:78,
+            receiveFlower: function(sender){
+                if(sender.mood>85){
+                    console.log('可以接着约会')
+
+                }
+                else{
+                    console.log('没门儿');
+                }
+            },
+               
+                listenGoodMood: function(){
+                setTimeout(function(){
+                    ym.mood=89;
+                    ym.receiveFlower();
+
+                },3000);
+                }
+                
+            };
+
+            const zly ={
+                name:'赵丽颖',
+                receiveFlower:function(sender){
+               meimei.listenGoodMood();
+                }
+            };
+             
+    </script>
+    
+</body>
+</html>

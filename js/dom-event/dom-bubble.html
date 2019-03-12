@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        baba
+        <div id="child">
+            zaizai
+        </div>
+    </div>
+    <script>
+        const parent=document.getElementById('parent');
+        const child=document.getElementById('child');
+    window.addEventListener('click',()=>{
+        console.log('window bubble');
+    },false);
+    document.body.addEventListener('click',()=>{
+        console.log('body bubble');
+    },false);
+    document.documentElement.addEventListener('click',()=>{
+        console.log('document bubble');
+    },false);
+    parent.addEventListener('click',()=>{
+        console.log('parent bubble');
+    },false);
+    child.addEventListener('click',()=>{
+        console.log('child bubble');
+    },false);
+    </script>
+</body>
+</html>

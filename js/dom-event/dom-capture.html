@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #evParent{
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        #ev{
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+        #ev img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- id用#，class用. -->
+    <div id="evParent">
+        父级
+        <div id="ev">
+            <img src="http://po6khh05j.bkt.clouddn.com/ie6.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        // 按顺序触发：window->html->body->evParent->ev
+    const ev=document.getElementById('ev');
+    const evParent=document.getElementById('evParent');
+    // html
+    document.documentElement.addEventListener('click',()=>{
+        console.log('document capture');
+    },true);
+    // 给父容器绑定事件
+    evParent.addEventListener('click',function(){
+        console.log('parent capture');
+    },true);
+    // 给子容器绑定事件
+    ev.addEventListener('click',function(){
+        console.log('target capture');
+    },true);
+    // body
+    document.body.addEventListener('click',()=>{
+        console.log('body capture');
+    },true);
+    window.addEventListener('click',()=>{
+        console.log('window capture');
+    },true);
+    </script>
+</body>
+</html>
