@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>问卷调查</title>
+    <style>
+        .table-striped {
+            text-align: center;
+            background-color: #e5e5e5;
+            border: 1px solid #d4440b;
+            font-size: 18px;
+            margin-top: 20px;
+            position: absolute;
+        }
+        .form-container {
+      padding: 85px;
+    }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="  table table-hover table-striped">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别<th>
+            <th>文化程度</th>
+            <th>微博时长</th>
+            <th>恶意评论</th>
+            <th>发表攻击性评论</th>
+            <th>了解网络暴力</th>
+            <th>遭受网络暴力</th>
+            <th>类型</th>
+            <th>禁止</th>
+            <th>建议</th>
+
+           </tr>
+           </thead>
+
+           <tbody id="tableBody">
+              
+                  <!--      <tr>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>性别</td>
+            <td>文化程度</td>
+            <td>微博时长</td>
+            <td>恶意评论</td>
+            <td>发表攻击性评论</td>
+            <td>了解网络暴力</td>
+            <td>遭受网络暴力</td>
+            <td>类型</td>
+            <td>禁止</td>
+            <td>建议</td>
+            --> 
+
+           </tr>
+               
+
+           </tbody>
+           </table>
+
+           <form class="needs-validation form-container" novalidate id="form">
+                <div class="form-group">
+                        <label for="nameInput">姓名</label>
+                        <input type="text"
+                         class="form-control" id="nameInput" placeholder="请输入姓名" required>
+                        <div class="valid-feedback">
+                          pass
+                        </div>
+                        <div class="invalid-feedback">
+                          请输入姓名
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                            <label for="ageInput">姓名</label>
+                            <input type="text"
+                             class="form-control" id="ageInput" placeholder="请输入年龄" required>
+                            <div class="valid-feedback">
+                              pass
+                            </div>
+                            <div class="invalid-feedback">
+                              请输入年龄
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                                <label for="sexInput">性别</label>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio1" value="m" required>
+                                  <label class="form-check-label" for="inlineRadio1">男</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio2" value="w" required>
+                                  <label class="form-check-label" for="inlineRadio2">女</label>
+                                  <div class="valid-feedback">
+                                    pass
+                                  </div>
+                                  <div class="invalid-feedback">
+                                    请选择性别
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                    <label for="konwInput">文化程度</label>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input inputRadio" type="radio" name="konwOption" id="inlineRadio1" value="m" required>
+                                      <label class="form-check-label" for="inlineRadio1">大学</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input inputRadio" type="radio" name="konwOption" id="inlineRadio2" value="w" required>
+                                      <label class="form-check-label" for="inlineRadio2">高中</label>
+                                      <div class="valid-feedback">
+                                        pass
+                                      </div>
+                                      <div class="invalid-feedback">
+                                        请选择文化程度
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                        <label for="weiboInput">微博时长</label>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input inputRadio" type="radio" name="weiboOption" id="inlineRadio1" value="m" required>
+                                          <label class="form-check-label" for="inlineRadio1">12小时</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                          <input class="form-check-input inputRadio" type="radio" name="weiboOption" id="inlineRadio2" value="w" required>
+                                          <label class="form-check-label" for="inlineRadio2">6小时以下</label>
+                                          <div class="valid-feedback">
+                                            pass
+                                          </div>
+                                          <div class="invalid-feedback">
+                                            请选择微博时长
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="form-group">
+                                            <label for="sexInput">性别</label>
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio1" value="m" required>
+                                              <label class="form-check-label" for="inlineRadio1">男</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                              <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio2" value="w" required>
+                                              <label class="form-check-label" for="inlineRadio2">女</label>
+                                              <div class="valid-feedback">
+                                                pass
+                                              </div>
+                                              <div class="invalid-feedback">
+                                                请选择性别
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                                <label for="sexInput">性别</label>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio1" value="m" required>
+                                                  <label class="form-check-label" for="inlineRadio1">男</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                  <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio2" value="w" required>
+                                                  <label class="form-check-label" for="inlineRadio2">女</label>
+                                                  <div class="valid-feedback">
+                                                    pass
+                                                  </div>
+                                                  <div class="invalid-feedback">
+                                                    请选择性别
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="form-group">
+                                                    <label for="sexInput">性别</label>
+                                                    <div class="form-check form-check-inline">
+                                                      <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio1" value="m" required>
+                                                      <label class="form-check-label" for="inlineRadio1">男</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                      <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio2" value="w" required>
+                                                      <label class="form-check-label" for="inlineRadio2">女</label>
+                                                      <div class="valid-feedback">
+                                                        pass
+                                                      </div>
+                                                      <div class="invalid-feedback">
+                                                        请选择性别
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="form-group">
+                                                        <label for="sexInput">性别</label>
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio1" value="m" required>
+                                                          <label class="form-check-label" for="inlineRadio1">男</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                          <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio2" value="w" required>
+                                                          <label class="form-check-label" for="inlineRadio2">女</label>
+                                                          <div class="valid-feedback">
+                                                            pass
+                                                          </div>
+                                                          <div class="invalid-feedback">
+                                                            请选择性别
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="form-group">
+                                                            <label for="sexInput">性别</label>
+                                                            <div class="form-check form-check-inline">
+                                                              <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio1" value="m" required>
+                                                              <label class="form-check-label" for="inlineRadio1">男</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                              <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio2" value="w" required>
+                                                              <label class="form-check-label" for="inlineRadio2">女</label>
+                                                              <div class="valid-feedback">
+                                                                pass
+                                                              </div>
+                                                              <div class="invalid-feedback">
+                                                                请选择性别
+                                                              </div>
+                                                            </div>
+                                                          </div>
+
+                                                          <div class="form-group">
+                                                                <label for="sexInput">性别</label>
+                                                                <div class="form-check form-check-inline">
+                                                                  <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio1" value="m" required>
+                                                                  <label class="form-check-label" for="inlineRadio1">男</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                  <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio2" value="w" required>
+                                                                  <label class="form-check-label" for="inlineRadio2">女</label>
+                                                                  <div class="valid-feedback">
+                                                                    pass
+                                                                  </div>
+                                                                  <div class="invalid-feedback">
+                                                                    请选择性别
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                              <div class="form-group">
+                                                                    <label for="sexInput">性别</label>
+                                                                    <div class="form-check form-check-inline">
+                                                                      <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio1" value="m" required>
+                                                                      <label class="form-check-label" for="inlineRadio1">男</label>
+                                                                    </div>
+                                                                    <div class="form-check form-check-inline">
+                                                                      <input class="form-check-input inputRadio" type="radio" name="sexOption" id="inlineRadio2" value="w" required>
+                                                                      <label class="form-check-label" for="inlineRadio2">女</label>
+                                                                      <div class="valid-feedback">
+                                                                        pass
+                                                                      </div>
+                                                                      <div class="invalid-feedback">
+                                                                        请选择性别
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+    
+
+           </form>
+      
+
+        </div>
+
+    
+</body>
+</html>

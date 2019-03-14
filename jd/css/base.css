@@ -1,0 +1,8 @@
+.w {
+    width: 1190px;
+    margin: 0 atuo;
+}
+.w, .header {
+    width: 80px;
+    background-color: #020000;
+}
