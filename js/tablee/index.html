@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>动态表格js</title>
+</head>
+<body>
+    <div class="container">
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>sex</th>
+                    <th>age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>杨幂</td>
+                    <td>女</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                        <td>杨幂</td>
+                        <td>女</td>
+                        <td>34</td>
+                 </tr>
+                    <tr>
+                            <td>杨幂</td>
+                            <td>女</td>
+                            <td>34</td>
+                        </tr>
+            </tbody>
+        </table>
+        <!-- <div class="row">
+            <div class="col-md-8 offset-md-2">
+             <table id="person" class="table table-striped">
+
+              </table>
+             </div>
+             </div>
+        <table id="person" class="table table-striped">
+
+         </table> -->
+         <div class="row">
+             <div class="col-md-8 offset-md-2">
+                 <table id="person" class="table table-striped">
+
+                 </table>
+             </div>
+         </div>
+         <table class="table table-striped">
+                     
+         </table>
+
+    </div>
+    <script>
+              let person =[
+            {name:"杨幂",sex:"女",age:34},
+                {name:"杨幂",sex:"女",age:34},
+                {name:"杨幂",sex:"女",age:34},
+                {name:"杨幂",sex:"女",age:34},
+                {name:"杨幂",sex:"女",age:34}
+            ];
+        function generateTableHead(table){
+            let thead=table.createTHead();
+            let row=thead.insertRow();
+            for(let key of data){
+                let th =document.createElement('th');
+                let text=document.createTextNode(key);
+                th.appendChild(text);
+                row.appendChild(th);
+            }
+        }
+        function generateTable(table,data) {
+            for(let element of data){
+            let row=table.insertRow();
+            
+            for(let key in element) {
+                let cell = row.insertCell();
+                let text = document.createTextNode
+                (element[key]);
+                cell.appendChild(text);
+
+                   }
+            }
+        }
+        let table =document.querySelector
+    ("#person");
+    let data =Object.keys(person[0]);
+    generateTable(table,person);
+    generateTableHead(table,data);//mdn 官方文档
+
+    </script>
+    
+</body>
+</html>

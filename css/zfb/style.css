@@ -28,3 +28,16 @@
     width: 10px;
     height: 10px;
 }
+.tbui-search-bar {
+    background-color:rgb(10, 24, 223);
+  
+}
+ #old{
+    text-decoration: line-through;
+    color: black;
+}
+#new {
+    color: red;
+    font-size: 18px;
+}
+
