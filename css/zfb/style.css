@@ -5,6 +5,9 @@
     bottom: 0;
     left: 0;
 }
+.active {
+    background-color:red !important;
+}
 .tab {
     display: none;
 }
@@ -23,21 +26,24 @@
     width: 100%;
     height: 100%;
 }
-.tbui-tabbar__item img {
-    display: block;
+.weui-tabbar__item img {
     width: 10px;
     height: 10px;
 }
-.tbui-search-bar {
+.weui-search-bar {
     background-color:rgb(10, 24, 223);
   
 }
  #old{
     text-decoration: line-through;
     color: black;
+    
 }
 #new {
     color: red;
     font-size: 18px;
+}
+#food-items {
+    text-align: center;
 }
 

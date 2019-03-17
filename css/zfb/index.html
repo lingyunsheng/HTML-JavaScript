@@ -42,9 +42,9 @@
                       </form>
                       <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
                   </div>
-                  <div class="goods">
-                      <ui class="food items">
-                          <li class="food-item">
+                  <div class="goods" id="goods">
+                      <ui class="food-items"id="food-items">
+                          <li class="food-item" id="food-item">
                               <div class="pic">
                                   <img src="./images/shuangfushui.png" alt="">
                                   
@@ -53,8 +53,8 @@
                               <p id="old">爽肤水 ¥59.9</p>
                               <p id="new">爽肤水 ¥59.9</p>
                           </li>
-                      </ui>
-                      <li class="food-item">
+                   
+                        <li class="food-item">
                             <div class="pic">
                                 <img src="./images/shuangfushui.png" alt="">
                                 
@@ -63,8 +63,8 @@
                             <p id="old">爽肤水 ¥59.9</p>
                             <p id="new">爽肤水 ¥59.9</p>
                         </li>
-                    </ui>
-                    <li class="food-item">
+                  
+                        <li class="food-item">
                             <div class="pic">
                                 <img src="./images/shuangfushui.png" alt="">
                                 
@@ -73,8 +73,38 @@
                             <p id="old">爽肤水 ¥59.9</p>
                             <p id="new">爽肤水 ¥59.9</p>
                         </li>
-                    </ui>
-                    <li class="food-item">
+                  
+                        <li class="food-item">
+                            <div class="pic">
+                                <img src="./images/shuangfushui.png" alt="">
+                                
+
+                            </div>
+                            <p id="old">爽肤水 ¥59.9</p>
+                            <p id="new">爽肤水 ¥59.9</p>
+                        </li>
+                 
+                        <li class="food-item">
+                            <div class="pic">
+                                <img src="./images/shuangfushui.png" alt="">
+                                
+
+                            </div>
+                            <p id="old">爽肤水 ¥59.9</p>
+                            <p id="new">爽肤水 ¥59.9</p>
+                        </li>
+                    
+                        <li class="food-item">
+                            <div class="pic">
+                                <img src="./images/shuangfushui.png" alt="">
+                                
+
+                            </div>
+                            <p id="old">爽肤水 ¥59.9</p>
+                            <p id="new">爽肤水 ¥59.9</p>
+                        </li>
+                   
+                        <li class="food-item">
                             <div class="pic">
                                 <img src="./images/shuangfushui.png" alt="">
                                 
@@ -130,6 +160,52 @@
   </div>
   </div>
   <script>
+      var lType=document.querySelectorAll('.goods__food-items__food-item');
+      console.log(lType);
+      for(let i=0;i<lType.length;i++){
+          console.log(i);
+          lType[i] = addEventListener("click",
+          function(){
+               for(let j of lType){
+                   j.classList.remove('active');
+               }
+               this.classList.add('active');
+
+          } )
+      }
+
+      var tType=document.querySelectorAll('weui-tabbar__item');
+      var pType=document.querySelectorAll('weui-tab__panel');
+      console.log(tType);
+      console.log(pType);
+      for (let i=0;i<tType.length;i++){
+          console.log(i);
+          tType[i]=addEventListener("click",
+          function (){
+              showTab.call(this);
+          })
+      }
+      
+      function showTab(){
+          for(let j=0;j<pType.length; j++){
+            console.log(this);
+              
+              if(tType[j]===this){
+                  tType[j].classList.add('weui-tabbar__item_on');
+                  pType[j].classList.add('show');
+
+
+              }
+              else{
+                tType[j].classList.remove('weui-bar__item_on');
+                lType[j].classList.remove('show');
+
+              }
+          }
+      }
+
+
+        
   </script>
 
 </body>
