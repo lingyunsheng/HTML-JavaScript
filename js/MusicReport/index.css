@@ -11,6 +11,7 @@
   /* music 按钮 */
   .music-btn {
     position: fixed;
+    z-index:9999;
     top: 25px;
     left: 25px;
     width: 40px;height: 40px;
