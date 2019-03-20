@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.swiper-wrapper{
+   margin-top: 10px;
+   width: 375px;
+   height: 812px;
+   
+}
+.main {
+    background-image: url('./images/bg1.jpg');
+
+}
+.head_log {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 350px;
+    
+}
+#e{
+    text-align: center;
+}
+.speed {
+    background-image: url('./images/bg2.jpg');
+}
+.head-foot {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 auto;
+    
+    margin-top: 350px;
+}
+.hope {
+    background-image: url('./images/bg1.jpg');
+}
+.happy {
+    background-image: url('./images/bg4.jpg');
+}
+.car {
+    background-image: url('./images/bg5.jpg');
+}
+.sufu {
+    background-image: url('./images/joy-snow.jpg');
+}
+.more {
+    background-image: url('./images/joy-chill.jpg');
+}
+.ran{
+    background-image: url('./images/bg1.jpg');
+}
+.process{
+    background-color: #fff;
+}
+.city{
+    background-image: url('./images/bg1.jpg');
+}
+.final{
+    background-image: url('./images/joy-max.jpg');
+}

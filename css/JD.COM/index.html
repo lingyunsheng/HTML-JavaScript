@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>2019年京东校园招聘</title>
+</head>
+<body>
+        <audio src="./bgm.mp3" id="bgm"></audio>
+        <div class="music-btn off"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide main">
+                    <header class="head_log">
+                       你很年轻 <br>理应更快
+                    </header>
+           <p id="e">Jumpstart <br>
+             yours <br>
+             
+             dreams</p>
+            </div>
+            <div class="swiper-slide speed">
+                   <header class="head_foot">
+                       快
+                       才有可能
+                   </header>
+                   <p class="info" id="info">这是一家以速度见长的公司</p>
+            </div>
+            <div class="swiper-slide hope">
+                   <header>
+                       快
+                       为满足期待
+                   </header>
+                   <p>
+                       专属定制成长方案
+                       要你不负众望
+                   </p>
+            </div>
+            <div class="swiper-slide happy">
+                    <header>
+                        快
+                        为取悦自己
+                    </header>
+                    <p>
+                        加班调休1：1
+                        越努力越快乐
+                    </p>
+             </div>
+             <div class="swiper-slide car">
+                    <header>
+                        快
+                        以驾驭更强
+                    </header>
+                    <p>
+                        不坛子里，京东“七分熟”就启用新人
+                    </p>
+                </div>
+                <div class="swiper-slide sufu">
+                        <header>
+                            快
+                            为挣脱束缚
+                        </header>
+                        <p>
+                            开放宽广的就业选择
+                            尽情展翅
+                        </p>
+                    </div>
+                    <div class="swiper-slide more">
+                            <header>
+                                快
+                                比最快的自己更快
+                            </header>
+                            <p>
+
+                            </p>
+                      
+                 </div>
+                 <div class="swiper-slide ran">
+                        <header class="ran">
+                            燃
+                        </header>
+                        <header class="ran">
+                                更快到达
+                                你想要的未来
+                            </header>
+
+                            <p>
+                                京东2019校园招聘
+                                招聘人群：2019年毕业
+                                全日制本科，博士，硕士
+                            </p>
+    
+
+                    </div>
+                    <div class="swiper-slide process">
+                            <h3>招聘流程</h3>
+                           <ul class="items">
+                           <li class="item">
+                               07月21日-09月05日
+                               网上申请
+                           </li>
+                           <li class="item">
+                                09月07日-09月08日
+                                在线笔试
+                           </li>
+                           <li class="item">
+                                09月16日-09月27日
+                                线下笔试
+                           </li>
+                           <li class="item">
+                               10月中旬前
+                                OFFER发放
+                           </li>
+                           </ul>
+
+                        </div>
+                        <div class="swiper-slide city">
+                                <header>
+                                    办公地点
+                                </header>
+                            </div>
+                            <div class="swiper-slide final">
+                                    <header>
+                                        技术方向
+                                    </header>
+                                    <p>
+                                        软件开发类 硬件开发类 数据与算法类
+                                        安全技术类 测试类 技术支持类
+                                        01/06
+                                    </p>
+                                    <button>填写信息</button>
+                                </div>
+
+        </div>
+    </div>
+    <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js">
+  </script>
+  <script>
+
+  var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    on: {
+      slideChangeTransitionEnd: function() {
+        if (this.activeIndex === 1) {
+          paras.classList.add('z-enter');
+        } else {
+          paras.classList.remove('z-enter');
+        }
+      }
+    }
+  })
+  </script>
+</body>
+
+</html>
