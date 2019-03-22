@@ -5,15 +5,44 @@
 html, body {
     width: 100%;
     height: 100%;
+    /* margin: 0 auto; */
+}
+.swiper-container {
+    margin-top: 10px;
+    width: 375px;
+    height: 812px;
 }
 .swiper-wrapper{
-   margin-top: 10px;
+   width: 100%;
+   height: 100%;
+
+   /* margin-top: 10px;
    width: 375px;
-   height: 812px;
+   height: 812px; */
+
    
 }
+.music-btn {
+    position: fixed;
+    z-index:9999;
+    top: 25px;
+    right: 25px;
+    width: 40px;height: 40px;
+    background: 
+    url(https://kfc.normcore.com/bft_burger/static/images/icon-play.png)
+    no-repeat
+    center / cover;
+  }
+  .music-btn.off {
+    background-image: 
+    url(https://kfc.normcore.com/bft_burger/static/images/icon-mute.png);
+  }
 .main {
-    background-image: url('./images/bg1.jpg');
+    background-color: red;
+    background-image: url('./images/p1-light.png');
+   
+   
+    /* animation: fadeInUp .5s .3s both; */
 
 }
 .head_log {
@@ -22,45 +51,308 @@ html, body {
     margin: 0 auto;
     text-align: center;
     margin-top: 350px;
+ 
     
 }
 #e{
     text-align: center;
 }
+.swiper-slide__log{
+   margin-top: 400px;
+}
 .speed {
     background-image: url('./images/bg2.jpg');
+    animation:mymove 10s infinite;
+    -webkit-animation:mymove 10s infinite; 
+    
 }
-.head-foot {
+.d1{
+    margin-top: 350px;
+    margin-left: 150px;
+    position: absolute;
+}
+.head_foot {
     font-size: 30px;
     color: #fff;
-    margin: 0 auto;
+    /* margin-top: 700px; */
+    top:80%;
+    left: 10%;
+    position: absolute;
+
     
-    margin-top: 350px;
+}
+.info {
+    font-size: 12px;
+    color: #fff;
+    top:90%;
+    left: 10%;
+    position: absolute;
+  
+  
 }
 .hope {
     background-image: url('./images/bg1.jpg');
 }
+.fdog {
+    top: 35%;
+    left: 50%;
+    position: absolute;
+}
+.animal {
+    top:55%;
+    position: absolute;
+}
+.head_ft {
+    font-size: 30px;
+    color: #fff;
+    /* margin-top: 700px; */
+    top:80%;
+    left: 10%;
+    position: absolute;
+
+    
+}
+.if {
+    font-size: 12px;
+    color: #fff;
+    top:80%;
+    left: 10%;
+    position: absolute;
+  
+  
+}
 .happy {
     background-image: url('./images/bg4.jpg');
+}
+.ddog {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+}
+.animals {
+    position: absolute;
+    top:30%;
+    left: 5%;
+}
+
+
+.head_hr {
+    font-size: 30px;
+    color: #fff;
+    /* margin-top: 700px; */
+    top:10%;
+    left: 10%;
+    position: absolute;
+
+    
+}
+.is {
+    font-size: 12px;
+    color: #fff;
+    top:15%;
+    left: 10%;
+    position: absolute;
+  
+  
 }
 .car {
     background-image: url('./images/bg5.jpg');
 }
+.gdog {
+    top:70%;
+    left:5%;
+    position: absolute;
+}
+.ani1 {
+    top:90%;
+    position: absolute;
+}
+.ani2 {
+    top:50%;
+    left:5%;
+    position: absolute;
+}
+.head_strong {
+    font-size: 30px;
+    color: #fff;
+    /* margin-top: 700px; */
+    top:10%;
+    left: 10%;
+    position: absolute;
+
+    
+}
+.new {
+    font-size: 12px;
+    color: #fff;
+    top:20%;
+    left: 10%;
+    position: absolute;
+  
+  
+}
 .sufu {
-    background-image: url('./images/joy-snow.jpg');
+    background-image: url('./images/bg3jpg.jpg');
+}
+.head_sf {
+    font-size: 30px;
+    color: #fff;
+    /* margin-top: 700px; */
+    top:10%;
+    left: 10%;
+    position: absolute;
+
+    
+}
+.cr {
+    font-size: 12px;
+    color: #fff;
+    top:20%;
+    left: 10%;
+    position: absolute;
+  
+  
+}
+.jdog {
+    top: 55%;
+    left: 35%;
+    position: absolute;
+}
+.an{
+    top: 40%;
+    position: absolute;
 }
 .more {
-    background-image: url('./images/joy-chill.jpg');
+    background-image: url('./images/bg6.jpg');
+}
+.head_mr {
+    font-size: 30px;
+    color: #fff;
+    /* margin-top: 700px; */
+    top:10%;
+    left: 10%;
+    position: absolute;
+
+    
+}
+.dr {
+    font-size: 12px;
+    color: #fff;
+    top:20%;
+    left: 10%;
+    position: absolute;
+  
+  
+}
+.dog6 {
+    top:30%;
+    left:30%;
+    position: absolute;
+}
+.ten1 {
+    top:60%;
+    left: 20%;
+    position: absolute;
+}
+.ten2{
+    top:60%;
+    left: 20%;
+    position: absolute;
 }
 .ran{
-    background-image: url('./images/bg1.jpg');
+    background-color: red;
+    
+}
+.head_lg {
+    font-size: 40px;
+    color: #fff;
+    /* margin-top: 700px; */
+    top:10%;
+    left: 10%;
+    position: absolute;
+
+    
+}
+.head_og {
+    font-size: 30px;
+    color: #fff;
+    /* margin-top: 700px; */
+    top:20%;
+    left: 10%;
+    position: absolute;
+
+    
+}
+.tj {
+    font-size: 20px;
+    color: #fff;
+    top:40%;
+    left: 10%;
+    position: absolute;
+  
+  
+}
+.ff {
+    font-size: 20px;
+    color: #fff;
+    top:90%;
+    left: 10%;
+    position: absolute;
+}
+.zp{
+    top: 60%;
+    left: 40%;
+    position: absolute;
 }
 .process{
     background-color: #fff;
 }
+.head_lc{
+    font-size: 30px;
+    color: #fff;
+    top:20%;
+    left: 10%;
+    position: absolute;
+}
+
 .city{
-    background-image: url('./images/bg1.jpg');
+    background-color: red;
+    background-image: url('./images/p1-light.png');
 }
 .final{
-    background-image: url('./images/joy-max.jpg');
+    background-image: url('./images/bg1.jpg');
 }
+/* 
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot');
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+        url('iconfont.woff2') format('woff2'),
+        url('iconfont.woff') format('woff'),
+        url('iconfont.ttf') format('truetype'),
+        url('iconfont.svg#iconfont') format('svg');
+  }
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .iconfont-btn {
+    position: fixed;
+    z-index:9999;
+    top: 25px;
+    left: 25px;
+    width: 40px;height: 40px;
+    background: 
+    url(&#x33)
+    no-repeat
+    center / cover;
+  }
+
+  .iconfont-btn off {
+
+  background-image: 
+  url(&#x33);
+} */
