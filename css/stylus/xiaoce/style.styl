@@ -1,0 +1,83 @@
+$fz = 12px
+$text_color = #333333
+
+
+html
+    font-size $fz
+    height 100vh
+    font-family -apple-system, sans-serif
+    // 高清晰优化在手机端的效果
+    text-rendering optimizeLegibility
+    color  #333333
+    background-color #336611
+
+// 重置img
+img
+    border-style none 
+    width auto
+    height auto 
+
+body
+    font-size $fz
+    // 垂直滑动
+    overflow-y scroll
+    // 滑动顺畅
+    -webkit-overflow-scrolling touch 
+
+.book-card
+    max-width 720px
+    margin 0 auto
+    margin-bottom 12px
+    // 阴影
+    box-shadow 0 1px 2px 0 rgba(0,0,0,.15)
+    background-color #ffffff
+
+.book-bought
+    // 块级盒子转为行内盒子
+    display flex
+    align-items center
+    border  1px solid #ecf0f3 
+    // 鼠标
+    cursor pointer
+    padding 8px 22px 8px 15px
+    // tab+.label直接在css中匹配父元素
+
+    .label
+        color #666666
+        font-size 16px
+        font-weight 400
+        // 很好的处理内部与兄弟元素的位置关系对齐
+        display inline-flex
+        // 垂直对齐
+        align-items center
+        // 不改变大小
+        flex-shrink 0
+        // 让图片居中对齐别的元素：用于图片与兄弟元素之间垂直方向上对齐
+        // img
+        // vertical-align middle
+
+    .users
+        height 24px
+        overflow hidden
+        // inline不能设置的高度
+        display inline-block
+        margin-left 24px
+        // 占用除了label剩下所有的空间
+        // flex 1
+        flex-grow 1
+        .user
+            width 24px
+            height 24px
+            border-radius 50%
+            // 将图片等比例缩放，大小不合适进行剪裁，留下核心
+            background-size cover
+            // 头像图片过多也不能缩小图片大小
+            flex-shrink 0
+            display inline-block
+            margin-left 10px
+            // &复用上一级的选择器
+            &:first-child
+                margin-left 0
+
+
+    
