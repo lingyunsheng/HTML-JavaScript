@@ -1,0 +1,6 @@
+html body{
+	background: #FFFFFF;
+	}
+.tab_active .weui-tabbar__label{
+	color: #10AEFF;
+	}

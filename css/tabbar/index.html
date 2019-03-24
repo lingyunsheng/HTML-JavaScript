@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>首页</title>
+		<link rel="stylesheet" href="lib/css/weui.min.css">
+		<link rel="stylesheet" href="lib/css/jquery-weui.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" href="./css/index.css">
+	</head>
+
+	<body ontouchstart>
+		<div id="home" v-cloak class="container">
+			<div class="weui-flex search_bar_box">
+				<div class="choose_addr">
+					<select class="weui-select my_seclet" name="select1">
+						<option value="1">南昌</option>
+						<option value="2">赣州</option>
+						<option value="3">九江</option>
+						<option value="4">抚州</option>
+						<option value="4">宜春</option>
+					</select>
+					<img class="sanjiao" src="images/sanjiao.png">
+				</div>
+				<div class="weui-flex__item search_box">
+					<label class="weui-search-bar__label search_bar" id="searchText">
+						<i class="weui-icon-search"></i>
+						<span>搜索</span>
+					</label>
+				</div>
+				<div class="info_box">
+					<img class="xiaoxi" src="images/xiaoxi.png">
+				</div>
+			</div>
+			<!--轮播-->
+			<div class="swiper-container" style="height: 10rem;">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="images/banner.png" /></div>
+					<div class="swiper-slide"><img src="images/banner@2x.png" /></div>
+				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination point"></div>
+			</div>
+
+			<!---->
+			<div class="weui-grids jiugongge">
+				<a href="" class="weui-grid js_grid">
+					<div class="weui-grid__icon grid__icon">
+						<img src="images/baodan.png" alt="">
+					</div>
+					<p class="weui-grid__label">
+						报单
+					</p>
+				</a>
+				<a href="" class="weui-grid js_grid">
+					<div class="weui-grid__icon grid__icon">
+						<img src="images/shuaidan.png" alt="">
+					</div>
+					<p class="weui-grid__label">
+						甩单
+					</p>
+				</a>
+				<a href="" class="weui-grid js_grid">
+					<div class="weui-grid__icon grid__icon">
+						<img src="images/zhanyegongjv.png" alt="">
+					</div>
+					<p class="weui-grid__label">
+						展业工具
+					</p>
+				</a>
+				<a href="" class="weui-grid js_grid">
+					<div class="weui-grid__icon grid__icon">
+						<img src="images/guwenlianmeng.png" alt="">
+					</div>
+					<p class="weui-grid__label">
+						金融顾问联盟
+					</p>
+				</a>
+			</div>
+
+
+			<div class="weui-cells">
+				<div class="weui-cell">
+					<weui-cell__hd>
+                        生活服务
+					</weui-cell__hd>
+				    <div class="weui-cell__bd">
+                           城市抢人大战
+					</div>
+					<div class="weui-cell__ft">
+                             福利不止户口买房
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<input style="display: none;" class="tabShow" type="" name="" id="" value="0" />
+		<script src="lib/js/jquery-2.1.4.js"></script>
+		<script src="lib/js/fastclick.js"></script>
+		<script src="lib/js/vue.min.js"></script>
+		<script src="lib/js/jquery-weui.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+		<script src="js/foot.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js"></script>
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				loop: true, // 循环模式选项
+
+				// 如果需要分页器
+				pagination: {
+					el: '.swiper-pagination',
+				},
+
+			})
+		</script>
+
+	</body>
+
+</html>

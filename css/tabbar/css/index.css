@@ -1,0 +1,95 @@
+.search_bar_box{
+	height: 2.5rem;
+}
+
+/*地址*/
+.choose_addr {
+	/*background: #007AFF;*/
+	position: relative;
+	width: 16%;
+	padding-right: 0.6rem;
+}
+.sanjiao{
+	position: absolute;
+	top: .9rem;
+	right:0px;
+	z-index: 10;
+}
+.my_seclet{
+	height: 1.6rem;
+	line-height: 1.6rem;
+	margin-top: .45rem;
+}
+/*搜索框*/
+.search_box {
+	/*background: #09BB07;*/
+	position: relative;
+}
+.search_bar{
+	height: 1.6rem;
+	line-height: 1.5rem;
+	width: 95%;
+	top: .45rem;
+	left: 5%;
+	background: #f1f6f9;
+	border-radius: 0.8rem;
+	text-align: left;
+	padding-left: 0.3rem;
+}
+/*消息*/
+.info_box {
+	/*background: lightblue;*/
+	width: 15%;
+	text-align: center;
+}
+.xiaoxi{
+	width: 1.2rem;
+	height: 1.2rem;
+	margin-top: .65rem;
+}
+
+.swiper-slide img{
+	width: 100%;
+	height: 100%;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+	bottom: -6px !important;
+}
+.jiugongge{
+	/*margin-top: 0.8rem;*/
+}
+
+.jiugongge .weui-grid{
+	width: 25%;
+}
+.weui-grids:before {
+    top: 0;
+    width: 1px;
+    border: none;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: scaleX(.5);
+    transform: scaleX(.5);
+}
+.weui-grid:before {
+    top: 0;
+    width: 1px;
+    border: none;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: scaleX(.5);
+    transform: scaleX(.5);
+}
+.weui-grid:after {
+    left: 0;
+    height: 1px;
+    border: none;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    }
+    .grid__icon{
+    	width: 2.7rem;
+    	height: 2.7rem;
+    }
