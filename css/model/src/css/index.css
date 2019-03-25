@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 100%;
+    color: #222;
+}
+body {
+    font-size: 1.2rem;
+    line-height: 1.5;
+
+}
+.container {
+    width: 100%;
+}
+header {
+    width: 100%;
+}
+::selection {
+    background-color: #b3d4fc;
+    text-shadow: none;
+
+}
+ul {
+    margin: 0;
+    padding: 0;
+
+}
+li {
+    list-style: none;
+}
+
+
+.top {
+    padding: 10px;
+    width: 100%;
+
+    background-color: #000;
+
+}
+.top li {
+    font-size: 24px;
+   position: relative;
+    float:right;
+    color: #fff;
+    margin-top: -30px;
+    margin-right: 20px;
+    list-style: none;
+    text-indent: 2;
+
+
+}
+.top  li a{
+    list-style: none;
+    font-size: 24px;
+    color:#fff;
+    text-decoration: none;
+
+
+}
+.tel{
+    font-size: 16px;
+    color:#fff;
+
+
+
+
+}
+
+.main {
+    padding: 10px;
+    width: 100%;
+    background-color: #e5e4e4;
+}
+.main li {
+
+
+    list-style: none;
+    display:flex;
+
+    align-items: center;
+    position: relative;
+
+
+}
+.mian, li a {
+
+    text-decoration: none;
+    color: #000;
+
+}
+.brand {
+    flex:1;
+}
+
+.clear::before {
+    content:"";
+    display:none;
+}
+.clearfix::after {
+   clear:both;
+}
+
+a::hover {
+    text-decoration: none;
+}
+header .top ul {
+    text-align: right;
+
+}
+header .top ul li {
+    display: inline-block;
+}
+header .top ul li+li {
+    border-left: 1px solid #999;
+    margin-left: -3px;
+}
+header .top ul li a {
+    display: inline-block;
+    padding: 0 1.5rem;
+    color: #ffffff;
+
+}
+
+footer ul li .icon {
+    display: inline-block;
+
+}

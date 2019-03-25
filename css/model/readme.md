@@ -60,6 +60,12 @@ device-width 屏幕宽度
 
  这是一行代码<script>
 
+  -  px(一个px相当于一个像素)
+  -  em 相对的长度单位 相对参照物为父元素的font-size em具有集成的特点 1em=16px
+  -  rem 相对参照物位根元素html
+  fz 62.5% 1rem=10px
+  fz 100% 1re=16px
+
 
 
   
