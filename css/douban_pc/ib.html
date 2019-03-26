@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ib</title>
+    <style>
+        .box {
+            width: 950px;
+            margin: 0 auto;
+            font-size: 0;
+            /* 文字内容看不到 */
+
+        }
+        .col-4,.col-8 {
+            height: 200px;
+            display: inline-block;
+            font-size: 14px;
+
+        }
+        .col-8 {
+                   width: 60%;
+                   background-color: green;
+        }
+        .col-4 {
+            width: 40%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- 两列式布局 -->
+        <!-- inline-block消除间隙浏览器的bug 不需要换行 “首尾相连 -->
+        <div class="col-8">fdfdfa</div>
+        <div  class="col-4">cccccc</div>
+
+    </div>
+    
+</body>
+</html>
