@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <input type="file" id="file" accept="audio/mp3,audio/ogg" multiple>
+    <article id="music-player">
+        <audio id="player">
+        </audio>
+
+        <section id="music-content">
+            <div id="album-picture">
+                <img src="img/timg.jpg" id="picture">
+            </div>
+
+            <span id="add-music" title="添加音乐"><i class="fa fa-upload" aria-hidden="true"></i></span>
+
+            <div>
+                <h3 id="music-title">Welcome to you!</h3>
+                <p id="music-singer">Have a good time!</p>
+            </div>
+
+            <div id="music-control">
+                <button id="music-stop">
+                    <i class="fa fa-play" aria-hidden="true" id="control-icon"></i>
+                </button>
+
+                <button id="music-pre" title="上一首">
+                    <i class="fa fa-fast-backward" aria-hidden="true"></i>
+                </button>
+
+                <button id="music-next" title="下一首">
+                    <i class="fa fa-fast-forward" aria-hidden="true"></i>
+                </button>
+
+                <div id="sound-icon">                    
+                    <i class="fa fa-volume-up" aria-hidden="true" id="volume"></i>
+                    <i class="fa fa-minus-circle" aria-hidden="true" id="volume-down" title="降低"></i>
+                    <progress value="10" max="10" id="music-sound"></progress>
+                    <i class="fa fa-plus-circle" aria-hidden="true" id="volume-up" title="提高"></i>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <div><progress value="0" max="100" id="music-progress"></progress></div>
+            <span id="current-time">0:00</span><span id="duration">/0:00</span>
+            <img src="img/loop.png" id="play-style-loop" title="顺序播放" class="">    
+            <img src="img/random.png" id="play-style-random" title="随机播放" class="hidden">    
+        </aside>
+    </article>
+
+    <article id="music-list">
+        <ul id="musics"></ul>
+    </article>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
