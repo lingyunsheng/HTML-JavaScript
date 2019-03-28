@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>arrow-arguments</title>
 </head>
+
 <body>
     <script>
         function foo() {
-            var arrow_func=()=>{
-                   console.log(arguments);
+            var a = 1;
+            var arrow_func = () => {
+                console.log(arguments);
             }
-          arrow_func(4,5,6);
+            arrow_func(4, 5, 6);
         }
-        foo(1,2,3)
+        foo(1, 2, 3)
         // var arrow_func=()=>{
         //     console.log(arguments);
 
         // }
-       
+
     </script>
 </body>
+
 </html>
