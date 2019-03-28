@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var Type = {}; //object
+    // 不加函数，因为typeof函数会返回精确的函数 012为真，3为假
+    for(var i = 0, type;type=['String', 'Array', 'Number'][i++];){
+        console.log(type, '--------');
+        // 立即执行函数 type作为参数传进来 闭包
+        (function(type) {
+            console.log("is" + type, '+++++');
+            // 完成了类型检测的定义
+            Type["is" + type] = function(obj) {
+                // console.log(obj);
+                return Object.prototype.toString.call(obj) === '[object ' + type + ']'  
+            }
+            // return Object.prototype
+        })(type)
+    }
+</script>
+</body>
+</html>
