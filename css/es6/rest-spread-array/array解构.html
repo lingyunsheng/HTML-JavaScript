@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array</title>
+</head>
+
+<body>
+    <script>
+        const lists = [
+            { name: '李雷' },
+            { age: 32 },
+            [{ school: 'ecut' }]
+        ];
+        //我叫李雷 我有32
+        //es5
+        var nameObj = lists[0];
+        var ageObj = lists[1];
+
+        //数组 解构 es6
+        const [a, b] = lists;
+
+        //e===undefined
+        const [, , c] = lists;
+
+        const [, , [f]]=lists;
+        // const [, , f]=lists;
+    </script>
+
+</body>
+
+</html>

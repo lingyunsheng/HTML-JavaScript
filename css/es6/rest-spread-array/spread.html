@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>扩展运算符</title>
+</head>
+<body>
+    <script>
+       //扩展运算符 好比是刚才 resr是参数的逆运算
+       //将一个数组打散
+       const arr = [6, 8, 9] ;
+       console.log(...arr);
+       console.log([...arr]);
+       //
+       const arr1 = [0, 1, 2];
+       const arr2 = [3, 4, 5];
+       //数组拼接
+       const newArr = arr1.concat(arr2);
+    //    const newArr_spread =  [...arr1, ...arr2];
+       //push(3,4,5)
+       arr1.push(...arr2);
+
+       const min_arr = [ 90, 3, 99, 100];
+       const min_num=Math.min(...min_arr);
+       //Marth.min(90,99,78,100,67);
+
+       function sum(...args){
+           //args 数组
+           let sum=0;
+           for (let i=0;
+           i<args.length;i++){
+               sum += args[i];
+
+           }
+           return sum;
+           //求和
+           //return 'sum'
+        //   const newArr_spread = [...arr5];
+        //   push(90,3,99,100);
+        //   arr5.push(...min_arr);
+        //   for(let i=0;i<arr5.length;i++){
+        //       sum=sum+arr[i];
+        //       return sum;
+        //   }
+       }
+      const a = sum(...min_arr);
+       //const min_arr = [ 90, 3， 99， 100];
+       //sum(10,89,20)
+        sum();
+
+        
+    </script>
+</body>
+</html>

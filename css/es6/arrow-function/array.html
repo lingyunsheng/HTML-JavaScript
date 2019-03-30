@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>array</title>
 </head>
+
 <body>
-    
+    <script>
+        const ages =[
+        {
+            name: '李雷', age: 18
+        },
+        
+        {
+            name: '李雷1', age: 30
+        },
+        {
+            name: '韩梅梅', age: 30
+        },
+        {
+            name: '韩梅梅1', age: 15
+        },
+    ]
+        // const ages = [18, 20, 30, 40, 10];
+        const this_age = ages
+            .find((age) => {
+                return age === 10;
+            });
+        console.log(this_age);
+        const this_age_index = ages
+            .findIndex((age) => {
+                return age === 10;
+            });
+        console.log(this_age, this_age_index);
+     //age大于15 
+        const this_age_index = ages
+            .findIndex((person) => {
+                return person.age>15;
+            })
+        console.log(this_age, this_age_index);
+          //等于30
+        const this_age_index = ages
+            .findIndex((person) => {
+                return person.age ===30;
+            })
+        console.log(this_age, this_age_index);
+
+
+
+    </script>
+
 </body>
+
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>object</title>
+</head>
+
+<body>
+    <script>
+        const obj = {
+            name: '李雷',
+            age: 32,
+            foo: { bar: 'bar val' },
+            baz: ['Hello', { msg: 'World' }]
+        }
+        //es5
+        // var name = obj.name,age=obj.age;
+        //es6
+        // ：赋值 undifined
+        //var hello;
+     
+        const {
+            age: this_age,
+            name: this_name,
+            foo: { bar },
+            //  baz: ['Hello', {msg: 'World'}]
+            baz: [hello, { msg: world }]
+        } = obj;
+    //const {name,age}= obj;
+
+
+
+
+    </script>
+
+</body>
+
+</html>
