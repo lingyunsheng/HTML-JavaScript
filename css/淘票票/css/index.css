@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+
+a {
+    color: #14191e;
+    text-decoration: none;
+}
+a:hover {
+    color: #f01400;
+}
+.page {
+    overflow: hidden;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 60px;
+    background-color: #fafafa;
+}
+.header-log {
+    margin: 10px 0 0 10px;
+    padding-left: 50px;
+    float: left;
+    line-height: 40px;
+    font-size: 24px;
+
+}
+.nav-header {
+   
+    float: right;
+}
