@@ -105,7 +105,9 @@ html,body {
     background: url(../img/screen-1-phone.png)no-repeat center;
     background-size: cover;
     z-index:2;
+    
 }
+
 .screen-1__shadow {
     position: absolute;
     bottom: 30px;
@@ -153,6 +155,18 @@ html,body {
     top: 270px;
     left: 50%;
     margin-left: -400px;
+    animation: phones 3s infinite;
+}
+@keyframes phones {
+    0% {
+        translate: rotateX(100deg);
+    }
+    75% {
+        translate: rotateX(260deg);
+    }
+    100% {
+        translate: rotateX(0deg);
+    }
 }
 .screen-2__point {
     width: 100px;
@@ -216,7 +230,9 @@ html,body {
     left: 465px;
     background: url(../img/bg-screen-3.png) no-repeat;
 
+
 }
+
 .screen-3__features {
     position: absolute;
     bottom:140px;

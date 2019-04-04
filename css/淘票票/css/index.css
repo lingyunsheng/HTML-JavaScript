@@ -8,35 +8,82 @@ html,body {
     /* position: relative; */
     /* overflow: hidden; */
 }
-
-a {
-    color: #14191e;
-    text-decoration: none;
-}
-a:hover {
-    color: #f01400;
+a{
+    text-decoration: none !important;
+    color: #3E3E3E;
+  
 }
 .page {
     overflow: hidden;
+
 }
 .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
-    height: 60px;
-    background-color: #fafafa;
+    z-index:10;
+    height:60px;
+    background-color: #FF3333;
 }
 .header-log {
-    margin: 10px 0 0 10px;
-    padding-left: 50px;
-    float: left;
-    line-height: 40px;
+   position: relative;
+    margin: 5px 0 0 10px;
+    float:left;
+    line-height: 50px;
     font-size: 24px;
-
+    padding-left: 20%;
+    
+    
 }
 .nav-header {
-   
     float: right;
+    margin: 10px 0px 0 10px;
+    position: relative;
+    line-height: 40px;
+    font-size: 18px;
+    padding-right: 50%;
+}
+.nav-header__item-1 {
+    
+    margin-right: 30px;
+ 
+
+}
+.nav-header__item-2 {
+    
+    margin-right: 30px;
+}
+.nav-header__item-3 {
+    
+    margin-right: 30px;
+ 
+
+}
+.nav-header__item-4 {
+    
+    margin-right: 40px;
+ 
+
+}
+.nav-header__item-5 {
+    
+    margin-right: 30px;
+ 
+
+}
+
+.screen-1 {
+    width: 100%;
+    height: 400px;
+}
+.screen-1__wrap {
+    height: 100%;
+    max-width: 1200px;
+    min-width:600px;
+    position: relative;
+
+}
+.screen-1__download img{
+   
 }
