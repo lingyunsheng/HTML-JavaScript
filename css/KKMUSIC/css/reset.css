@@ -1,0 +1,11 @@
+a {
+    display: block;
+    text-decoration: none;
+    color: #333333;
+}
+a:hover {
+    color: #e5e5e5;
+}
+ul,li,ol {
+    list-style: none;
+}
