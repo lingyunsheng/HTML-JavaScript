@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,li,ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+
+}
+
+html,body {
+    width: 100%;
+    
+}
+.mi-page {
+    background-color: #333;
+}
+.mi-page .topbar {
+  
+    width: 1226px;
+    margin: 0 auto;
+    
+    height: 60px;
+}
+.topbar a {
+    color: #b0b0b0;
+}
+.topbar a:hover {
+    color: #fff;
+}
+.topbar .topbar-nav  {
+         float: left;
+         font-size:12px;
+         height: 40px;
+         line-height: 40px;
+        
+}
+.topbar .topbar-nav li {
+    float: left;
+    padding:0 10px 0 ;
+}
+.topbar .topbar-nav li span {
+    font-size: 12px;
+    color: #424242;
+    font-family: sans-serif;
+    margin: 0.5em;
+}
+
+.topbar-cart {
+    font-size:12px;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+}
+.topbar .topbar-info {
+    font-size:12px;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+}
+.topbar .topbar-info li {
+    float: right;
+}
+.topbar::before, .topbar::after, .clearfix::before, .clearfix::after {
+    content: '';
+    display: table;
+}
+
+.topbarr::after, .clearfix::after {
+    clear: both;
+}
+
+
+
