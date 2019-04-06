@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     li {
+         font-size: 16px;
+     }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="demo"></p>
+    </div>
+    <script>
+        var li =document.createElement('p');
+        var body = document.getElementsByTagName('body');
+        li.innerHTML = '你妈死了';
+        body[0].appendChild(li);
+        var list = document.getElementById('demo');
+        list.value.innerHTML = 'hi';
+
+    </script>
+</body>
+</html>
