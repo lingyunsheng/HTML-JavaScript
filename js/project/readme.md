@@ -187,6 +187,27 @@ js ->弱类型var a;  强类型 c c++ string a="aaa"
   var a={0:60;1:61,2:62}
   a[0]->60
 
+  原始类型：数字NUmber 字符串String 布尔值 Boolean
+  var a=?;
+  var b = Number(a);
+
+  ###流程控制 
+  条件语句 if switch
+  循环语句 for while
+
+  if(表达式 条件)-》真
+  {
+      语句
+  }
+  var score=?;
+  if(score >90){ true
+      console.log("奖励100块");
+  }
+  else { false
+      console.log("做家务)
+  }
+
+
 
 
 

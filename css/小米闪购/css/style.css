@@ -254,7 +254,9 @@ a {
     text-align: center;
     cursor: pointer;
 }
-
+.seckill-nav li:hover{
+    color: #f1393a;
+}
 .seckill-nav li em {
     display: inline-block;
     margin-left: 30px;
