@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax</title>
+</head>
+
+<body>
+    <script>
+        var xhr = null
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest()
+        } else {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP")
+        }
+
+        //true异步 异步操作 回调函数
+        xhr.open('get', '/mock.json', true)
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencode")
+        xhr.send()
+        // console.log(xhr.responseText)
+        // console.log(xhr.readyState, xhr.status)
+        // 4 200 200代表该次请求成功 获取数据 4
+        //一开始是0 执行send方法后 status是1 成功接收是2 执行完是3 解析后是4 4步操作
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                
+                console.log(xhr.responseText)
+            }
+        }
+        //请求一定会耗时 一定比console.log久 耗时就会产生异步 出现需要时间的函数 产生异步
+        console.log(1232423)
+
+
+
+    </script>
+</body>
+
+</html>
