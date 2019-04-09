@@ -40,11 +40,22 @@
         <div class="douban-download__wrap">
         
             <div class="douban-download__load">
-                <h3>豆瓣6.0</h3><br>
-                <button>下载app</button>
+                <h3>豆瓣 <sapn>6.0</sapn></h3><br>
+                <button class="douban-download-btn">下载app</button>
             </div>
             <div class="douban-download__login">
-
+                <form class="form-login" action="">
+                    <p>短信登录／注册 密码登录</p>
+                    <p>登录注册表示同意 <a href="#">豆瓣使用协议、隐私政策</a> </p>
+                    <input type="text" class="phone" placeholder="手机号"><br>
+                    <input type="text" class="validate" placeholder="验证码"><br>
+                    <input type="button" class="form-btn" value="登录豆瓣"><br>
+                   <label for=""><input type="radio">下次自动登录</label>
+                   <a href="#">收不到验证码</a> <br>
+                   <hr>
+                   <p>第三方登录</p>
+                   
+                </form>
             </div>
         </div>
 
