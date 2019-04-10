@@ -25,14 +25,46 @@
         // console.log(xhr.readyState, xhr.status)
         // 4 200 200代表该次请求成功 获取数据 4
         //一开始是0 执行send方法后 status是1 成功接收是2 执行完是3 解析后是4 4步操作
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                
-                console.log(xhr.responseText)
+        var p = new Promise((resolve, reject) => {
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+
+                    console.log(xhr.responseText)
+                    // console.log(1232423)
+                    resolve(xhr.responseText)
+                }
             }
+        })
+
+        //请求一定会耗时 一定比console.log久 耗时就会产生异步 出现需要时间的函数 产生异步 js不会等待 往下执行
+        function xq() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("赵丽颖要相亲");
+                    resolve('相亲很顺利')
+                }, 1000)
+            })
         }
-        //请求一定会耗时 一定比console.log久 耗时就会产生异步 出现需要时间的函数 产生异步
-        console.log(1232423)
+        //xq()
+        function marry() {
+            setTimeout(() => {
+                console.log('赵丽颖结婚了')
+            }, 500)
+
+        }
+        // p
+        //     .then((e)=>{
+        //         console.log(e)
+        //     })
+        p
+            .then(xq)
+            .then(marry)
+            // .then((e)=>{
+            //     console.log(e)
+            // })
+            .catch(() => {
+                console.log('赵丽颖出家了')
+            })
 
 
 
