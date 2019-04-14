@@ -1,0 +1,50 @@
+/**
+ * Main Page
+ */
+ .main {
+
+}
+
+
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 36px;
+}
+
+.slide-1 {
+  // background-color: #F3B05A;
+  background: url('https://img.aotu.io/xiaocezi/1.jpg') 50% 0 no-repeat;
+  background-size: cover;
+}
+
+.slide-2 {
+  // background-color: #F4874B
+  background: url('https://img.aotu.io/xiaocezi/2.jpg') 50% 0 no-repeat;
+  background-size: cover;
+}
+
+.slide-3 {
+  // background-color: #F46A4E;
+  background: url('https://img.aotu.io/xiaocezi/3.jpg') 50% 0 no-repeat;
+  background-size: cover;
+}
+
+
+.control {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-size: 24px;
+}
