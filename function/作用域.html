@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function add() {
+        //     // var y = 100;//局部变量
+        //     y=100;//变成全局变量
+        //     console.log('add():y=' + y);
+        //     // x = 100;
+
+        // }
+        // // var y = 1;//全局变量
+        // // var y = x;
+        // add();
+        // console.log("全局y=" + y);
+
+        // 预解析:浏览器 获得js文件的时候 不是立即执行代码 全片快速扫描一遍
+        // 把变量 预先解析
+
+        //变量 把变量的声明 提到最前面来
+  
+        console.log("x = "+ x);
+        var x=10;
+        add();//函数也是 变量
+        function add(){
+            //局部变量
+            // var y;
+            y=10;//局部变量
+            var y =1;
+            console.log('add():y' + y);
+        }
+
+        
+    </script>
+</body>
+
+</html>

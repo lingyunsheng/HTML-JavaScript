@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // var obj1 = {
+    //     x:0,
+    //     "x":1,
+    //     'x':1,
+    //     1:0,
+    // }   
+var person1 = {
+    name:'赵丽颖',
+    sex:'女',
+    age:34,
+    "fist name":'赵鸡',
+    slogan:function(){
+        for (var i=0;i<10; i++){
+            console.log('我是赵丽颖');}
+    }
+} 
+// 创建新的对象 定义这个适用对象 var person -> var容器小 
+//值 数字 字符串
+// var person2 = person1;
+// person2.name="杨幂";
+
+//用类的形式创建类 人的类
+var person2 = new Person();
+// es5 function -> es6 class
+//为了区分函数和类 类
+function Person(name,sex,age){
+    this.name = name;
+    this.sex=sex;
+    this.age=age;
+    this.slogan=function(){
+        console.log('我是唐嫣');
+    }
+}
+//构造函数
+var person1 = new Person("赵丽颖","女","34");
+var person2 = new Person("唐嫣","女","37");
+//类 人
+// var person2 = new Person();
+//类 系统自带的类 
+//对象属性的基本操作 增删改 修改 属性的值 查 获取属性的值 遍历
+// 查 获取属性值 点. []
+// var name=person1.name; ->'赵丽颖'
+// name=person1['name'];
+//name="赵丽颖"
+
+person1["name"]="唐嫣";
+// person1.name="赵丽颖2";
+//遍历
+for (var pN in person1){
+    console.log('person1的属性名：'+ person1[pN]);
+}
+
+// 增加属性 修改属性的时候 没有自动加上
+//删除属性
+// delete person1.name;
+    </script>
+</body>
+</html>

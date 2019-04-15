@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 闭包 变量的私有化
+    // var counter =0;//全局变量 -》 谁都可以访问 修改 
+    function add(){
+        var counter=0;//局部变量 实现有全局变量得生命力
+      return function (){
+            counter++;//全局变量的生命周期
+            console.log('counter='+counter);
+        }//匿名函数
+        
+      
+    }   
+    //函数的立即执行 函数声明和执行 放在一起
+    var plus =(function add(){
+       var counter=0;//局部变量 实现有全局变量得生命力
+       return function (){
+            counter++;//全局变量的生命周期
+            console.log('counter='+counter);
+        }//匿名函数
+    })(); 
+    
+    // add();//counter 的初始化
+    plus();
+    plus();
+    plus();
+    plus();
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function 名字(0,1 ,多个参数) {
+        //     执行语句
+        // }
+        //喊口号 num 形参
+        // function slogan(num, time) {
+        //     // time ->undefined 默认值7
+        //     // if (time == undefined) {
+        //     //     time = 7;
+        //     // }
+        //     time = time||8
+        //     for (var a = 1; a <= num; a++) {
+        //         console.log(time + '点' + a + '好好学习，努力赚钱');
+        //     }
+        // }
+        // var time = 7;
+        // slogan(10);//实参 实际的参数 对应的值\
+        // slogan(10,12);
+        // var time = 12;
+        // slogan(10, time);
+        //换个名字调用
+        // var fname = slogan;
+        // fname(4);
+        // var time = 12;
+        // slogan();
+        // var time = 23;
+        // slogan();
+
+        //返回值 return
+        // 动态参数
+        function add(x,y){//加法
+            //数组[1,2,4,5,23]
+            var arguments=[1,2,4,5,23];
+            // x = arguments[0];
+            // y = arguments[1];
+            var z=0;
+
+            for (var i = 0;i<arguments.length; i++){
+                    z+=arguments[i];
+            }
+            
+            return z;
+
+        }
+        var rs= add(1,2,4,5,23);
+        console.log('1+ 2 4,5,23 =' +rs);
+
+        rs = add(3,4);
+        console.log('3+4=' + rs);
+    </script>
+</body>
+
+</html>
