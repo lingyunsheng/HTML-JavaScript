@@ -22,13 +22,23 @@
             width: 100%;
             height: 100%;
             max-width: 980px;
-            margin: 0 auto;
+            margin: auto;
         }
 
         .list {
             padding: 10px;
             height: 20px;
             border-bottom: 1px solid #ddd;
+        }
+
+        #recycle {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            background-color: #ddd;
         }
     </style>
 </head>
@@ -44,30 +54,53 @@
             <div class="list" draggable="true">这是列表6的标题</div>
             <div class="list" draggable="true">这是列表7的标题</div>
         </div>
+        <div id="recycle" draggable="="true">回收站</div>
     </div>
     <script>
-    const lists = document .querySelectorAll('.list');
-    //记录一下源对象
-    let srcDiv = null;
-    for(let i=0,length=lists.length;i<length;i++){
-        let list = lists[i];
-        list.addEventListener('dragstart',function(){
-            //this代表发生的对象
-            srcDiv = this;
-            this.style.backgroundColor ='red';
-        })
-        list.addEventListener('dragend',function(event){
-            this.style.backgroundColor ='#fff';
-            event.preventDefault();
-        })
-        list.addEventListener('dragenter',function(){
-            //在当前节点插入拖动的元素
-           this.parentNode.insertBefore(srcDiv,this);
-        })
+        const recycle = document
+            .getElementById('recycle');
 
-    }
+        const lists = document
+            .querySelectorAll('.list');
+        // 源对象
+        let srcDiv = null;
+        for (let i = 0, length = lists.length;
+            i < length;
+            i++) {
+            recycle.addEventListener('drop', function (event) {
 
-    
+                          console.log('drop');
+                          srcDiv.parentNode.removeChild(srcDiv);
+            })
+            document.addEventListener('drop',function(event){
+                event.preventDefault();
+            })
+            document.addEventListener('dragover',function(event){
+                event.preventDefault();
+            })
+
+            let list = lists[i];
+            list.addEventListener('dragstart', function () {
+                srcDiv = this;
+                this.style.backgroundColor = '#f8f8f8';
+            })
+            list.addEventListener('dragend', function (event) {
+                this.style.backgroundColor = '#fff';
+                event.preventDefault();
+            })
+            list.addEventListener('dragenter', function () {
+                if (srcDiv != this) {
+                    if (this === this.parentNode.lastElementChild
+                        && srcDiv === document
+                            .querySelector('.list:nth-last-child(2)')) {
+                        this.parentNode.appendChild(srcDiv);
+                    } else {
+                        // 在 当前节点前面插入 拖动的那个元素
+                        this.parentNode.insertBefore(srcDiv, this);
+                    }
+                }
+            })
+        }
     </script>
 </body>
 
