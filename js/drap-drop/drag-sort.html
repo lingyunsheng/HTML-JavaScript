@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        #app {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .list {
+            padding: 10px;
+            height: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="main">
+            <div class="list" draggable="true">这是列表1的标题</div>
+            <div class="list" draggable="true">这是列表2的标题</div>
+            <div class="list" draggable="true">这是列表3的标题</div>
+            <div class="list" draggable="true">这是列表4的标题</div>
+            <div class="list" draggable="true">这是列表5的标题</div>
+            <div class="list" draggable="true">这是列表6的标题</div>
+            <div class="list" draggable="true">这是列表7的标题</div>
+        </div>
+    </div>
+    <script>
+    const lists = document .querySelectorAll('.list');
+    //记录一下源对象
+    let srcDiv = null;
+    for(let i=0,length=lists.length;i<length;i++){
+        let list = lists[i];
+        list.addEventListener('dragstart',function(){
+            //this代表发生的对象
+            srcDiv = this;
+            this.style.backgroundColor ='red';
+        })
+        list.addEventListener('dragend',function(event){
+            this.style.backgroundColor ='#fff';
+            event.preventDefault();
+        })
+        list.addEventListener('dragenter',function(){
+            //在当前节点插入拖动的元素
+           this.parentNode.insertBefore(srcDiv,this);
+        })
+
+    }
+
+    
+    </script>
+</body>
+
+</html>
