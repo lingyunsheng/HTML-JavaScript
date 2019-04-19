@@ -58,6 +58,13 @@ Page({
         wx.navigateTo({
             url: '../legends/legends'
         });
+    },
+    bindLatestBattleTap: function (e) {
+        console.log('点击了战绩');
+        wx.navigateTo({
+            url: '../latest/latest'
+        });
+
     }
 
 });

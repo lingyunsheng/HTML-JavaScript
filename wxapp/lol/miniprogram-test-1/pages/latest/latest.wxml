@@ -1,0 +1,9 @@
+<view  class="container latest">
+<block wx:for="{{latest}}">
+    <view class="con">
+
+    </view>
+
+
+    <text >{{item.name}}</text>
+</block>

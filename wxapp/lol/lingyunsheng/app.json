@@ -1,8 +1,6 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/legends/legends", 
-    "pages/latest/latest",
     "pages/logs/logs"
   ],
   "window":{

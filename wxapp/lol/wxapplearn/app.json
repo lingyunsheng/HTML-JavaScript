@@ -1,0 +1,40 @@
+{
+  "pages": [
+    
+    "pages/main/index",
+    "pages/lesson/index",
+    "pages/mine/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F8D7CD",
+    "navigationBarTitleText": "反赵丽颖戏精联盟",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "color":"#515151",
+     "backgroundColor":"#fff",
+     "list":[
+       {
+         "pagePath":"pages/main/index",
+         "text":"首页",
+         "iconPath":"images/shouye.png",
+         "selectedIconPath":"images/hover-shouye.png"
+       },
+       {
+        "pagePath":"pages/lesson/index",
+        "text":"土丽丝",
+        "iconPath":"images/class.png",
+        "selectedIconPath":"images/hover-class.png"
+      },
+      {
+        "pagePath":"pages/mine/index",
+        "text":"我的",
+        "iconPath":"images/mine.png",
+        "selectedIconPath":"images/hover-mine.png"
+      }
+       
+     ]
+
+  }
+}
