@@ -235,6 +235,11 @@ a {
 
 .seckill-nav {
     margin: -68px 0 22px;
+
+}
+.seckill-navfixed {
+    /* position: fixed;
+    top:60px; */
 }
 
 .seckill-nav ul {
@@ -254,9 +259,10 @@ a {
     text-align: center;
     cursor: pointer;
 }
-.seckill-nav li:hover{
+
+/* .seckill-nav li:hover{
     color: #f1393a;
-}
+} */
 .seckill-nav li em {
     display: inline-block;
     margin-left: 30px;
@@ -268,7 +274,7 @@ a {
 
 .seckill-nav li span {
     display: inline-block;
-    /* margin-left: 15px; */
+    margin-left: 15px;
     text-align: left;
     line-height: 1;
     vertical-align: middle;
@@ -288,8 +294,11 @@ a {
     text-align: left;
     line-height: 20px;
 }
-
+.seckill-goods .active {
+    display: block;
+}
 .seckill-goods ul {
+    display: none;
     margin-right: -13px;
     /* border:1px solid black; */
 }
