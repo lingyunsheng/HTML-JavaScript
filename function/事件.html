@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 什么是事件
+        js -》 交互 页面交互
+        js -》 事件驱动
+
+        用户 html元素 产生一个事件 事件 主动的 调用的设定  方法 函数
+        事件源 产生事件的地方
+        事件的类型 点击 键盘
+        事件的对象 记录好信息
+        事件的处理程序 函数
+
+        注册 把以后会发生的事情 先提前报备一下
+
+        两种方式
+        html的属性
+        属性名 on+事件的名字 onclick 
+        属性值 方法名
+                直接在html设定
+                通过js元素的对象设定
+
+            通过调用 系统提供的方法
+     -->
+     <div id="div1" onclick="add()" >div1</div>
+     <div id="div2">div2</div>
+     <script>
+         var num=0;
+       function add (){
+           console.log('点击了:'+ ++num);
+       }
+       function add2 (){
+        console.log('点击:'+ ++num);
+       }
+       var div2 = document.getElementById('div2');
+       div2.onclick = add;
+    //    div.onclick =null;
+    // div1.addEventListener('click',add(),事件处理方式 false 冒泡)
+    div2.addEventListener('click',add2);
+     
+     </script>
+</body>
+</html>

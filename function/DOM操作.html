@@ -16,15 +16,50 @@
         线性  单链表 循环链表 队列 栈 数组
         树形  二叉树 平衡树  红黑树
         网状  有向图 无向图 寻路算法 A*算法 -->
-        <div>
+        <!-- DOM 树
+        Document 节点 只有一个
+        标签节点 元素节点
+        文本节点 
+        标签节点 元素节点 样子 样式 找到这些节点
+        3种 最常用的方法 
+        通过ID
+        通过标签名
+        通过class来查找 -->
+      
+        <!-- id 唯一性 
+  var div1= document.getElementById('div1'); 节点 document 上使用
+  tag 任意节点
+        -->
+
+        <!-- 创建节点 添加到DOM树 删除节点  -->
+        <!-- <div id="div1">
             div1
-            <p>p1</p>
-            <p>p2</p>
+            <p id="p1" class="txt">p1</p>
+            <p id="p2">p2</p>
             div1
+        </div> -->
+        <div id="div1">
+            <div id="div2">div2</div>
+
         </div>
     <script>
+    //    var div1= document.getElementById('div1');
+    //    var p =document.getElementsByTagName('p');//返回的是一个数组
+    //    var ps = document.getElementsByClassName('txt');
         
-        
+        var div1 = document.getElementById('div1');
+        //创建一个p标签
+        var p =document.createElement('p');
+        //创建一个文本节点
+        var ptxt =document.createTextNode('赵丽颖死了');
+        p.appendChild(ptxt)
+        //添加节点
+        div1.appendChild(p);
+        //删除节点
+        var div2 =document.getElementById('div2');
+        div1.removeChild(div2);
+        //自己把自己干掉
+        // div2.parentNode.removeChild(div2);
     </script>
 </body>
 </html>

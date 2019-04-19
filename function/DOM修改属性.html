@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" dat="1">
+        <img id="img"  class="box" src="" alt="">
+        <p id="p1">p1</p>
+    </div>
+    <script>
+        var img1=document.getElementById('img');
+        img1.src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2328873263,1601203834&fm=179&app=42&f=JPEG?w=121&h=140";
+        img1.className="zly";
+        img1.style.color="red";
+        //获取属性
+        img1.getAttribute('dat');
+        // 设置属性
+        img1.setAttribute('dat','2');
+        img1.removeAttribute('dat');
+        var p1= document.getElementById('p1');
+        p1.innerHTML ="赵丽颖死了 ";
+
+        
+    </script>
+</body>
+</html>

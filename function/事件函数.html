@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 事件函数 发生的时候 操作function -->
+    <div id="div1">div1</div>
+    <input type="text" id="input1">
+    <script>
+        var div1 = document.getElementById('div1');
+        // 事件对象 event 提供了详细的信息
+        // 具体发生事件的元素 鼠标的位置 点击的状态 键盘的按键
+        // div1.addEventListener('click', add);  
+        var input1 = document.getElementById('input1');
+        input1.addEventListener('keydown',add);
+        function add(event) {
+            console.log(event);
+            event.preventDefault();
+        }
+      
+
+    </script>
+
+</body>
+
+</html>
