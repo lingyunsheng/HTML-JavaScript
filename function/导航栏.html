@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 浏览器导航栏信息 -->
+    <!-- window.location对象 -->
+    <!-- 属性 url的各个部分
+    location.href;
+    location.toString() -->
+    <!-- 刷新页面 打开新的页面 -->
+    <script>
+        // var bcf = confirm("是否确定");
+        // // location.reload();
+        // // localtion.replace();
+        // if(bcf){
+        //     location.replace("http://www.baidu.com");
+        // }else 
+        //     location.reload();
+
+            // 浏览器的历史 前进后退
+            // history.back();
+            // history.forward();
+            // history.go(-2);
+            // 浏览器的信息 版本 厂家
+            // navigator
+            // 获取浏览器的分辨率
+            //计时器 
+            //循环执行 var sil =   setInterval(函数名, 时间)
+            // 停掉： clearIterval(sil);
+            // 执行一次 var sil = setTimeout(函数名, 时间)
+            // 停掉 clearTimeout(sil);
+
+            var num = 0;
+            function add(){
+                console.log("num="+ ++num);
+            }
+            var sil = setInterval(add,1000);
+            function end(){
+                console.log("settimeout")
+                clearInterval(sil);
+            }
+            setTimeout(end,10000);
+        
+
+    
+    </script>
+</body>
+</html>
