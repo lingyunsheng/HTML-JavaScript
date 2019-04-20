@@ -388,9 +388,44 @@ a {
 }
 .footer {
     margin: 0 auto;
-    background-color: #333;
+    /* background-color: #333; */
 }
 .footer .container {
     font-size: 16px;
   
+}
+.footer .tabbar-nav li {
+    float: left;
+ 
+}
+.footer .tabbar-nav li a {
+    font-size: 14px;
+    color: #424242;
+    padding-left: 2px;
+}
+.footer .tabbar-nav li span {
+    font-size: 12px;
+    color: #424242;
+    font-family: sans-serif;
+    margin: 0.5em;
+
+}
+.footer .tabbar-nav li a:hover {
+    color: #ff6700;
+}
+.footer .container {
+    font-size: 14px;
+}
+.footer .tabbar-info a{
+    font-size: 14px;
+    color: #424242;
+    padding-left: 2px;
+}
+.footer .tabbar-info span {
+    font-size: 14px;
+    color: #424242;
+    padding-left: 2px;
+}
+.footer .tabbar-info a:hover {
+    color: #ff6700;
 }
