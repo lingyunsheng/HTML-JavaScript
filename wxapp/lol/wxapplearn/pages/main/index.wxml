@@ -1,4 +1,33 @@
 <!--pages/main/index.wxml-->
 <!-- <text>pages/main/index.wxml</text> -->
-<view class="container">说说你为什么讨厌赵丽颖</view>
-<p>没有理由谢谢</p>
+<view class="container">
+<view class="searchbar">
+
+
+<input type="search" class="searchbar-text" placeholder="搜索目的地/交通/景点/酒店"></input>
+<input type="button"  class="searchbar-btn">
+
+</input>
+
+</view>
+<view class="swiper">
+    <swiper indicator-dots="{{indicatorDots}}"  
+           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">  
+         <block wx:for="{{imgUrls}}">  
+           <swiper-item>  
+              <navigator url="{{item.link}}" hover-class="navigator-hover">  
+               <image src="{{item.url}}" class="slide-image" width="355" height="150" />  
+              </navigator>  
+           </swiper-item>  
+         </block>  
+ </swiper>  
+</view>
+<view class="trip">
+     
+
+</view>
+
+
+
+</view>
+

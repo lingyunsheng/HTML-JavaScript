@@ -1,26 +1,10 @@
-// pages/main/index.js
+// pages/goal/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      {
-        link: '/pages/main/index',
-        url: '/images/98a90b9759ee3d6dff9035dd4d166d224e4adee3.jpg'
-      }, {
-        link: '/pages/main/index',
-        url: '/images/98a90b9759ee3d6dff9035dd4d166d224e4adee3.jpg'
-      }, {
-        link: '/pages/main/index',
-        url: '/images/98a90b9759ee3d6dff9035dd4d166d224e4adee3.jpg'
-      }
-    ],
-    indicatorDots: true,  //小点
-    autoplay: true,  //是否自动轮播
-    interval: 3000,  //间隔时间
-    duration: 3000,  //滑动时间
 
   },
 
@@ -28,7 +12,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(1)
 
   },
 
@@ -36,42 +19,42 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(2)
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(3)
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log(4)
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log(5)
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-   
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-   
+
   },
 
   /**
