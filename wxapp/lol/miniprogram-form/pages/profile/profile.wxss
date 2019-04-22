@@ -1,0 +1,11 @@
+/* pages/profile/profile.wxss */
+
+page{
+    background-color: #f8f8f8;
+    line-height: 1.6;
+
+}
+.section {
+    padding: 0 15px;
+    margin-top: 15px;
+}
