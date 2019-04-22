@@ -32,3 +32,19 @@ window.onscroll = function () {
     }
     console.log(scrollTop);
 }
+
+function run() {
+    var login = document.getElementById('login');
+    var regist = document.getElementById('regist');
+    login.onclick = function () {
+        window.location(log.html);
+    };
+    regist.onclick = function () {
+        window.location(regist.html);
+    };
+
+
+
+}
+
+

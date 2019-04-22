@@ -237,10 +237,10 @@ a {
     margin: -68px 0 22px;
 
 }
-.seckill-navfixed {
-    /* position: fixed;
-    top:60px; */
-}
+/* .seckill-navfixed {
+    position: fixed;
+    top:60px;
+} */
 
 .seckill-nav ul {
     height: 68px;
@@ -429,3 +429,4 @@ a {
 .footer .tabbar-info a:hover {
     color: #ff6700;
 }
+

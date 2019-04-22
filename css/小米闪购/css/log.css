@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    width: 100%;
+}
+.topbar {
+    
+    /* background: red; */
+    background-color: #fff;
+    height: 98px;
+}
+.container {
+    width: 1226px;
+    margin: 0 auto;
+    height: 98px;
+    /* background-color: #e5e5e5; */
+}
+.topbar-nav {
+     margin-top: 10px;
+     /* border:1px solid #000; */
+     float:left;
+    
+     
+}
+.topbar-nav .topbar-logo {
+    float: left;
+    background: url(https://s01.mifile.cn/i/mi-logo.png)no-repeat ;
+    background-color: #ff6700;
+    margin-top: 5px;
+    margin-right: 10px;
+  
+}
+
+
+.topbar-nav .topbar-header {
+    float: left;
+    vertical-align: center;
+ 
+   
+}
+.topbar-nav .topbar-header p {
+    font-size: 8px;
+}
