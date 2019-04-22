@@ -21,3 +21,8 @@ return h<=H
 简单查找 时间开销是 n
 二分查找写法是有规律的
 min max
+x y 要找的是最小的可疑的min 可以来优化的
+找中间 mid = x+((y-x)>>1) 小了 
+mid + 1新的x
+大了mid-1 新的y
+log2N
