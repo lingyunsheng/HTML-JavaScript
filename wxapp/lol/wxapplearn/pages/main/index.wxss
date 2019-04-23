@@ -5,6 +5,9 @@
     height: 100%;
     box-sizing: border-box;
 } */
+.slide-image {
+    width: 100%;
+}
 view.text {
     display: flex;
     align-items: center;
