@@ -5,25 +5,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      {
-        link: '/pages/main/index',
-        url: '/images/98a90b9759ee3d6dff9035dd4d166d224e4adee3.jpg'
-      }, {
-        link: '/pages/main/index',
-        url: '/images/98a90b9759ee3d6dff9035dd4d166d224e4adee3.jpg'
-      }, {
-        link: '/pages/main/index',
-        url: '/images/98a90b9759ee3d6dff9035dd4d166d224e4adee3.jpg'
-      }
-    ],
-    indicatorDots: true,  //小点
-    autoplay: true,  //是否自动轮播
-    interval: 3000,  //间隔时间
-    duration: 3000,  //滑动时间
-
+    city:"南昌",
+  //   imgUrls: [
+  //     'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+  //     'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
+  //     'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
+  //   ],
+  //   indicatorDots: false,
+  //   autoplay: false,
+  //   interval: 5000,
+  //   duration: 1000,
+   
+  // },
+  // changeIndicatorDots(e) {
+  //   this.setData({
+  //     indicatorDots: !this.data.indicatorDots
+  //   })
+  // },
+  // changeAutoplay(e) {
+  //   this.setData({
+  //     autoplay: !this.data.autoplay
+  //   })
+  // },
+  // intervalChange(e) {
+  //   this.setData({
+  //     interval: e.detail.value
+  //   })
+  // },
+  // durationChange(e) {
+  //   this.setData({
+  //     duration: e.detail.value
+  //   })
+  // },
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -64,14 +78,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-   
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-   
+
   },
 
   /**

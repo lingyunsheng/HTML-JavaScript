@@ -1,33 +1,40 @@
-<!--pages/main/index.wxml-->
+<!-- pages/main/index.wxml -->
 <!-- <text>pages/main/index.wxml</text> -->
+<!-- <view class="container">
+  <view class="searchbar">
+    <input type="search" class="searchbar-text" placeholder="搜索目的地/交通/景点/酒店"></input>
+    <input type="button" class="searchbar-btn"></input>
+  </view>
+  <swiper indicator-dots="true" 
+          indicator-color="red" 
+          indicator-active-color="white"
+          autoplay="false" 
+          current="0"
+          interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+ 
+  <view class="trip"></view>
+</view> -->
 <view class="container">
-<view class="searchbar">
+  <scroll-view>
+    < view class="header">
+      <view class="header_hd">
+        <text>{{city}}</text>
+        <view class="downtips"></view>
+      </view>
+      <view class="header_bd">
+        <view class="header_bd-btn header_bd-hot">正在上映</view>
+         <view class="header_bd-btn header_bd-waiting">即将上映</view>
+      </view>
+      <view class="header_ft">
+        <image src="../../images/search-btn.png" />
+      </view>
+    </view>
 
-
-<input type="search" class="searchbar-text" placeholder="搜索目的地/交通/景点/酒店"></input>
-<input type="button"  class="searchbar-btn">
-
-</input>
-
+  </scroll-view>
 </view>
-<view class="swiper">
-    <swiper indicator-dots="{{indicatorDots}}"  
-           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">  
-         <block wx:for="{{imgUrls}}">  
-           <swiper-item>  
-              <navigator url="{{item.link}}" hover-class="navigator-hover">  
-               <image src="{{item.url}}" class="slide-image" width="355" height="150" />  
-              </navigator>  
-           </swiper-item>  
-         </block>  
- </swiper>  
-</view>
-<view class="trip">
-     
-
-</view>
-
-
-
-</view>
-
