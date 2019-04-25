@@ -1,0 +1,9 @@
+<!-- index.wxml -->
+<view class="map-box">
+  <map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" markers="{{markers}}" show-location='true' polyline="{{polyline}}" bindmarkertap="toDrive">
+    <!-- 中心坐标 -->
+    <cover-image src="../../images/point-in-map.png" class="map-icon_point"></cover-image>
+    <!-- icon -->
+    <cover-image src="../../images/reset.png" class="map-icon map-icon_reset" bindtap="toCurrentLocation"></cover-image>
+  </map>
+</view>
