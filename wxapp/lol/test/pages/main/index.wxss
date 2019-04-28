@@ -1,1 +1,10 @@
 /* pages/main/index.wxss */
+.contanier {
+    width: 100%;
+    height: 100%;
+}
+.search {
+    margin-top: 10px;
+    position: absolute;
+
+}

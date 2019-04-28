@@ -1,13 +1,37 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
+
     "pages/main/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "007ACC",
+    "navigationBarTitleText": "大人小世界",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "000000",
+    "backgroundColor": "#eeeeee",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/main/index",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/hover-shouye.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/main/index",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/hover-shouye.png",
+        "text": "旅程"
+      },
+      {
+        "pagePath": "pages/main/index",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/hover-shouye.png",
+        "text": "我的"
+      }]
   }
 }
