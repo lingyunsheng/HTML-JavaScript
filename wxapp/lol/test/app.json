@@ -1,12 +1,16 @@
 {
   "pages": [
-
-    "pages/main/index"
+    
+   
+   "pages/index/index",
+    "pages/shortVideo/index",
+    "pages/menu/index",
+    "pages/mine/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "007ACC",
-    "navigationBarTitleText": "大人小世界",
+    "navigationBarTitleText": "腾讯视频",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -16,22 +20,29 @@
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/main/index",
+        "pagePath": "pages/index/index",
         "iconPath": "images/shouye.png",
         "selectedIconPath": "images/hover-shouye.png",
         "text": "首页"
       },
       {
-        "pagePath": "pages/main/index",
+        "pagePath": "pages/shortVideo/index",
         "iconPath": "images/shouye.png",
         "selectedIconPath": "images/hover-shouye.png",
-        "text": "旅程"
+        "text": "短视频"
       },
       {
-        "pagePath": "pages/main/index",
+        "pagePath": "pages/menu/index",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/hover-shouye.png",
+        "text": "频道"
+      },
+      {
+        "pagePath": "pages/mine/index",
         "iconPath": "images/shouye.png",
         "selectedIconPath": "images/hover-shouye.png",
         "text": "我的"
-      }]
+      }
+    ]
   }
 }

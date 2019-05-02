@@ -1,2 +1,18 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<!-- pages/index/index.wxml -->
+<view class="container">
+    <view class="search">
+        <view class="search-input">
+            <input type="button" class="search-input__btn" value="搜索" />
+            <input type="text" class="search-input__text" placeholder="请输入片名、主演或导演" />
+        </view>
+    </view>
+    <view class="swiper">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image src="{{item}}" class="slide-image" width="355" height="150" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view>

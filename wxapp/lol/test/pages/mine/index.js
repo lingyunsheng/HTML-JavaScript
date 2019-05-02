@@ -1,40 +1,11 @@
-// pages/index/index.js
+// pages/mine/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      '../../images/mine.png',
-      '../../images/mine.png',
-      '../../images/mine.png'
-    ],
-    indicatorDots: true,
-    autoplay: true,
-    interval: 5000,
-    duration: 1000
 
-  },
-  changeIndicatorDots(e) {
-    this.setData({
-      indicatorDots: !this.data.indicatorDots
-    })
-  },
-  changeAutoplay(e) {
-    this.setData({
-      autoplay: !this.data.autoplay
-    })
-  },
-  intervalChange(e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-  durationChange(e) {
-    this.setData({
-      duration: e.detail.value
-    })
   },
 
   /**

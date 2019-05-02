@@ -1,5 +1,0 @@
-<view class="container">
-<view class="search">
-    <input type="text"  placeholder="旅拍"/>
-</view>
-</view>

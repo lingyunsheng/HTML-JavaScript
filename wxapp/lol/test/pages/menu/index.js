@@ -1,4 +1,4 @@
-// pages/main/index.js
+// pages/menu/index.js
 Page({
 
   /**
