@@ -2,7 +2,7 @@
 <view class="container">
     <view class="search">
         <view class="search-input">
-            <input type="button" class="search-input__btn" value="搜索" />
+            <input type="button" class="search-input__btn" value="搜索"/>
             <input type="text" class="search-input__text" placeholder="请输入片名、主演或导演" />
         </view>
     </view>
@@ -15,4 +15,6 @@
             </block>
         </swiper>
     </view>
+
+    
 </view>

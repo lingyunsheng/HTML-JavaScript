@@ -27,20 +27,20 @@
       },
       {
         "pagePath": "pages/shortVideo/index",
-        "iconPath": "images/shouye.png",
-        "selectedIconPath": "images/hover-shouye.png",
+        "iconPath": "images/shortVideo.png",
+        "selectedIconPath": "images/hover-shortVideo.png",
         "text": "短视频"
       },
       {
         "pagePath": "pages/menu/index",
-        "iconPath": "images/shouye.png",
-        "selectedIconPath": "images/hover-shouye.png",
+        "iconPath": "images/class.png",
+        "selectedIconPath": "images/hover-class.png",
         "text": "频道"
       },
       {
         "pagePath": "pages/mine/index",
-        "iconPath": "images/shouye.png",
-        "selectedIconPath": "images/hover-shouye.png",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/hover-mine.png",
         "text": "我的"
       }
     ]
