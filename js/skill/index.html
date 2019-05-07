@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="?name=lilei&sex=female">
+        Search
+    </a>
+    <a href="?name=hanmeimei">
+        hanmeimei
+    </a>
+    <script>
+    const search = location.search;
+    console.log(search);
+    if(search){
+        // 文件api 将本地文件url显示
+        const paramsObj = new URLSearchParams(search);
+        console.log(paramsObj);
+        console.log(paramsObj.get('name'));
+    }
+    function getQueryString(){
+        let obj={};
+        // ?name=lilei&sex=female
+        // substr 截取字符串字串
+        const search = location.search.substr(1);
+        // split分割
+        // /&/g g 是正则表达式的修饰符
+        const searchArr = search.split(/&/g);
+        console.log(searchArr);
+        // ["name=lilei", "sex=female"]
+        searchArr.forEach(item=>{
+            const ret = item.split('=');
+            // ['name','lilei'];
+            obj[ret[0]]=ret[1];
+        })
+        return obj;
+        // return {
+        //     name:'lilei',
+        //     sex:'female'
+        // }
+
+    }
+    getQueryString();
+    </script>
+    
+</body>
+</html>
