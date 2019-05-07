@@ -7,6 +7,7 @@ App({
     } else {
       wx.cloud.init({
         traceUser: true,
+        env:'lingyunsheng-0e0b69'
       })
     }
 
