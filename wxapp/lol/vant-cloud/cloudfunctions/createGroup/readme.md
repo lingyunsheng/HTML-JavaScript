@@ -1,0 +1,1 @@
+- 云函数装连接服务器，装了才可以增删改差 npm install --save wx-server-sdk@latest
