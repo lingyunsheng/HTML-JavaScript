@@ -1,0 +1,30 @@
+<!-- index.wxml -->
+<view class="container">
+    <view class="page__hd">
+        <scroll-view scroll-x="true" style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollLeft}}" scroll-with-animation class="my-scroll">
+            <view class="navbar">
+                <view wx:for="{{navbar}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="navbarTap">
+                    <text class="navbar-text{{currentTab==idx ? 'active':''}}">{{item}}</text>
+                </view>
+                <!-- <view hidden="{{currentTab! ==0}}">
+                tab_01
+            </view>
+             <view hidden="{{currentTab! ==1}}">
+                tab_02
+            </view>
+             <view hidden="{{currentTab! ==2}}">
+                tab_03
+            </view> -->
+            </view>
+        </scroll-view>
+        <view class="swiper">
+            <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                <block wx:for="{{imgUrls}}">
+                    <swiper-item>
+                        <image src="{{item}}" class="slide-image" width="355" height="150" />
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+    </view>
+</view>

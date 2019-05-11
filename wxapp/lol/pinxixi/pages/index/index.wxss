@@ -1,0 +1,56 @@
+.container {
+    border-top: 1rpx solid #e5e5e5;
+    background-color: #fff;
+    min-height: 100%;
+    display: flex;
+}
+
+.my-scroll {
+    width: 100%;
+    white-space: nowrap;
+}
+
+
+
+.navbar {
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar-item {
+    flex: 1.0;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: -1px;
+}
+
+.navbar-text {
+    display: block;
+    width: 80rpx;
+    padding: 10rpx;
+    margin: auto;
+}
+
+.navbar-text.active {
+    border-bottom: 2px solid #000;
+    color: red;
+    font-weight: bold;
+}
+
+.navbar-text.active:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 4px solid red;
+    transition: 0.2s all linear;
+}
+
+.hidden {
+    display: none;
+}
+.swiper{
+    width: 100%;
+}
