@@ -138,7 +138,7 @@ Component({
         emptyGridsBefore.push(preMonthDays - (emptyDays - i))
       }
       let after = (42 - thisMonthDays - emptyDays) - 7 >= 0 ? (42 - thisMonthDays - emptyDays) - 7 : (42 - thisMonthDays - emptyDays)
-      for (let i = 0; i <= after; i++) {
+      for (let i = 1; i <= after; i++) {
         emptyGridsAfter.push(i)
       }
       this.setData({
