@@ -10,4 +10,4 @@
 - wx.startPullDownRefresh(); onload 把生命周期交给 onPullDownRefresh()
   api 请求
   wx.stopPullDownRefresh();
-- 复杂项目的组件数量比较多 /style/base.wxss 多个组件都依赖的基础样式 
+- 复杂项目的组件数量比较多 /style/base.wxss 多个组件都依赖的基础样式

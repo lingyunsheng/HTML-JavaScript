@@ -1,7 +1,7 @@
 // miniprogram/pages/trends/trends.js
 const github = require('../../api/github.js');
-const timeRange = [
 
+const timeRange = [
   { label: 'Daily', value: 'Daily' },
   { label: 'Weekly', value: 'Weekly' },
   { label: 'Monthly', value: 'Monthly' }
@@ -21,7 +21,7 @@ const languages = [
   'Shell', 'SQL', 'Swift',
   'TeX',
   'Vue'
-].map(it =>({label:it, value:it}));
+].map(it => ({ label: it, value: it }));
 
 Page({
 
@@ -29,36 +29,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-    since:timeRange[0],
-    lang:languages[0],
+    since: timeRange[0],
+    lang: languages[0],
     trends: [],
     selectorValues: [timeRange, languages],
-    selectedIndices:[0,0]
+    selectedIndices: [0, 0]
   },
   reloadData() {
     const { selectedIndices } = this.data;
-    const since =timeRange[selectedIndices[0]].value.toLowerCase();
-    const lang = languages[selectedIndices[0]].value.toLowerCase();
+    const since = timeRange[selectedIndices[0]]
+    .value.toLowerCase();
+    const language = languages[selectedIndices[1]]
+    .value.toLowerCase();
     // 返回一个 promise
-    github.trendings({since,lang})
-      .then(data => {
-        console.log(data);
-        this.setData({
-          trends: data
-        })
-        wx.stopPullDownRefresh();
+    github.trendings({since, language})
+    .then(data => {
+      console.log(data);
+      this.setData({
+        trends: data
       })
-      .catch(() => {
-        wx.stopPullDownRefresh();
-      })
+      wx.stopPullDownRefresh();
+    })
+    .catch(() => {
+      wx.stopPullDownRefresh();
+    })
   },
-  changeFilte(event){
+  changeFilter(event) {
     const selectedIndices = event.detail.value;
     this.setData({
       selectedIndices
     });
     wx.startPullDownRefresh();
-
   },
 
   /**
