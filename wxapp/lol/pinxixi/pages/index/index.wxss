@@ -1,56 +1,70 @@
-.container {
-    border-top: 1rpx solid #e5e5e5;
-    background-color: #fff;
-    min-height: 100%;
-    display: flex;
-}
 
-.my-scroll {
-    width: 100%;
+.nav{
+  
+    height: 90rpx;
+    background: #fff;
+    margin-bottom: 0;
+    border-bottom: 1rpx solid #eeeeee;
+    border-top: 1rpx solid #eeeeee;
+    overflow: hidden;
     white-space: nowrap;
-}
-
-
-
-.navbar {
-    display: flex;
-    border-bottom: 1px solid #eee;
-}
-
-.navbar-item {
-    flex: 1.0;
+  }
+  .nav text{
+    /* 等分 */
+    display: inline-block;
     text-align: center;
-    font-size: 14px;
-    color: #999;
-    margin-bottom: -1px;
-}
-
-.navbar-text {
-    display: block;
-    width: 80rpx;
-    padding: 10rpx;
-    margin: auto;
-}
-
-.navbar-text.active {
-    border-bottom: 2px solid #000;
+    line-height: 30rpx;
+    height: 90rpx;
+    width: 90rpx;
+    text-overflow: ellipsis;
+  }
+  
+   
+  /* 被选中的样式 */
+  .nav text.cur{
     color: red;
-    font-weight: bold;
-}
-
-.navbar-text.active:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    border-bottom: 4rpx solid  red;
+  }
+  .scrollView{
+      width: 100%;
+  }
+  swiper{
     width: 100%;
-    border-bottom: 4px solid red;
-    transition: 0.2s all linear;
-}
-
-.hidden {
-    display: none;
-}
-.swiper{
+    height: 340rpx;
+  }
+  swiper image{
+    display: block;
     width: 100%;
-}
+    height: 100%;
+  }
+  .scroll-view {
+    background: #fff;
+    margin-top: 4rpx;
+  }
+  .block1 ul {
+    display: inline-block;
+  }
+  .block1 li {
+    display: inline-block;
+    font-size: 35rpx;
+    padding: 4rpx 4rpx;
+  }
+  .block1 image {
+    width: 40rpx;
+    height: 40rpx;
+  }
+  .block1 .text {
+    vertical-align: center;
+    line-height: 20rpx;
+    
+    
+  }
+  .block2 li{
+    display: inline-block;
+    font-size: 35rpx;
+    padding: 4rpx 4rpx;
+  }
+  .block2 image {
+    width: 40rpx;
+    height: 40rpx;
+  }

@@ -1,30 +1,52 @@
 <!-- index.wxml -->
 <view class="container">
-    <view class="page__hd">
-        <scroll-view scroll-x="true" style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollLeft}}" scroll-with-animation class="my-scroll">
-            <view class="navbar">
-                <view wx:for="{{navbar}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="navbarTap">
-                    <text class="navbar-text{{currentTab==idx ? 'active':''}}">{{item}}</text>
+    <scroll-view scroll-left="{{scrollLeft}}" scroll-x="{{true}}">
+        <view class="page__hd">
+            <view class="nav scrollMove" style="left:{{viewleft}}rpx">
+                <text class='{{curNum==index?"cur":""}}' data-navindex="{{index}}" wx:for="{{nav}}" wx:key=" " bindtap='tabnav'>
+                    {{item}}
+                </text>
+            </view>
+            <!-- 首页热门 -->
+            <view hidden='{{curNum!==0}}'>
+                <view class="swiper">
+                    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="red">
+                        <block wx:for="{{imgUrls}}">
+                            <swiper-item>
+                                <image src="{{item}}" bindtap="imagesDetail" />
+                            </swiper-item>
+                        </block>
+                    </swiper>
                 </view>
-                <!-- <view hidden="{{currentTab! ==0}}">
-                tab_01
+                <view class="scroll-view">
+                    <scroll-view class="scrollView" scroll-x="{{true}}" scroll-left="{{scrollLeft}}">
+                        <view class="block1">
+                            <block wx:for="{{block1lists}}">
+                                <ul class="items">
+                                    <li class="item">
+                                        <image src="{{item.icons}}" />
+                                       <text class="text">{{item.name}}</text> 
+                                    </li>
+                                </ul>
+                            </block>
+                        </view>
+                           <view class="block2">
+                            <block wx:for="{{block2lists}}">
+                                <ul class="items">
+                                    <li class="item">
+                                        <image src="{{item.icons}}" /> 
+                                       <text > {{item.name}}</text>
+                                    </li>
+                                </ul>
+                            </block>
+                        </view>
+                    </scroll-view>
+                </view>
             </view>
-             <view hidden="{{currentTab! ==1}}">
-                tab_02
-            </view>
-             <view hidden="{{currentTab! ==2}}">
-                tab_03
-            </view> -->
-            </view>
-        </scroll-view>
-        <view class="swiper">
-            <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-                <block wx:for="{{imgUrls}}">
-                    <swiper-item>
-                        <image src="{{item}}" class="slide-image" width="355" height="150" />
-                    </swiper-item>
-                </block>
-            </swiper>
+            <!-- 男装 -->
+            <view hidden='{{curNum!==1}}'>我是排行</view>
+            <!-- 美妆 -->
+            <view hidden='{{curNum!==2}}'>我是搜索</view>
         </view>
-    </view>
+    </scroll-view>
 </view>
