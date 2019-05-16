@@ -27,3 +27,5 @@ SELECT * from users
     AND password =
     'password%27'   
 escape 解决部分安全问题 编码
+
+unescape("password%27")
