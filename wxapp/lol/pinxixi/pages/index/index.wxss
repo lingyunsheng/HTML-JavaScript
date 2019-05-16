@@ -1,3 +1,7 @@
+.container {
+  overflow: hidden;
+
+}
 
 .nav{
   
@@ -8,6 +12,8 @@
     border-top: 1rpx solid #eeeeee;
     overflow: hidden;
     white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 0;
   }
   .nav text{
     /* 等分 */
@@ -24,7 +30,10 @@
   .nav text.cur{
     color: red;
     border-bottom: 4rpx solid  red;
+   
+    height: 89rpx;
   }
+  
   .scrollView{
       width: 100%;
   }
@@ -37,34 +46,148 @@
     width: 100%;
     height: 100%;
   }
-  .scroll-view {
+  .scroll-view .scrollView {
     background: #fff;
+    width: 100%;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .scrollView .block1 {
+    margin-bottom: 20rpx;
+   width: 100%;
+   padding: 0;
+   
+
+  }
+  .scroll-view .scrollView .block1:nth-child(2){
+         margin-bottom: 24rpx;
+  }
+  .scroll-view .block1 ul {
+    display: inline-block;
+    text-align: center;
+    width: 150rpx;
+  }
+ 
+  .scroll-view .block1 image {
+    width: 76rpx;
+    height: 76rpx;
+  }
+  .scroll-view .block1 .text {
+    color: #777777;
+    font-size: 22rpx;
+    
+    
+  }
+  .scrollView .block2 {
+    margin-bottom: 20rpx;
+   width: 100%;
+   padding: 0;
+   
+
+  }
+  .scroll-view .scrollView .block2:nth-child(2){
+         margin-bottom: 24rpx;
+  }
+  .scroll-view .block2 ul {
+    display: inline-block;
+    text-align: center;
+    width: 150rpx;
+  }
+ 
+  .scroll-view .block2 image {
+    width: 76rpx;
+    height: 76rpx;
+  }
+  .scroll-view .block2 .text {
+    color: #777777;
+    font-size: 22rpx;
+    
+    
+  }
+  .scroll-view .scroll-line {
+    transform: scaleX(0.221);
+    background-color: #e8e8e8;
+    height: 4rpx;
+    margin-top: 16rpx;
+    margin-bottom: 10rpx;
+    position: relative;
+  }
+  .scroll-line .scrollMove {
+    position: absolute;
+    background-color: red;
+    height: 4rpx;
+    width: 480rpx;
+
+  }
+
+  .listGoods{
+    width: 100%;
+    margin-top: 10rpx;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 4rpx solid #e5e5e5;
+  }
+  .listGoods .list-goods {
+    display: inline-block;
+ 
+    width: 360rpx;
+    height: 500rpx;
+    border: 4rpx solid #e5e5e5;
+
+  }
+  .listGoods .list-goods .goods-image{
+    width: 360rpx;
+    height: 300rpx;
+
+  }
+  .listGoods .list-goods .content {
+    font-size: 24rpx;
+    color: #000;
+    text-align: center;
+
+
+
+  }
+  .listGoods .list-goods .Price {
     margin-top: 4rpx;
+    vertical-align: top;
+
   }
-  .block1 ul {
-    display: inline-block;
+  .listGoods .list-goods .Price .price {
+    color: red;
+    font-size: 26rpx;
+    padding-right: 4rpx;
+
   }
-  .block1 li {
-    display: inline-block;
-    font-size: 35rpx;
-    padding: 4rpx 4rpx;
+  .listGoods .list-goods .Price .pin {
+    color: #3f3c3cdc;
+    font-size: 20rpx;
+
   }
-  .block1 image {
-    width: 40rpx;
-    height: 40rpx;
+
+  .invitation {
+    width: 450rpx;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    background: #000;
+    opacity: 0.9;
+    z-index:999;
+    color: #fff;
+    border-radius: 14rpx;
+
   }
-  .block1 .text {
-    vertical-align: center;
-    line-height: 20rpx;
-    
-    
+  .invite.pic image{
+    width: 70rpx;
+    height: 70rpx;
+    padding: 14rpx;
   }
-  .block2 li{
-    display: inline-block;
-    font-size: 35rpx;
-    padding: 4rpx 4rpx;
+  .invite.content {
+    position: absolute;
+    top: 30rpx;
+    left: 88rpx;
+    font-size: 30rpx;
+    padding-left: 8rpx;
   }
-  .block2 image {
-    width: 40rpx;
-    height: 40rpx;
-  }
+  

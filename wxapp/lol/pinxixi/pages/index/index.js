@@ -7,20 +7,99 @@ Page({
       '汽车', '鞋包', '百货', '女装', '水果', '运动', '电脑', '家纺',
       '内衣', '家装', '母婴', '家具'],
     curNum: 0,
-    goods: [],
+    name: 0,
+    viewleft:0,
+    title:0,
+    show:true,
+    animationData:{},
+    goods: [
+      {
+        url: '../goods1/goods1',
+        src: '../../images/two.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '10.9',
+        pin: '已团114万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods1/goods1',
+        src: '../../images/three.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods1/goods1',
+        src: '../../images/four.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods1/goods1',
+        src: '../../images/five.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件'
+      },
+      {
+        url: '../goods1/goods1',
+        src: '../../images/six.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods1/goods1',
+        src: '../../images/seven.png',
+        content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods1/goods1',
+        src: '../../images/eight.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods1/goods1',
+        src: '../../images/nine.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods1/goods1',
+        src: '../../images/ten.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+
+
+    ],
     categories: [],
     activeCategoryId: 0,
     banners: [],
     toView: 'red',
     scrollLeft: 100,
     imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640',
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
+      '//t00img.yangkeduo.com/t04img/images/2018-06-03/a2a9c4f596faa47e2a387751f4aa8e39.jpeg?imageMogr2/format/webp/quality/50',
+      '//t00img.yangkeduo.com/t09img/images/2018-06-01/d48e3e2294cea2ddf7f52211d218657f.jpeg?imageMogr2/format/webp/quality/50',
+      '//t00img.yangkeduo.com/t05img/images/2018-06-03/a4a01001373b85b521b1db9e64ff32ee.jpeg?imageMogr2/format/webp/quality/50',
+      '//t00img.yangkeduo.com/t01img/images/2018-06-03/3728f696f66f4a6da1bee861afdf6e73.jpeg?imageMogr2/format/webp/quality/50',
+      '//t00img.yangkeduo.com/t03img/images/2018-06-03/8009baf6f2a86704fb9d137af8bad103.jpeg?imageMogr2/format/webp/quality/50',
+      '//t00img.yangkeduo.com/t05img/images/2018-06-03/af0e581e74acb90343c162a08b0cd1b4.jpeg?imageMogr2/format/webp/quality/50',
+      'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4119613175,2906257134&fm=27&gp=0.jpg',
     ],
     indicatorDots: true,
     autoplay: false,
@@ -28,98 +107,98 @@ Page({
     duration: 1000,
     block1lists: [
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic1.png',
         name: '限时秒杀'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic3.png',
         name: '断码清仓'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic2.png',
         name: '多多矿场'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic4.png',
         name: '品牌馆'
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic5.png',
         name: '多多果园'
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic10.png',
         name: '充值中心'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic4.png',
         name: '爱逛街'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic5.png',
         name: '9块9特卖'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic2.png',
         name: '电器城'
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic7.png',
         name: '每日好店'
       }
 
     ],
     block2lists: [
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic6.png',
         name: '多多矿场'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic7.png',
         name: '品牌馆'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic8.png',
         name: '多多果园'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic9.png',
         name: '食品超市'
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic11.png',
         name: '一份抽奖'
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic1.png',
         name: '9块9特卖'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic13.png',
         name: '电器城'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic14.png',
         name: '每日好店'
 
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic15.png',
         name: '品牌特卖'
       },
       {
-        icons:'../../images/blkPic1.png',
+        icons: '../../images/blkPic16.png',
         name: '领券中心'
       }
 
@@ -188,6 +267,16 @@ Page({
     this.getCategory();//分类类别
     this.listGoods();//商品列表
     var that = this;
+    // 动画效果
+    var animation = wx.createAnimation();
+    setInterval(function(){
+      var show = !that.data.show;
+      that.setData({
+        animationData:animation.export(),
+        show:show
+      })
+    },9000)
+
 
 
   },
