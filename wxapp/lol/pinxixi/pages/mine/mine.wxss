@@ -1,1 +1,10 @@
 /* pages/mine/mine.wxss */
+
+.container {
+    width: 100%;
+    background: #fff;
+}
+.user__hd button {
+    width: 300rpx;
+    height: 50rpx;
+}

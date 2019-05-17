@@ -5,13 +5,50 @@ Page({
    * 页面的初始数据
    */
   data: {
+    canIUse:wx.canIUse('button.open-type.getUserInfo')
+
+  },
+  onGoUserInfo(e){
+    if(e.detail.userInfo){
+      var that =this;
+      wx.navigateTo({
+        url:'../../pages/index/index'
+      })
+    }else{
+      wx.showModal({
+        title:'警告',
+        content:'未授权',
+        showCancel:false,
+        confirmText:'返回授权',
+        success(res){
+          if(resizeBy.confirm){
+            console.log('success')
+          }
+        }
+      })
+    }
 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function (e) {
+    var that =this;
+    wx.getSetting({
+      success:function(res){
+        if(res.authSetting['scope.userInfo']){
+          wx.getUserInfo({
+            success:function(res){
+              that.queryUserInfo();
+              wx.navigateTo({
+                url:'../../pages/index/index'
+              })
+            }
+          })
+        }
+      }
+    })
 
   },
 

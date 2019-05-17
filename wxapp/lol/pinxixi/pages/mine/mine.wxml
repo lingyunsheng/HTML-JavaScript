@@ -1,2 +1,6 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="container">
+    <view class="user__hd" >
+        <button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGoUserInfo"></button>
+    </view>
+</view>

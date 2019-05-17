@@ -1,2 +1,38 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="container">
+    <view class="searchBar">
+        <input type="text" placeholder="胶原美白丸" class="searchBar-text"/>
+        <!-- <icon src="../../images/search.png" /> -->
+    </view>
+    <view class="category"  >
+        <scroll-view  scroll-y="true" class="scroll-view-left" bindscroll="scrollMove">
+            <view class="nav_left_items{{currentTab ==item.index ? 'cur':''}}" 
+            wx:for="{{category}}" wx:key="" 
+            data-index="{{index}}" data-id="{{item.index}}"
+             bindtap="leftNav">
+                {{item.categoryName}}
+            </view>
+          
+
+        </scroll-view>
+
+        <scroll-view scroll-y="true" class="scroll-view-right">
+            <view class="nav_right">
+                <view wx:if="{{category[currentIndex].ishaveChild}}">
+                    <view class="nav_right_items" wx:for="{{category[currentIndex].children}}" wx:key="id">
+                        <navigator url="../index/index">
+                        <image src="{{item.image}}" />
+                        <text >{{item.name}}</text>
+                        
+                        </navigator>
+
+                    </view>
+                </view>
+                <!-- 如果没有数据 -->
+                <view class="nodata_text" wx:else>该类暂无数据</view>
+            </view>
+
+        </scroll-view>
+
+    </view>
+</view>
