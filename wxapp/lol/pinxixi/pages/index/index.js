@@ -14,7 +14,7 @@ Page({
     animationData:{},
     goods: [
       {
-        url: '../goods1/goods1',
+        url: '../goods/goods',
         src: '../../images/two.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '10.9',
@@ -22,7 +22,7 @@ Page({
         title: '商品详情'
       },
       {
-        url: '../goods1/goods1',
+        url: '../goods/goods',
         src: '../../images/three.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
@@ -30,7 +30,7 @@ Page({
         title: '商品详情'
       },
       {
-        url: '../goods1/goods1',
+        url: '../goods/goods',
         src: '../../images/four.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
@@ -38,14 +38,14 @@ Page({
         title: '商品详情'
       },
       {
-        url: '../goods1/goods1',
+        url: '../goods/goods',
         src: '../../images/five.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
         pin: '已团3万件'
       },
       {
-        url: '../goods1/goods1',
+        url: '../goods/goods',
         src: '../../images/six.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
@@ -53,7 +53,7 @@ Page({
         title: '商品详情'
       },
       {
-        url: '../goods1/goods1',
+        url: '../goods/goods',
         src: '../../images/seven.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
         price: '29.9',
@@ -61,7 +61,7 @@ Page({
         title: '商品详情'
       },
       {
-        url: '../goods1/goods1',
+        url: '../goods/goods',
         src: '../../images/eight.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
@@ -69,7 +69,7 @@ Page({
         title: '商品详情'
       },
       {
-        url: '../goods1/goods1',
+        url: '../goods/goods',
         src: '../../images/nine.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
@@ -77,7 +77,7 @@ Page({
         title: '商品详情'
       },
       {
-        url: '../goods1/goods1',
+        url: '../goods/goods',
         src: '../../images/ten.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '29.9',
@@ -262,6 +262,7 @@ Page({
 
   },
   onLoad(res) {
+    // this.tabnav();
     this.getNav();//顶部导航
     this.getBanners();//广告位banners
     this.getCategory();//分类类别

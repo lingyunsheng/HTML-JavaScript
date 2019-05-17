@@ -11,7 +11,7 @@
             <view hidden='{{curNum!==0}}'>
                 <view class="swiper">
                     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="red">
-                        <block wx:for="{{imgUrls}}">
+                        <block wx:for="{{imgUrls}}" wx:key="">
                             <swiper-item>
                                 <image src="{{item}}" bindtap="getBanners" />
                             </swiper-item>
@@ -21,7 +21,7 @@
                 <view class="scroll-view">
                     <scroll-view class="scrollView" scroll-x="{{true}}" scroll-left="{{scrollLeft}}" bindscroll="scrollMove">
                         <view class="block1">
-                            <block wx:for="{{block1lists}}">
+                            <block wx:for="{{block1lists}}" bindtap="getCategory">
                                 <ul class="items">
                                     <li class="item">
                                         <image class="image" src="{{item.icons}}" />
@@ -30,8 +30,8 @@
                                 </ul>
                             </block>
                         </view>
-                        <view class="block2">
-                            <block wx:for="{{block2lists}}">
+                        <view class="block2" >
+                            <block wx:for="{{block2lists}}" bindtap="getCategory" wx:key="">
                                 <ul class="items">
                                     <li class="item">
                                         <image class="image" src="{{item.icons}}" />

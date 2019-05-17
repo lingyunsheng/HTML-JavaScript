@@ -1,6 +1,15 @@
 <!--pages/mine/mine.wxml-->
 <view class="container">
-    <view class="user__hd" >
-        <button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGoUserInfo"></button>
+    <view class="userInfo" >
+        <!-- <button open-type='getUserInfo' 
+        lang="zh_CN" bindgetuserinfo="onGoUserInfo"></button> -->
+         <button wx:if="{{!hasUserInfo && canIUse}}" 
+         open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取个人信息 </button>
+          <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar"
+       src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+
     </view>
 </view>

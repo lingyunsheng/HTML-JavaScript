@@ -4,7 +4,8 @@
     "pages/recommend/recommend",
     "pages/search/search",
     "pages/chat/chat",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/goods/goods"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,8 +15,8 @@
     "navigationStyle": "default"
   },
   "tabBar": {
-    "color": "#333",
-    "selectedColor": "red",
+    "color": "#666",
+    "selectedColor": "#E02E24",
     "backgroundColor": "#fff",
     "borderStyle": "black",
     "position": "bottom",
@@ -51,5 +52,6 @@
         "text": "个人中心"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

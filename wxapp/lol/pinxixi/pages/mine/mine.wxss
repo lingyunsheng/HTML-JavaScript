@@ -1,10 +1,31 @@
 /* pages/mine/mine.wxss */
 
+
 .container {
     width: 100%;
-    background: #fff;
 }
-.user__hd button {
-    width: 300rpx;
-    height: 50rpx;
+.userInfo{
+    background: #fff;
+    margin-top: 10rpx;
+    display: flex;
+    flex-direction: row;
+ 
+}
+.userInfo .userinfo-avatar{
+    width: 128rpx;
+    height: 128rpx;
+    border-radius: 50%;
+    /* flex:1; */
+    left: 0;
+    position: absolute;
+   margin-left: 34rpx;
+
+    
+}
+.userInfo .userInfo.nickName{
+  
+    color: #000;
+    flex:0;
+
+
 }
