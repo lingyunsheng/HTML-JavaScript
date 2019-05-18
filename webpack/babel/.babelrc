@@ -1,0 +1,7 @@
+// babel的配置文件
+// 插件plugins
+{
+    // 预处理
+    "presets": ["env"],
+    "plugins":["transform-object-rest-spread"]
+}
