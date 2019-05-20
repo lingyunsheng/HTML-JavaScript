@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+  <navigator url="../logs/logs"></navigator>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+<!-- 
+
+<scroll-view style="height:200px" scroll-y="{{true}}" bindscrolltoupper="upper" 
+bindscrolltolower="lower" bindscroll="scroll"  scroll-into-view="{{toView}}"
+    scroll-top="{{scrollTop}}">
+  <view id="green" class="scroll-view-item bc_green"></view>
+  <view id="red" class="scroll-view-item bc_red"></view>
+  <view id="yellow" class="scroll-view-item bc_yellow"></view>
+  <view id="blue" class="scroll-view-item bc_blue"></view>
+</scroll-view>
+ <button size="mini" bindtap="tap">click me to scroll into view</button>
+ <button size="mini" bindtap="tapMove">click me to scroll</button>
+
+<include src="../template/template"></include>
+<import src="../template/footer"></import>
+<template is="footer"></template>
+
+
+<view class="container">
+  <icon type="success" color="red" size="45" />
+</view>
+
+阮某教育
+<text>vue node.js</text>
+<button type="default">default</button>
+<button type="primary" bindtap="btnclick">{{btntext}}</button>
+<text wx:if="{{condition}}">{{text}}</text>
+<text wx:else>条件2</text>
+<text wx:for="{{['a','b']}}" wx:for-item="item1" wx:for-index="index1">{{index1}}-{{item1}}</text> -->
+

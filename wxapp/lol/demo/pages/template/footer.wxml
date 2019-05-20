@@ -1,0 +1,3 @@
+<template name="footer">
+    <text>我是底部</text>
+</template>
