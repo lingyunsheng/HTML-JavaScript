@@ -91,5 +91,10 @@ Page({
         })
       }
     }, fail)
+  },
+  getDiary(){
+    wx.navigateTo({
+      url:'../diary/index',
+    })
   }
 })
