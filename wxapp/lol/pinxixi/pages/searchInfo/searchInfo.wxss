@@ -1,0 +1,24 @@
+/* pages/searchInfo/searchInfo.wxss */
+.container{
+    width: 100%;
+    height: 100%;
+}
+.search{
+    width: 100%;
+    height: 100%;
+    display:inline-block;
+}
+.search input{
+    width: 700rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    font-size: 22rpx;
+    color: #eeeeee;
+    background: #eee;
+}
+.serach button{
+    width: 90rpx;
+    height: 90rpx;
+
+}

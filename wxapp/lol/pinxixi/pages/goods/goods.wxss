@@ -1,1 +1,41 @@
 /* pages/goods/goods.wxss */
+.container{
+    width: 100%;
+    height: 100%;
+}
+swiper{
+    width: 100%;
+    height: 400rpx;
+}
+swiper image{
+    width: 100%;
+    display: block;
+}
+
+.goodsInfo{
+  width: 100%;
+
+
+}
+.goodsInfo .Price{
+
+}
+.goodsInfo .Price .price{
+  color: red;
+  font-size: 42rpx;
+  float:left;
+
+}
+.goodsInfo .Price .want {
+  color:#000;
+  font-size: 22rpx;
+  float: right;
+
+}
+.goodsInfo .content{
+  margin-top: 10rpx;
+  display: inline-block;
+}
+.goodsInfo .share{
+  display: inline-block;
+}

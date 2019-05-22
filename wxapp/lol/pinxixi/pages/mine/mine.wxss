@@ -1,31 +1,56 @@
 /* pages/mine/mine.wxss */
 
-
 .container {
-    width: 100%;
+  width: 100%;
 }
-.userInfo{
-    background: #fff;
-    margin-top: 10rpx;
-    display: flex;
-    flex-direction: row;
- 
-}
-.userInfo .userinfo-avatar{
-    width: 128rpx;
-    height: 128rpx;
-    border-radius: 50%;
-    /* flex:1; */
-    left: 0;
-    position: absolute;
-   margin-left: 34rpx;
 
-    
+.userInfo {
+  background: #fff;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
 }
-.userInfo .userInfo.nickName{
+
+.userInfo .header {
+  display: flex;
+}
+
+.userInfo .userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  /* flex:1; */
+  left: 0;
+  position: absolute;
+  margin-left: 34rpx;
+}
+
+.userInfo .userInfo.nickName {
+  color: #000;
+  flex: 0;
+}
+
+.userInfo .update {
+  width: 128rpx;
+  height: 40rpx;
+  font-size: 16rpx;
+  color: #fff;
+  background: red;
+  text-align: center;
+  border-radius: 4rpx solid red;
   
-    color: #000;
-    flex:0;
+}
 
-
+.userInfo .button{
+  flex: 1;
+}
+.button .pindan {
+  width: 150rpx;
+  height: 60rpx;
+  background: #fff;
+  text-align: center;
+  font-size: 16rpx;
+  color: #000;
+  border-radius: 4rpx solid #fff;
+ 
 }

@@ -84,7 +84,54 @@ Page({
         pin: '已团3万件',
         title: '商品详情'
       },
-
+      {
+        url: '../goods/goods',
+        src: '../../images/ten.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods/goods',
+        src: '../../images/ten.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods/goods',
+        src: '../../images/ten.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods/goods',
+        src: '../../images/ten.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods/goods',
+        src: '../../images/ten.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
+      {
+        url: '../goods/goods',
+        src: '../../images/ten.png',
+        content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
+        price: '29.9',
+        pin: '已团3万件',
+        title: '商品详情'
+      },
 
     ],
     categories: [],

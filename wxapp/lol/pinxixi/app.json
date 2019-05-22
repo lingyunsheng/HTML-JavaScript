@@ -5,7 +5,9 @@
     "pages/search/search",
     "pages/chat/chat",
     "pages/mine/mine",
-    "pages/goods/goods"
+    "pages/goods/goods",
+    "pages/searchInfo/searchInfo",
+    "pages/mans/mans"
   ],
   "window": {
     "backgroundTextStyle": "light",

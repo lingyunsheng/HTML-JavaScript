@@ -1,38 +1,30 @@
-<!--pages/search/search.wxml-->
-<view class="container">
-    <view class="searchBar">
-        <input type="text" placeholder="胶原美白丸" class="searchBar-text"/>
-        <!-- <icon src="../../images/search.png" /> -->
+<!-- 搜索区 -->
+<view class='search-box'>
+  <!-- <icon class='iconfont icon-xiaokuku'></icon> -->
+  <input type="text" placeholder="{{searchText}}" bindtap="search"/>
+</view>
+<!-- 内容区 -->
+<view class='con-wrapper'>
+  <!-- 左侧 -->
+  <scroll-view scroll-y scroll-top="{{scrollTop}}" scroll-with-animation class='con-wrap-boxLeft' style='height:{{scrHeight}}'>
+    <view wx:for="{{searchTitle}}" id='{{index}}' class='con-wrap-boxLeft-item {{index==currentId ? "con-wrap-boxLeft-active" : ""}}' bindtap='leftClassifyTap'>
+    <text id='{{index}}' class='con-wrap-boxLeft-itemTwo {{index==currentId ? "con-wrap-boxLeft-activeTwo" : ""}}' catchtap='leftClassifyTap'>{{item}}</text>
     </view>
-    <view class="category"  >
-        <scroll-view  scroll-y="true" class="scroll-view-left" bindscroll="scrollMove">
-            <view class="nav_left_items{{currentTab ==item.index ? 'cur':''}}" 
-            wx:for="{{category}}" wx:key="" 
-            data-index="{{index}}" data-id="{{item.index}}"
-             bindtap="leftNav">
-                {{item.categoryName}}
-            </view>
-          
-
-        </scroll-view>
-
-        <scroll-view scroll-y="true" class="scroll-view-right">
-            <view class="nav_right">
-                <view wx:if="{{category[currentIndex].ishaveChild}}">
-                    <view class="nav_right_items" wx:for="{{category[currentIndex].children}}" wx:key="id">
-                        <navigator url="../index/index">
-                        <image src="{{item.image}}" />
-                        <text >{{item.name}}</text>
-                        
-                        </navigator>
-
-                    </view>
-                </view>
-                <!-- 如果没有数据 -->
-                <view class="nodata_text" wx:else>该类暂无数据</view>
-            </view>
-
-        </scroll-view>
-
+  </scroll-view>
+  <!-- 右侧 -->
+  <scroll-view scroll-y scroll-into-view="{{scView}}" scroll-with-animation bindscroll='rigConScr' bindscrolltolower='scrLower' lower-threshold='20px' class='con-wrap-boxRight' style='height:{{scrHeight}}'>
+    <view class='con-wrap-boxRight-item' wx:for="{{searchContent}}" id='c{{index}}'>
+      <text class='left-title'>{{item.title}}</text>
+      <navigator url='../checkAll/checkAll?datas={{item.title}}' class='rig'>
+        <text >查看全部</text>
+        <icon class='iconfont icon-chaoguo'></icon>
+      </navigator>
+      <view class='con-wrap-boxRight-classify'>
+        <view class='classify' wx:for="{{item.content}}" wx:for-item="items">
+          <icon class='iconfont {{items.ic}}'></icon>
+          <view class='classify-font'>{{items.icname}}</view>
+        </view>
+      </view>
     </view>
+  </scroll-view>
 </view>

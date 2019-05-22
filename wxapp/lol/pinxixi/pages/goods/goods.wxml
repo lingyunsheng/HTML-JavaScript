@@ -1,2 +1,47 @@
-<!--pages/goods/goods.wxml-->
+<!-- pages/goods/goods.wxml -->
+<view class="container">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="red">
+        <block class="swiper" wx:for="{{imgUrl}}" wx:key="imgUrl">
+            <swiper-item>
+                <image src="{{item}}" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="goodsInfo">
+        <view class="Price">
+            <text class="price">￥399</text>
+            <text class="want">7人想买</text>
+        </view>
+        <view class="content">
+            美白面膜神仙水
 
+        </view>
+        <view class="share">
+            分享
+        </view>
+        <view class="lingquan">
+            <button class="lq">领券</button>
+            <button class="lq1">满200元减10元</button>
+            <button class="lq2">满300元减15元</button>
+        </view>
+        <view class="declare">
+            <text class="d1">全场包邮</text>
+            <text class="d2">7天退换</text>
+            <text class="d3">48小时发货</text>
+            <text class="d4">假一赔十</text>
+        </view>
+    </view>
+    <view class="pin">
+        <text class="title">7人想买，可抢先拼单</text>
+        <!-- <image src="#" /> -->
+        <button>抢先拼单</button>
+    </view>
+    <view class="store">
+        <!-- <image src="#" /> -->
+        <h1>火热青春时尚美妆</h1>
+        <button>进店逛逛</button>
+    </view>
+
+
+
+</view>

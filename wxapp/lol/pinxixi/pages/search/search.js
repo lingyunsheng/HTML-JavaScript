@@ -1,663 +1,281 @@
-// pages/search/search.js
-Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    currentTab:0,
-    currentIndex:0,
-    category:[
-      {
-        categoryId:1,
-        categoryName:'手机数码',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:2,
-        categoryName:'美妆个护',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:3,
-        categoryName:'食品饮料',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:4,
-        categoryName:'品质男装',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:5,
-        categoryName:'家居百货',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:6,
-        categoryName:'家用电器',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:7,
-        categoryName:'运动户外',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:8,
-        categoryName:'充值中心',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:9,
-        categoryName:'鞋靴箱包',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:10,
-        categoryName:'内裤衣袜',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:11,
-        categoryName: '电脑办公',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:12,
-        categoryName:'流行女装',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:13,
-        categoryName: '母婴玩具',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:14,
-        categoryName:'汽车车品',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:15,
-        categoryName:'家纺布艺',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:16,
-        categoryName:'水果生鲜',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:17,
-        categoryName:'家具家装',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:18,
-        categoryName:'海外精选',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:19,
-        categoryName: '医药健康',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
-      {
-        categoryId:20,
-        categoryName:'品牌推荐',
-        ishaveChild:true,
-        children:[
-          {
-            child_id: 1,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 2,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 3,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          },
-          {
-            child_id: 4,
-            name: '樱桃',
-            image: "https://m.360buyimg.com/mobilecms/s357x357_jfs/t15613/296/2281640440/392160/6e019064/5a9a450dNa47bf95f.jpg!q50.jpg"
-          }
-
-        ]
-
-      },
+     
+       
+        
    
-    
-    ],
-   
+     
+ var searchTitle = ['女装','鞋包','母婴','男装','内衣','食品','百货','美女','手机','电器','家纺','家具','电脑','充值'];
 
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    var that = this;
-
-  },
-  leftNav:function(e){
-    let index = e.currentTarget.dataset.index
-    let id = e.currentTarget.dataset.id
-    this.setData({
-      currentTab:index,
-      currentIndex:id
-    })
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+ var searchContent = [
+   {
+     title: '女装',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '鞋包',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '母婴',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '男装',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '内衣',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '食品',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '百货',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '美女',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '手机',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '电器',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '家纺',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '家具',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '电脑',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   },
+   {
+     title: '充值',
+     content: [
+       { ic: 'icon-naozhong', icname: '限时秒杀' },
+       { ic: 'icon-yagaoyashua', icname: '每日清仓' },
+       { ic: 'icon-chaoguo', icname: '多多矿场' },
+       { ic: 'icon-shucai', icname: '一分抽奖' },
+       { ic: 'icon-diaodai', icname: '食品超市' },
+       { ic: 'icon-shejishi2', icname: '时尚穿搭' },
+       { ic: 'icon-xiaokuku', icname: '天天红包' },
+       { ic: 'icon-tangguo1', icname: '电器城' },
+       { ic: 'icon-diaodai', icname: '食品超市' }
+     ]
+   }
+ ];
+ 
+ Page({
+   /**
+    * 页面的初始数据
+    */
+   data: {
+     searchText: '蓝牙耳机迷你',
+     searchTitle: searchTitle,
+     searchContent: searchContent,
+     scrHeig: '1000rpx',
+     currentId: 0,
+     scrollTop: '0',
+     scView: 'c0'
+   },
+ 
+   /**
+    * 生命周期函数--监听页面加载
+    */
+   onLoad: function (options) {
+     var ratio = wx.getSystemInfoSync().windowWidth/750;
+     this.setData({
+       scrHeight: wx.getSystemInfoSync().windowHeight/ratio-60-32+'rpx'
+     }) 
+   },
+   leftClassifyTap: function (e) {
+     var curId = e.target.id;
+     if (curId < 5){
+       this.setData({
+         currentId: curId,
+         scrollTop: '0',
+         scView: 'c' + curId
+       })
+     }else{
+       this.setData({
+         currentId: curId,
+         scrollTop: [0.5 + (curId - 5)] * 55,
+         scView: 'c' + curId
+       })
+     }
+   },
+   rigConScr: function (e) {
+     var that = this;
+     var query = wx.createSelectorQuery();
+     query.selectAll('.con-wrap-boxRight-item').boundingClientRect(function(res){
+       res.forEach(function(item){
+         if (item.top > 0 && item.top < 150) {
+           var curId = item.id.substr(1);
+           if (curId < 5) {
+             that.setData({
+               currentId: curId,
+               scrollTop: '0'
+             })
+           } else {
+             that.setData({
+               currentId: curId,
+               scrollTop: [0.5 + (curId - 5)] * 55
+             })
+           }
+         }
+       })
+     }).exec();
+   },
+   scrLower: function () {
+     var curId = this.data.searchTitle.length - 1;
+     this.setData({
+       currentId: curId,
+       scrollTop: [0.5 + (curId - 5)] * 55
+     })
+   },
+   search(e){
+     wx.navigateTo({
+       url:'../searchInfo/searchInfo'
+     })
+   }
+  })

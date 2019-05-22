@@ -15,6 +15,12 @@ Page({
       url: '../index/index'
     })
   },
+  update(){
+
+  },
+  pindan(){
+
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

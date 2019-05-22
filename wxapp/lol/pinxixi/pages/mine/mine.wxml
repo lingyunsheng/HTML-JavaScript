@@ -1,15 +1,57 @@
 <!--pages/mine/mine.wxml-->
 <view class="container">
-    <view class="userInfo" >
-        <!-- <button open-type='getUserInfo' 
+  <view class="userInfo">
+    <!-- <button open-type='getUserInfo' 
         lang="zh_CN" bindgetuserinfo="onGoUserInfo"></button> -->
-         <button wx:if="{{!hasUserInfo && canIUse}}" 
-         open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取个人信息 </button>
-          <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar"
-       src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取个人信息 </button>
+    <block wx:else>
+      <view class="header">
+
+
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+
+      </view>
+      <view class="name">
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <button class="update" bindtap='update'>更新资料</button>
+      </view>
+      <view class="button">
+        <button class="pindan" bindtap='pindan'>拼单返现</button>
+      </view>
+
     </block>
+    <view>
+      <text>品牌特卖</text>
+      <button>回力小白鞋49</button>
+    </view>
+    <view class="order">
+      <view class="my-order">
+        <image src="#"></image>
+        <text>待付款</text>
+
+      </view>
+      <view class="my-share">
+        <image src="#"></image>
+        <text>待分享</text>
+
+      </view>
+      <view class="my-send">
+        <image src="#"></image>
+        <text>待发货</text>
+      
+      </view>
+       <view class="my-receive">
+        <image src="#"></image>
+        <text>待收货</text>
+
+      </view>
+      <view class="my-advice">
+        <image src="#"></image>
+        <text>待评价</text>
+
+      </view>
 
     </view>
+
+  </view>
 </view>
