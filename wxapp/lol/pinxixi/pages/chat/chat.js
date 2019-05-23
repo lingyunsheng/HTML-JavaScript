@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    banner:{
+      src:'//images.pinduoduo.com/mrk/2019-05-22/7e78d475-bf14-423d-8342-47e03911d72f.jpg'
+    }
 
   },
 

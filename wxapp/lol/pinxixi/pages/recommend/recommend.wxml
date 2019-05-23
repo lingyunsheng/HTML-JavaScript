@@ -1,2 +1,4 @@
 <!--pages/recommend/recommend.wxml-->
-<text>pages/recommend/recommend.wxml</text>
+<view class="container">
+    <text>年轻人不要冲动</text>
+</view>

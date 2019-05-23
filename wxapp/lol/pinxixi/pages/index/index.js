@@ -149,7 +149,7 @@ Page({
       'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4119613175,2906257134&fm=27&gp=0.jpg',
     ],
     indicatorDots: true,
-    autoplay: false,
+    autoplay: true,
     interval: 5000,
     duration: 1000,
     block1lists: [

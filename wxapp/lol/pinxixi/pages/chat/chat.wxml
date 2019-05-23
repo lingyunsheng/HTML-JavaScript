@@ -1,2 +1,22 @@
-<!--pages/chat/chat.wxml-->
-<text>pages/chat/chat.wxml</text>
+<!-- pages/chat/chat.wxml -->
+<view class="container">
+  <view class="banner-item" wx:for="{{banner}}" wx:key="banner">
+    <image src="{{banner.src}}" />
+  </view>
+  <view class="chat-list">
+    <view class="chat-list-title">
+      <text class="">还没有聊天消息</text>
+    </view>
+    <view class="chat-list-text">
+      <text>与商家、官方客服的聊天会显示在这里</text>
+    </view>
+    <view class="chat-list-link">
+      <text>联系官方客服</text>
+    </view>
+  </view>
+
+  <view class="recommend">
+    爆款推荐
+  </view>
+  <include src="../index/index"></include>
+</view>
