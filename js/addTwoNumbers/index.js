@@ -56,9 +56,22 @@ var addTwoNumbers = function (l1, l2) {
 
   }
   // 为假不执行
-  carry && (ans.push(carry));
-  ans.reverse();
-  return ans.join('');
+  carry && (ans.push(carry));//最后如果有进位
+  ans.reverse();//反过来
+  // return ans.join('');
+
+
+  // 返回的应该也是一个结点  头结点
+  let ret = [];
+  for (let i = 0, len = ans.length; i < len; i++) {
+    ret[i] = new LinkedNode(ans[i]);//值部分
+  }
+  for (let i = 0, len = ans.length; i < len - 1; i++) {
+    ret[i].next = ret[i + 1];//指针
+  }
+  return ret[0];
+
+
 
 }
 
@@ -75,8 +88,12 @@ let b1 = new LinkedNode(4),
 b1.next = b2;
 b2.next = b3;
 
-
-console.log(addTwoNumbers(a1, b1));
+// 返回的是两数相加头节点
+let ret = (addTwoNumbers(a1, b1));
+while(ret){
+  console.log(ret.val);
+  ret=ret.next;
+}
 // let node=a1;
 // while(node){
 //   console.log(node.val);
