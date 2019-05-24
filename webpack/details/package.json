@@ -1,0 +1,30 @@
+{
+  "name": "details",
+  "version": "1.0.0",
+  "description": "devDependencies 开发\r Dependencies 所有阶段\r webpacck 打包工具 构建应用",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "dependencies": {
+    "babel-loader": "^7.1.4",
+    "css-loader": "^2.1.1",
+    "lodash": "^4.17.11",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.32.2"
+  }
+}
