@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="" id="app">
+        <!-- {{message}}
+        <p class="coll">赵丽颖今天v了吗</p>
+        <p class="good" v-bind:class="{cool:isGood}">天气真好</p>
+        <p class="good" v-bind:class="isGood? 'cool':'notcool'">天气真好</p>
+        <p class="cool" v-bind:class="[activeClass]">赵丽颖今天v了吗</p> -->
+        <!-- <ul>
+            <li v-for="item in todos">{{item.text}}</li>
+        </ul> -->
+        <!-- <p>{{content}}</p>
+        <input type="text" v-model="content"> -->
+        <p class="coll" v-on:click="reverseMsg">{{msg}}</p>
+    </div>
+    <script>
+        var app=new Vue({
+            // dom结构 element
+            el:'#app',
+            // 数据源
+            data:{
+                // message:'hello world',
+                // isGood:true,
+                // activeClass:'active'
+                // todos:[
+                //     {text:'学习vue'},
+                //     {text:'学习js'},
+                //     {text:'写项目'},
+                    
+                // ]
+                msg:'赵丽颖今天v了吗',
+                content:''
+            },
+            methods:{
+                reverseMsg(){
+                    // this的作用域是vue下的
+                    this.msg = this.msg.split('').reverse().join('')
+
+                }
+
+            }
+        })
+    
+    </script>
+    
+</body>
+</html>
