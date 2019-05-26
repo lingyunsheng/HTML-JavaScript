@@ -18,5 +18,5 @@
   <view class="recommend">
     爆款推荐
   </view>
-  <include src="../index/index"></include>
+  <include src="../index/index.wxml"/>
 </view>

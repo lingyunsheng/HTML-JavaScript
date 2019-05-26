@@ -17,11 +17,12 @@
       </view>
       <view class="button">
         <button class="pindan" bindtap='pindan'>拼单返现</button>
+        <button class="shengqian" bindtap='shengqian'>省钱月卡</button>
       </view>
 
 
     </block>
   </view>
-  
+
 
 </view>
