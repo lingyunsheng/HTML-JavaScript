@@ -7,7 +7,8 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    isLogin: false
   },
   onWeixinLogin(e) {
     const userInfo = e.detail.userInfo;
@@ -28,8 +29,12 @@ Page({
             // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
             wx.getUserInfo({
               success: res => {
+                console.log('用户 res', res);
                 const userInfo = res.userInfo;
                 resolve(userInfo);
+              },
+              fail: err => {
+                console.log(err);
               }
             })
           }
@@ -59,6 +64,16 @@ Page({
               },
               success: res => {
                 console.log('服务',res);
+                const { skey } = res.result;
+                wx.setStorageSync('skey', skey);
+                this.setData({
+                  isLogin: true,
+                  userInfo
+                })
+                wx.hideLoading();
+              }, 
+              fail: err => {
+                console.log(err);
               }
             })
           }
@@ -68,29 +83,31 @@ Page({
   },
 
   onLoad: function() {
-    if (!wx.cloud) {
-      wx.redirectTo({
-        url: '..ooseLibooseLib',
+    // 刷新了还有
+    const skey = wx.getStorageSync('skey');
+    if (skey) {
+      wx.checkSession({
+        success: () => {
+          this.setData({
+            isLogin: true
+          })
+          this.handleGetLocationUserInfo()
+          .then(userInfo => {
+            this.setData({
+              userInfo
+            })
+          })
+        },
+        fail: () => {
+          isLogin: false
+        }
       })
-      return
+    } else {
+      this.setData({
+        isLogin: false
+      })
     }
 
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
-              })
-            }
-          })
-        }
-      }
-    })
   },
 
   onGetUserInfo: function(e) {

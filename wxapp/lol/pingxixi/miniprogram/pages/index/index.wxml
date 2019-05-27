@@ -1,9 +1,9 @@
-<!-- index.wxml -->
+<!--index.wxml-->
 <view class="container">
-    <view class="userinfo">
+  <view class="userinfo">
     <button class="userinfo-nickname" 
       bindgetuserinfo="onWeixinLogin"
-      wx:if="{{ !isLogin }}"
+      wx:if="{{ !isLogin }}
       open-type="getUserInfo">
         微信授权登陆
     </button>
