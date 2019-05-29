@@ -19,3 +19,18 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+vue init webpack element
+
+<el-input v-model="input" placeholder="请输入内容"></el-input>
+
+<script>
+export default {
+  data() {
+    return {
+      input: ''
+    }
+  }
+}
+</script>
+双向数据绑定
