@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .like-btn {
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        
+    </div>
+    <script>
+    // const button = document.querySelector('.like-btn');
+    // const buttonText = button.querySelector('.like-text');
+    // let isLiked = false;
+    // button.addEventListener('click', () => {
+    //     isLiked = !isLiked
+    //     if (isLiked) {
+    //         buttonText.innerHTML = '取消';
+    //     } else {
+    //         buttonText.innerHTML = '点赞';
+    //     }
+    // })
+    // wrapper留一个挂载点mount到根节点上 vue也要绑定到el元素
+    const wrapper = document.querySelector('.wrapper');
+    // String -> DOM  一次性的把str放到dom中 不好改
+    const createDomFromString = (domString) => {
+        // dom比htmlstring好的地方在于 js操作
+        const div = document.createElement('div');
+        div.innerHTML = domString;
+        return div;
+    }
+    // 组件类  new一下
+    class LikeButton{
+        // 构造函数
+        constructor () {
+            // 所有状态数据都在这
+            this.state = {
+                isLiked: false
+            }
+        }
+        // render相当于之前的dom vue的template react里的render() 组件内部模板部分，等待数据往里面套。是一个必备的方法
+        changeLikeText () {
+            // console.log(this.el);
+            // 太多的dom了，所以删掉
+            // const likeText = this.el.querySelector('.like-text');
+            // this.state.isLiked = !this.state.isLiked;
+            // likeText.innerHTML = this.state.isLiked?'取消':'点赞'
+            // 没有dom  只要维护状态刚更新，框架维护界面更新
+            this.setState({
+                isLiked: !this.state.isLiked
+            })
+        }
+        // 更新状态模板
+        setState(state) {
+            // 将状态更新
+            // VM 模型即this.state与view视图的实时对应
+            const oldEl = this.el;
+            this.state = state;
+            // 状态更新模板也更新 动态编译模板
+            this.el = this.render();
+            // DOM更新
+            // 把老节点移走
+            if (this.onStateChange)
+              this.onStateChange(oldEl, this.el)
+        }
+        
+        render() {
+            // return dom节点  
+            this.el = createDomFromString(`
+            <button id="like-btn">
+                <span class="like-text">${this.state.isLiked?'取消':'点赞'}<span>
+            </button>
+            `)
+            // call指向this， bind返回新的函数，组件内部事件执行都要bind
+            this.el.addEventListener('click', this.changeLikeText.bind(this), false);
+            return this.el;
+        }
+    }
+    // new vue
+    const likeButton1 = new LikeButton();
+    // wrapper.innerHTML = likeButton1.render();
+    // 整个节点都被remove
+    wrapper.appendChild(likeButton1.render());
+    likeButton1.onStateChange = (oldEl, newEl) => {
+        wrapper.insertBefore(newEl, oldEl);
+        wrapper.removeChild(oldEl);
+    }
+    const likeButton2 = new LikeButton();
+    wrapper.appendChild(likeButton2.render());
+    </script>
+</body>
+</html>
