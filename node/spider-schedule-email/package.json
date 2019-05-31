@@ -1,0 +1,19 @@
+{
+  "name": "spider-schedule-email",
+  "version": "1.0.0",
+  "description": "npm init -y\r npm i superagent -S\r npm i cheerio -S\r ## $\r x.find() 查找 x 元素下面的内容 $('.box').find('p');\r \\s 空白字符\r .replace(/\\s/g, \"\"); 去除无用的空白字符",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "ejs": "^2.6.1",
+    "nodemailer": "^6.2.1",
+    "superagent": "^5.0.5"
+  },
+  "devDependencies": {}
+}
