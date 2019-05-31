@@ -1,0 +1,17 @@
+<view class="my_title">
+    <!-- logo -->
+    <navigator class="logo" url="#">
+        <image class="logo_img" style="width:200rpx;height:100rpx" src="./../../../images/logo.png" />
+    </navigator>
+    <!-- 搜索 -->
+    <view class="serach_icon">
+        <image class="icon_img" style="width:60rpx;height:60rpx" src="./../../../images/search.png" />
+        <input class="icon_text" type="text" placeholder="" />
+    </view>
+    <!-- 用户 -->
+    <view class="user_icon">
+        <image style="width:54rpx;height:60rpx" src="./../../../images/user.jpg" />
+    </view>
+    <!-- 下载按钮 -->
+    <view class="down_app">下载 app</view>
+</view>
