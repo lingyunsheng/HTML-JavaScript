@@ -1,28 +1,28 @@
-<!--pages/mine/mine.wxml-->
+<!-- pages/mine/mine.wxml -->
 <view class="container">
-  <view class="userInfo">
+  <view class="userInfo-container">
     <!-- <button open-type='getUserInfo' 
         lang="zh_CN" bindgetuserinfo="onGoUserInfo"></button> -->
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取个人信息 </button>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      获取个人信息
+    </button>
     <block wx:else>
-      <view class="header">
-
-
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-
+      <view class="userInfo">
+        <view class="header">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </view>
+        <view class="name">
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+          <button class="update" bindtap='update'>更新资料</button>
+        </view>
+        <view class="button">
+          <button class="pindan" bindtap='pindan'>拼单返现</button>
+          <button class="shengqian" bindtap='shengqian'>省钱月卡</button>
+        </view>
       </view>
-      <view class="name">
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-        <button class="update" bindtap='update'>更新资料</button>
+      <view class="special-sell">
+        <text>品牌特卖</text>
       </view>
-      <view class="button">
-        <button class="pindan" bindtap='pindan'>拼单返现</button>
-        <button class="shengqian" bindtap='shengqian'>省钱月卡</button>
-      </view>
-
-
     </block>
   </view>
-
-
 </view>

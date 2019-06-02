@@ -5,15 +5,21 @@
 }
 
 .userInfo {
-  background: #fff;
-  margin-top: 10rpx;
-  display: flex;
+ display: flex;
   flex-direction: row;
-  flex-flow: row;
+  align-items: center;
+  float: left;
+  background-color: #fff;
+  position: fixed;
+  top:0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 200rpx;
 }
 
 .userInfo .header {
-  flex:1;
+ 
  
 }
 
@@ -23,22 +29,23 @@
   border-radius: 50%;
   /* flex:1; */
   left: 0;
- position: absolute;
   margin-left: 34rpx;
+  margin-right:34rpx;
 }
 .userInfo .name{
-  flex:1;
+  
+ margin-right: 150rpx;
   
 
 }
 .userInfo .userInfo.nickName {
   color: #000;
-  margin-right: 150rpx;
-    position: relative;
+ 
 
 }
 
 .userInfo .update {
+  
 
   width: 128rpx;
   height: 40rpx;
@@ -51,29 +58,32 @@
 }
 
 .userInfo .button{
-  flex: 1;
   
+  margin-right: 34rpx;
 
 }
 .button .pindan {
-  position: relative;
+float: right;
   width: 150rpx;
   height: 60rpx;
   background: #fff;
   text-align: center;
-  font-size: 16rpx;
+  font-size: 20rpx;
   color: #000;
   border-radius: 4rpx solid #fff;
  
 }
 .button .shengqian {
-  position: relative;
+  margin-top:20rpx;
+  float: right;
   width: 150rpx;
   height: 60rpx;
   background: #fff;
   text-align: center;
-  font-size: 16rpx;
+  font-size: 20rpx;
   color: #000;
   border-radius: 4rpx solid #fff;
+  vertical-align: center;
+  line-height: 60rpx;
  
 }

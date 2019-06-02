@@ -1,4 +1,20 @@
-<!--pages/recommend/recommend.wxml-->
+<!-- pages/recommend/recommend.wxml -->
 <view class="container">
-    <text>年轻人不要冲动</text>
+    <scroll-view scroll-y>
+        <view class="recommend" wx:for="{{goods}}" wx:key="{{index}}">
+            <navigator url='../goods/goods'>
+            <view class="iamge">
+                <image src="{{item.src}}" />
+            </view>
+                <view class="Content">
+                    <text class="content">{{item.content}}</text>
+                </view>
+                <view class="Price">
+                      <text class="price">{{item.price}}</text>
+                <text class="pin">{{item.pin}}</text>
+                </view>
+              
+            </navigator>
+        </view>
+    </scroll-view>
 </view>

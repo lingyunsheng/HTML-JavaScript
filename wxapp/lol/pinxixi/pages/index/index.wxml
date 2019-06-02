@@ -1,83 +1,79 @@
 <!-- index.wxml -->
 <view class="container">
-    <scroll-view scroll-left="{{scrollLeft}}" scroll-x="{{true}}" bindscroll="scrollMove">
+    <scroll-view scroll-left="{{scrollLeft}}" scroll-x bindscroll="scrollMove">
         <view class="page__hd">
             <view class="nav scrollMove" style="left:{{viewleft}}rpx">
                 <text class='{{curNum==index?"cur":""}} ' data-navindex="{{index}}" wx:for="{{nav}}" wx:key=" " bindtap='tabnav'>
                     {{item}}
                 </text>
             </view>
-            <!-- 首页热门 -->
-            <view hidden='{{curNum!==0}}'>
-                <view class="swiper">
-                    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="red">
-                        <block wx:for="{{imgUrls}}" wx:key="">
-                            <swiper-item>
-                                <image src="{{item}}" bindtap="getBanners" />
-                            </swiper-item>
-                        </block>
-                    </swiper>
-                </view>
-                <view class="scroll-view">
-                    <scroll-view class="scrollView" scroll-x="{{true}}" scroll-left="{{scrollLeft}}" bindscroll="scrollMove">
-                        <view class="block1">
-                            <block wx:for="{{block1lists}}" bindtap="getCategory">
-                                <ul class="items">
-                                    <li class="item">
-                                        <image class="image" src="{{item.icons}}" />
-                                        <view class="text">{{item.name}}</view>
-                                    </li>
-                                </ul>
-                            </block>
-                        </view>
-                        <view class="block2" >
-                            <block wx:for="{{block2lists}}" bindtap="getCategory" wx:key="">
-                                <ul class="items">
-                                    <li class="item">
-                                        <image class="image" src="{{item.icons}}" />
-                                        <view class="text">{{item.name}}</view>
-                                    </li>
-                                </ul>
-                            </block>
-                        </view>
-                    </scroll-view>
-                    <view class="scroll-line">
-                        <view class="scrollMove" style="left:{{viewleft}}rpx"></view>
-                    </view>
-                </view>
-                <view class="listGoods">
-                    <navigator  class="list-goods" wx:for="{{goods}}" wx:key="" bindtap="listGoods" data-title="{{item.title}}" url="{{item.url}}">
-                        <image class="goods-image" src="{{item.src}}" />
-                        <view class="content">{{item.content}}</view>
-                        <view class="Price">
-                            <text class="price">￥{{item.price}}</text>
-                            <text class="pin">{{item.pin}}</text>
-                        </view>
-                    </navigator>
-                </view>
-                <view class="invite" wx:if="{{show}}">
-                    <navigator class="invitation" animation="{{animationData}}">
-                        <view class="invite pic">
-                            <image src="../../images/tx.png" />
-                        </view>
-                        <view class="invite content">
-                            <text >LingYunSheng邀请你拼单</text>
-                        </view>
-
-                    </navigator>
-                </view>
-                <view class="returnTop">
-
-                </view>
-            </view>
-            <!-- 男装 -->
-            <view hidden='{{curNum!==1}}'>
-                我是男装
-                <include src="../mans/mans"></include>
-
-            </view>
-            <!-- 美妆 -->
-            <view hidden='{{curNum!==2}}'>我是搜索</view>
         </view>
     </scroll-view>
+    <!-- 首页热门 -->
+    <view hidden='{{curNum!==0}}'>
+        <view class="swiper">
+            <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="red">
+                <block wx:for="{{imgUrls}}" wx:key="">
+                    <swiper-item>
+                        <image src="{{item}}" bindtap="getBanners" />
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        <view class="scroll-view">
+            <scroll-view class="scrollView" scroll-x scroll-left="{{scrollLeft}}" bindscroll="scrollMove">
+                <view class="block1">
+                    <block wx:for="{{block1lists}}" bindtap="getCategory">
+                        <ul class="items">
+                            <li class="item">
+                                <image class="image" src="{{item.icons}}" />
+                                <view class="text">{{item.name}}</view>
+                            </li>
+                        </ul>
+                    </block>
+                </view>
+                <view class="block2">
+                    <block wx:for="{{block2lists}}" bindtap="getCategory" wx:key="">
+                        <ul class="items">
+                            <li class="item">
+                                <image class="image" src="{{item.icons}}" />
+                                <view class="text">{{item.name}}</view>
+                            </li>
+                        </ul>
+                    </block>
+                </view>
+            </scroll-view>
+            <view class="scroll-line">
+                <view class="scrollMove" style="left:{{viewleft}}rpx"></view>
+            </view>
+        </view>
+        <view class="listGoods">
+            <navigator class="list-goods" wx:for="{{goods}}" wx:key="" bindtap="listGoods" data-title="{{item.title}}" url="{{item.url}}">
+                <image class="goods-image" src="{{item.src}}" />
+                <view class="content">{{item.content}}</view>
+                <view class="Price">
+                    <text class="price">￥{{item.price}}</text>
+                    <text class="pin">{{item.pin}}</text>
+                </view>
+            </navigator>
+        </view>
+        <view class="invite" wx:if="{{show}}">
+            <navigator class="invitation" animation="{{animationData}}">
+                <view class="invite pic">
+                    <image src="../../images/tx.png" />
+                </view>
+                <view class="invite content">
+                    <text>LingYunSheng邀请你拼单</text>
+                </view>
+            </navigator>
+        </view>
+        <view class="returnTop"></view>
+    </view>
+    <!-- 男装 -->
+    <view hidden='{{curNum!==1}}'>
+        我是男装
+        <include src="../mans/mans"></include>
+    </view>
+    <!-- 美妆 -->
+    <view hidden='{{curNum!==2}}'>我是搜索</view>
 </view>
