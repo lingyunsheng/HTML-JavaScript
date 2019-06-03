@@ -26,7 +26,7 @@ const posts = [
     },
     {
         id: 1,
-        content: '赵丽颖今天昆仑饭店吃了吗'
+        content: '<strong>赵丽颖今天昆仑饭店吃了吗</strong>'
     }
 ]
 app.use(async (ctx) => {
