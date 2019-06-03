@@ -73,3 +73,48 @@
     line-height: 100rpx;
     border-bottom: 4rpx solid #eee;
 }
+.listGoods {
+    width: 100%;
+    margin-top: 10rpx;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 4rpx solid #e5e5e5;
+  }
+  
+  .listGoods .list-goods {
+    display: inline-block;
+    width: 367rpx;
+    height: 500rpx;
+    border-top: 2rpx solid #e5e5e5;
+    border-right:2rpx solid #e5e5e5;
+    border-bottom:2rpx solid #e5e5e5;
+    border-left:2rpx solid #e5e5e5;
+  }
+  
+  .listGoods .list-goods .goods-image {
+    width: 360rpx;
+    height: 300rpx;
+  }
+  
+  .listGoods .list-goods .content {
+    font-size: 24rpx;
+    color: #000;
+    text-align: center;
+  }
+  
+  .listGoods .list-goods .Price {
+    margin-top: 4rpx;
+    vertical-align: top;
+  }
+  
+  .listGoods .list-goods .Price .price {
+    color: red;
+    font-size: 26rpx;
+    padding-right: 4rpx;
+  }
+  
+  .listGoods .list-goods .Price .pin {
+    color: #3f3c3cdc;
+    font-size: 20rpx;
+  }

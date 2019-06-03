@@ -18,5 +18,15 @@
   <view class="recommend">
     爆款推荐
   </view>
-  <include src="../index/index.wxml"/>
+  <!-- <include src="../index/index.wxml"/> -->
+     <view class="listGoods">
+            <navigator class="list-goods" wx:for="{{goods}}" wx:key="" bindtap="listGoods" data-title="{{item.title}}" url="{{item.url}}">
+                <image class="goods-image" src="{{item.src}}" />
+                <view class="content">{{item.content}}</view>
+                <view class="Price">
+                    <text class="price">￥{{item.price}}</text>
+                    <text class="pin">{{item.pin}}</text>
+                </view>
+            </navigator>
+        </view>
 </view>
