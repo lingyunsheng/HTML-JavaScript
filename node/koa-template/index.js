@@ -12,7 +12,13 @@ app.use(async (ctx, next) => {
     await next();
     console.log(2);
 })
-// use中间件
+// next下没有东西转上一个next
+app.use(async (ctx, next) => {
+    
+    await next();
+    console.log(4);
+})
+// use中间件nex
 app.use(async (ctx) => {
     console.log(3);
     ctx.body = `hello Koa`;
