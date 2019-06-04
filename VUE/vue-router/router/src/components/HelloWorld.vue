@@ -13,6 +13,11 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  beforeRouteEnter (to, from, next) {
+    // ...
+    console.log(from, to)
+    next()
   }
 }
 </script>

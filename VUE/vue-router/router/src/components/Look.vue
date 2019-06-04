@@ -1,6 +1,7 @@
 <template>
     <div class="look">
       {{message}}
+      {{$route.params.id}}
       <router-view/>
     </div>
 </template>

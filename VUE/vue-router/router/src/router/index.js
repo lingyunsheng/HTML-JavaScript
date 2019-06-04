@@ -15,7 +15,7 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/look',
+      path: '/look/:id',
       name: 'Look',
       component: Look,
       children: [
@@ -30,6 +30,10 @@ export default new Router({
           component: LookTwo
         }
       ]
+    },
+    {
+      path: '/detail',
+      redirect: '/'
     }
   ]
 })
