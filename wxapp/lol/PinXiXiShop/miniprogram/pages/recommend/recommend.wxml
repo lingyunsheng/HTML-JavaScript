@@ -1,0 +1,23 @@
+<!-- pages/recommend/recommend.wxml -->
+<view class="container">
+    <scroll-view scroll-y>
+        <navigator url='../goods/goods'>
+            <view class="recommend" wx:for="{{goods}}" wx:key="{{index}}">
+                <view class="image">
+                    <image src="{{item.src}}" />
+                </view>
+                <view class="right">
+                    <view class="Content">
+                        <text class="content">{{item.content}}</text>
+                    </view>
+                    <view class="Price">
+                        <text class="price">{{item.price}}</text>
+                        <text class="pin">{{item.pin}}</text>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+          <image class="top" class="goTop" hidden="{{showTop}}"  bindtap="goTop" src="{{icoSrc}}"/>
+    </scroll-view>
+    
+</view>

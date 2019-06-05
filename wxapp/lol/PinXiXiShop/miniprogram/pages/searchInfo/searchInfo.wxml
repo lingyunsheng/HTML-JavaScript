@@ -1,0 +1,16 @@
+<!--pages/searchInfo/searchInfo.wxml-->
+<view class="container">
+    <view class="search">
+        <input type="text" class="search-text" placeholder="胶原美白丸" />
+        <button class="search-btn" bindtap="btnclick">搜索</button>
+    </view>
+    <view class="latest_search">
+      <view class="header">
+        <text>最近搜索</text>
+        
+      </view>
+      <view class="search_menu" wx:for="{{ songList}}" wx:key="{{index}}" bindtap="getHot">
+        <text>{{item}}</text>
+      </view>
+    </view>
+</view>

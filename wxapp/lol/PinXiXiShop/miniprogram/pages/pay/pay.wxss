@@ -1,0 +1,66 @@
+/* miniprogram/pages/pay/pay.wxss */
+.address{
+    font-size: 28rpx;
+    color: #151516;
+
+}
+.shoplist{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pay_count{
+    font-size: 28rpx;
+    color: #151516;
+}
+.removeCount{
+    background-color: #F2F2F2;
+    width: 62rpx;
+    height: 50rpx;
+    text-align: center;
+    line-height: 50rpx;
+}
+.addCount{
+    background-color: #E0E0E0;
+    width: 62rpx;
+    height: 50rpx;
+    text-align: center;
+    line-height: 50rpx;
+}
+
+.detail_nav{
+     width: 100%;
+     position: fixed;
+     height: 106rpx;
+     bottom: 0;
+}
+.detail_nav-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+   
+}
+.left{
+    width: 410rpx;
+    background: #fff;
+    height: 106px;
+    line-height: 106rpx;
+    padding-left: 50rpx;
+}
+.real_pay{
+    font-size: 28rpx;
+    color: #151516;
+}
+.pay_num{
+    font-size: 40rpx;
+    color: #e02e24;
+}
+.button-red{
+    color: #fff;
+    background-color: #e02e24;
+    text-align: center;
+    width: 340rpx;
+    height: 106rpx;
+    
+}

@@ -1,0 +1,120 @@
+/* pages/chat/chat.wxss */
+
+.container{
+    width: 100%;
+    background: #f2f2f2;
+}
+.banner-item {
+    width: 100%;
+}
+.banner-item image{
+    width: 100%;
+    height: 200rpx;
+}
+
+.chat-list{
+    width: 100%;
+
+
+}
+.chat-list .chat-list-title:before{
+   
+        content: "\E772";
+        font-size: .7rem;
+        color: #ccc;
+        font-family: chat;
+        line-height: 1;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        width: 100rpx;
+        height: 100rpx;
+        text-align: center;
+        justify-content: center;
+    
+}
+.chat-list .chat-list-title{
+    text-align: center;
+    font-size: 26rpx;
+    color: #58595b;
+    justify-content: center;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-top: 100rpx;
+}
+.chat-list .chat-list-text{
+    text-align: center;
+    font-size: 22rpx;
+    color: #9c9c9c;
+    justify-content: center;
+    padding-top: 5rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-top: 10rpx;
+}
+.chat-list .chat-list-link{
+    text-align: center;
+    justify-content: center;
+    color: #3aace9;
+    padding-top: 10rpx;
+    font-size: 22rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-top: 10rpx;
+    margin-bottom: 100rpx;
+}
+
+.recommend{
+    width: 100%;
+    height: 100rpx;
+    background: #fff;
+    text-align: center;
+    font-size: 26rpx;
+    color: red;
+    line-height: 100rpx;
+    border-bottom: 4rpx solid #eee;
+}
+.listGoods {
+    width: 100%;
+    margin-top: 10rpx;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 4rpx solid #e5e5e5;
+  }
+  
+  .listGoods .list-goods {
+    display: inline-block;
+    width: 367rpx;
+    height: 500rpx;
+    border-top: 2rpx solid #e5e5e5;
+    border-right:2rpx solid #e5e5e5;
+    border-bottom:2rpx solid #e5e5e5;
+    border-left:2rpx solid #e5e5e5;
+  }
+  
+  .listGoods .list-goods .goods-image {
+    width: 360rpx;
+    height: 300rpx;
+  }
+  
+  .listGoods .list-goods .content {
+    font-size: 24rpx;
+    color: #000;
+    text-align: center;
+  }
+  
+  .listGoods .list-goods .Price {
+    margin-top: 4rpx;
+    vertical-align: top;
+  }
+  
+  .listGoods .list-goods .Price .price {
+    color: red;
+    font-size: 26rpx;
+    padding-right: 4rpx;
+  }
+  
+  .listGoods .list-goods .Price .pin {
+    color: #3f3c3cdc;
+    font-size: 20rpx;
+  }

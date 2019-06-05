@@ -1,0 +1,108 @@
+/* 搜索区 */
+.search-box {
+    width: 710rpx;
+    height: 60rpx;
+    margin: 0 20rpx 0 20rpx;
+    padding: 0rpx 0rpx 10rpx 0rpx;
+    border-radius: 16rpx;
+    font-size: 26rpx;
+    line-height: 60rpx;
+    text-align: center;
+    background-color: #efefef;
+  }
+  .search-box .icon-xiaokuku {
+    color: #afafaf;
+    padding-right: 10rpx;
+  }
+  .search-box input {
+    color: #949494;
+  }
+  .search-box input text{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    line-height: 60rpx;
+    height: 60rpx;
+    padding: 5rpx;
+    
+  }
+  /* 内容区 */
+  .con-wrapper {
+    border-top: 2rpx solid #e5e5e5;
+    margin-top: 20rpx;
+    width: 100%;
+    font-size: 30rpx;
+  }
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+  }
+  .con-wrap-boxLeft {
+    position: fixed;
+    width: 186rpx;
+    background-color: #f8f8f8;
+  }
+  .con-wrap-boxLeft-item {
+    width: 186rpx;
+    height: 110rpx;
+    line-height: 110rpx;
+    text-align: center;
+  }
+  .con-wrap-boxLeft-active {
+    background-color: #fff;
+    color: red;
+  }
+  .con-wrap-boxLeft-itemTwo {
+    display: inline-block;
+    width: 186rpx;
+    height: 56rpx;
+    line-height: 56rpx;
+    margin: 27rpx 0 27rpx 0;
+  }
+  .con-wrap-boxLeft-activeTwo {
+    border-left: 8rpx solid red;
+  }
+  .con-wrap-boxRight {
+    margin-left: 186rpx;
+    width: 564rpx;
+  }
+  .con-wrap-boxRight-item {
+    position: relative;
+    padding-top: 15rpx;
+  }
+  .rig {
+    position: absolute;
+    right: 24rpx;
+    top: 13rpx;
+    color: #929292;
+    font-size: 30rpx;
+  }
+  .icon-chaoguo {
+    margin-left: 10rpx;
+  }
+  .left-title {
+    width: 80rpx;
+    height: 100rpx;
+    line-height: 80rpx;
+    margin: 26rpx;
+  }
+  .con-wrap-boxRight-classify {
+    padding-left: 46rpx;
+    padding-top: 30rpx;
+  }
+  .classify {
+    display: inline-block;
+    width: 166rpx;
+    height: 154rpx;
+    text-align: center;
+  }
+  .classify .iconfont {
+    font-size: 70rpx;
+  }
+  .classify-font {
+    font-size: 26rpx;
+    padding-top: 10rpx;
+  }
+  

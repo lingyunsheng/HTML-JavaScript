@@ -1,0 +1,8 @@
+<!-- pages/myOrder/myOrder.wxml -->
+<view class="container">
+    <scroll-view class="scrollView" scroll-x>
+        <view class="orderNav" >
+           <text data-index="{{index}}" class="orderNav {{index === currentNav ? 'active':''}}" wx:for="{{orderNav}}" wx:key="{{index}}">{{item}}</text> 
+        </view>
+    </scroll-view>
+</view>

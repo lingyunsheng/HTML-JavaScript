@@ -1,0 +1,31 @@
+<!-- miniprogram/pages/pay/pay.wxml -->
+<view class="container">
+    <view class="address">
+        <navigator url="../address/address">
+            手动添加地址
+        </navigator>
+    </view>
+    <view class="shoplist">
+        <text class="pay_count">购买数量</text>
+        <button class="removeCount">-</button>
+        <text class="count">1</text>
+        <button class="addCount">+</button>
+    </view>
+     <view class="youhui">
+        <text class="dianpu_youhui">店铺优惠</text>
+    </view>
+    <view class="detail_nav">
+    
+     <view class="detail_nav-btn">
+         <view class="left">
+   <span class="real_pay">实付款：</span> <text class="pay_num">￥188 免运费</text>
+
+         </view>
+    
+        <button class="button-red" bindtap="immeBuy" formType="submit">立即支付</button>
+    </view>
+   
+    
+    </view>
+   
+</view>

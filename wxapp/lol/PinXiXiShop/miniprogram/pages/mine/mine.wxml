@@ -1,0 +1,113 @@
+<view class="container">
+  <view class="userInfo">
+    <view class="header">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </view>
+    <view class="name">
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <button class="update" bindtap='update'>更新资料</button>
+    </view>
+    <view class="button">
+      <button class="pindan" bindtap='pindan'>拼单返现</button>
+      <button class="shengqian" bindtap='shengqian'>省钱月卡</button>
+    </view>
+  </view>
+  <view class="special_sell" style="background:url('../../images/special_sell.png'),-webkit-linear-gradient(#625e70,#4f4c5b)">
+    <text class="sell">品牌特卖</text>
+    <button>床品套件27元抢</button>
+  </view>
+  <view class="my_order">
+    <navigator url="../myOrder/myOrder">
+      <view class="my_order-header">
+        <text class="order">我的订单</text>
+        <text class="readAll">查看全部</text>
+      </view>
+    </navigator>
+    <view class="my_order_content">
+      <view class="Pay">
+        <image src="../../images/pay.png" />
+        <text class="pay">待付款</text>
+      </view>
+      <view class="Share">
+        <image src="../../images/share.png" />
+        <text class="share">待分享</text>
+      </view>
+      <view class="Send">
+        <image src="../../images/send.png" />
+        <text class="send">待发货</text>
+      </view>
+      <view class="Recive">
+        <image src="../../images/recive.png" />
+        <text class="recive">待收货</text>
+      </view>
+      <view class="Command">
+        <image src="../../images/command.png" />
+        <text class="command">待评价</text>
+      </view>
+    </view>
+  </view>
+  <view class="my_order">
+    <view class="my_order_content">
+      <view class="Pay">
+        <image src="../../images/youhuiquan.png" />
+        <text class="pay">优惠券</text>
+      </view>
+      <view class="Share">
+        <image src="../../images/shangpin_collect.png" />
+        <text class="share">商品收藏</text>
+      </view>
+      <view class="Send">
+        <image src="../../images/dianpu_collect.png" />
+        <text class="send">店铺收藏</text>
+      </view>
+      <view class="Recive">
+        <image src="../../images/history_local.png" />
+        <text class="recive">历史浏览</text>
+      </view>
+      <view class="Command">
+        <image src="../../images/tuikuan.png" />
+        <text class="command">退款售后</text>
+      </view>
+    </view>
+  </view>
+  <view class="bottom_menu">
+    <view class="new">
+      <image src="../../images/redbag.webp" style="width:54rpx;height:54rpx" />
+      <text class="invite_content">新人红包</text>
+    </view>
+    <view class="invite">
+      <image src="../../images/newPerson.webp" style="width:54rpx;height:54rpx" />
+      <text class="invite_content">邀请好友</text>
+    </view>
+    <view class="shouhuo">
+      <navigator url="../address/address">
+        <image src="../../images/shouhuo.webp" style="width:54rpx;height:54rpx" />
+        <text class="shouhuo_content">收货</text>
+      </navigator>
+    </view>
+    <view class="myRemark">
+      <image src="../../images/redbag.webp" style="width:54rpx;height:54rpx" />
+      <text class="myRemark_content">我的评价</text>
+    </view>
+    <view class="kefu">
+      <image src="../../images/gfkefu.webp" style="width:54rpx;height:54rpx" />
+      <text class="kefu_content">官方客服</text>
+    </view>
+    <view class="set">
+      <image src="../../images/set.webp" style="width:54rpx;height:54rpx" />
+      <text class="set_content">设置</text>
+    </view>
+  </view>
+  <view class="recommend">爆款推荐</view>
+  <!-- <include src="../index/index.wxml"/> -->
+  <view class="listGoods">
+    <navigator class="list-goods" wx:for="{{goods}}" wx:key="" bindtap="listGoods" data-title="{{item.title}}" url="{{item.url}}">
+      <image class="goods-image" src="{{item.src}}" />
+      <view class="content">{{item.content}}</view>
+      <view class="Price">
+        <text class="price">￥{{item.price}}</text>
+        <text class="pin">{{item.pin}}</text>
+      </view>
+    </navigator>
+  </view>
+</view>

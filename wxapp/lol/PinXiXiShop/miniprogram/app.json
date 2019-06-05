@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recommend/recommend",
+    "pages/search/search",
+    "pages/chat/chat",
+    "pages/mine/mine",
+    "pages/goods/goods",
+    "pages/searchInfo/searchInfo",
+    "pages/mans/mans",
+    "pages/myOrder/myOrder",
+    "pages/pay/pay",
+    "pages/address/address"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "拼夕夕",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#E02E24",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index-selected.png"
+      },
+      {
+        "pagePath": "pages/recommend/recommend",
+        "iconPath": "images/recommend.png",
+        "selectedIconPath": "images/recommend-selected.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search-selected.png",
+        "text": "搜索"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "iconPath": "images/chat.png",
+        "selectedIconPath": "images/chat-selected.png",
+        "text": "聊天"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine-selected.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

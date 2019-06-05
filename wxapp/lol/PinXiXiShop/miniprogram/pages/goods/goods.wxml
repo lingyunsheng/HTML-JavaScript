@@ -1,0 +1,76 @@
+<!-- banner -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<scroll-view scroll-y="true">
+  <view class="detail" wx:for="{{goods}}" wx:key="{{index}}">
+    <view class="price">
+      <text class="new_price">￥{{item.newPrice}}</text>
+      <text class="old_price">￥{{item.oldPrice}}</text>
+      <text class="pin">已拼{{item.pin}}件</text>
+    </view>
+    <view class="Content">
+      <text class="content">{{item.content}}</text>
+      <text class="share">分享</text>
+    </view>
+    <view class="lingquan">
+      <button class="lq">领券</button >
+      <button  class="mq">5元无门槛券</button>
+      <button  class="mj">满100元减5元</button>
+    </view>
+    <view class="tips">
+      <text class="quanchang">全场包邮</text>
+      <text class="qitian">7天退换</text>
+      <text class="fahuo">48小时发货</text>
+      <text class="peichang">假一赔十</text>
+    
+    </view>
+  </view>
+  <view class="pindan">
+    <view class="pindan_info">
+      <text class="info">这些人刚刚购买成功，可插队拼单</text>
+    </view>
+    <view class="pindan_arr" wx:for="{{pindanList}}" wx:key="{{index}}">
+      <image src="{{item.src}}" />
+      <text class="user_nickname">{{item.name}}</text>
+      <button>插队拼单</button>
+    </view>
+  </view>
+  
+  <view class="remark">
+    <view class="remark_hd">
+      <text class="remark_goods">商品评价</text>
+      <text class="readMore">查看更多</text>
+    </view>
+    <view class="text_remark" wx:for="{{remarkList}}" wx:key="{{index}}">
+      <image src="{{item.src}}" />
+      <text class="username">{{item.username}}</text>
+      <text class="remark_content">{{item.remark}}</text>
+    </view>
+  </view>
+  <view class="goods_detail" wx:for="{{  detailImg}}"wx:key="{{index}}">
+    <image src="{{item}}" />
+  </view>
+  
+</scroll-view>
+ <image src="../../images/goTop.png" class="gotop" hidden="{{showTop}}" bindtap="goTop"/>
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <view class="left">
+      <text bindtap="index" class="toIndex">首页</text>
+      <text class="collect" bindtap="collect">收藏</text>
+      <text class="chat" bindtap="chat">客服</text>
+  </view>
+  <view class="detail_nav-btn"> 
+  <navigator url="../pay/pay" >
+   <button class="button-green" bindtap="addCar" formType="submit">单独购买</button>
+  
+    <button class="button-red" bindtap="immeBuy" formType="submit">发起拼单</button>
+   
+  </navigator>
+  </view>
+</view>

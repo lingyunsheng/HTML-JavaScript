@@ -1,0 +1,82 @@
+/* pages/recommend/recommend.wxss */
+/* .container{
+    width: 100%;
+    height: 100%;
+    border-top: 1rpx solid #eee;
+    box-sizing: border-box;
+}
+.recommend{
+    width: 100%;
+   
+    display: inline-block;
+    border-bottom: 1rpx solid #eee;
+}
+.image{
+    float: left;
+}
+.image image{
+    width: 200rpx;
+    height: 200rpx;
+}
+.right{
+    float: right;
+}
+ */
+.container{
+width: 100%;
+}
+.recommend{
+    display: block;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 350rpx;
+    border-bottom: 4rpx solid #eee;
+    border-top: 4rpx solid #eee;
+    margin-left: 4rpx;
+    margin-right: 4rpx;
+    border-radius: 4rpx solid #fff;
+
+}
+.image{
+    display: block;
+    float: left;
+}
+image{
+    width: 300rpx;
+    height: 330rpx;
+}
+.right{
+    display: block;
+    float: right;
+    width: 400rpx;
+    height: 300rpx;
+}
+.Content .content{
+  font-size: 30rpx;
+  color: #000;
+  font-weight: bold;
+}
+.Price{
+    margin-top: 150rpx;
+    vertical-align: top;
+}
+.Price .price{
+    font-size: 30rpx;
+    color: red;
+    font-weight: bold;
+ 
+}
+.Price .pin{
+  
+    font-size: 26rpx;
+    color: #666;
+    padding-left: 4rpx;
+}
+.goTop{
+    position: fixed;
+    bottom: 20rpx;
+    right: 15rpx;
+    width: 64rpx;
+    height: 64rpx;
+  }
+

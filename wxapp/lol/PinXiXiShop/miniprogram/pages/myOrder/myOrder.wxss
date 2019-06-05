@@ -1,0 +1,17 @@
+/* pages/myOrder/myOrder.wxss */
+.container{
+    width: 100%;
+}
+
+.orderNav{
+    width: 100%;
+    border-top: 1rpx solid #000;
+    border-bottom: 1rpx solid #000;
+    height: 90rpx;
+    line-height: 90rpx;
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 15rpx;
+    color: #000;
+    font-size: 26rpx;
+}
