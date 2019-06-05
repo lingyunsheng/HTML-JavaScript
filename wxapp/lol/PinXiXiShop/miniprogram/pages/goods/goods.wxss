@@ -3,14 +3,18 @@ page {
   flex-direction: column;
   height: 100%;
 }
+
 /* 直接设置swiper属性 */
+
 swiper {
   height: 500rpx;
 }
+
 swiper-item image {
   width: 100%;
   height: 100%;
 }
+
 .detail {
   display: flex;
   flex-direction: column;
@@ -19,63 +23,69 @@ swiper-item image {
   margin-left: 5rpx;
   margin-right: 5rpx;
 }
+
 .detail .title {
   font-size: 40rpx;
   margin: 10rpx;
   color: black;
   text-align: justify;
 }
-.price{
+
+.price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
+
 .detail .new_price {
   color: red;
   font-size: 45rpx;
-  flex:1;
-
+  flex: 1;
 }
-.detail .old_price{
-  flex:5;
+
+.detail .old_price {
+  flex: 5;
   color: #000;
   font-size: 25rpx;
   text-decoration: line-through;
   padding-top: 5rpx;
 }
-.detail .pin{
+
+.detail .pin {
   font-size: 24rpx;
   color: #666;
-  flex:1;
+  flex: 1;
 }
-.Content{
+
+.Content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.Content .content{
+
+.Content .content {
   font-size: 40rpx;
   color: #000;
   white-space: nowrap;
 }
-.Content .share{
+
+.Content .share {
   font-size: 24rpx;
   color: #666;
   padding-top: 6rpx;
   align-items: center;
   justify-content: center;
-
-  
 }
-.lingquan{
+
+.lingquan {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 20rpx;
 }
-.lq{
-  flex:1;
+
+.lq {
+  flex: 1;
   font-size: 20rpx;
   color: #fff;
   background: red;
@@ -86,8 +96,9 @@ swiper-item image {
   line-height: 50rpx;
   margin-right: 5rpx;
 }
-.mq{
-  flex:3;
+
+.mq {
+  flex: 3;
   font-size: 20rpx;
   color: red;
   background: #fff;
@@ -98,8 +109,9 @@ swiper-item image {
   line-height: 50rpx;
   margin-right: 3rpx;
 }
-.mj{
-  flex:3;
+
+.mj {
+  flex: 3;
   font-size: 20rpx;
   color: red;
   background: #fff;
@@ -109,7 +121,8 @@ swiper-item image {
   height: 50rpx;
   line-height: 50rpx;
 }
-.tips{
+
+.tips {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -120,87 +133,99 @@ swiper-item image {
   height: 90rpx;
   line-height: 90rpx;
 }
-.pindan_info{
+
+.pindan_info {
   font-size: 30rpx;
   color: #555;
   padding-left: 10rpx;
   border-bottom: 1rpx solid #eee;
 }
-.pindan_arr{
+
+.pindan_arr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1rpx solid #eee;
 }
-.pindan image{
+
+.pindan image {
   width: 90rpx;
   height: 90rpx;
   border-radius: 50rpx solid #000;
 }
-.pindan_arr text{
+
+.pindan_arr text {
   font-size: 30rpx;
   color: #000;
-  flex:10;
+  flex: 10;
 }
-.pindan_arr button{
-  flex:2;
+
+.pindan_arr button {
+  flex: 2;
   width: 160rpx;
   height: 50rpx;
   line-height: 50rpx;
   text-align: center;
   background-color: red;
   color: #fff;
-  align-items:center;
+  align-items: center;
   margin-top: 10rpx;
   margin-right: 10rpx;
- 
 }
-.remark{
+
+.remark {
   margin-top: 5rpx;
   margin-left: 5rpx;
   margin-right: 5rpx;
   border-top: 1rpx solid #eee;
-
 }
-.remark_hd{
+
+.remark_hd {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
-.remark__goods{
+
+.remark__goods {
   font-size: 30rpx;
   color: #000;
 }
-.readMore{
+
+.readMore {
   font-size: 26rpx;
   color: #666;
 }
-.text_remark{
+
+.text_remark {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1rpx solid #eee;
 }
-.text_remark image{
+
+.text_remark image {
   width: 90rpx;
   height: 90rpx;
 }
-.text-remark .username{
+
+.text-remark .username {
   font-size: 28rpx;
   color: #000;
 }
-.goods_detail image{
+
+.goods_detail image {
   width: 100%;
   height: 500rpx;
 }
-.gotop{
+
+.gotop {
   width: 90rpx;
   height: 90rpx;
   right: 15rpx;
   bottom: 100rpx;
   position: fixed;
 }
+
 .line_flag {
   width: 80rpx;
   height: 1rpx;
@@ -209,6 +234,7 @@ swiper-item image {
   background-color: gainsboro;
   text-align: center;
 }
+
 .line {
   width: 100%;
   height: 2rpx;
@@ -217,6 +243,7 @@ swiper-item image {
   background-color: gainsboro;
   text-align: center;
 }
+
 .detail-nav {
   display: flex;
   flex-direction: row;
@@ -230,26 +257,33 @@ swiper-item image {
   width: 100%;
   height: 100rpx;
 }
-.left{
+
+.left {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 30%;
- 
 }
-.detail_nav-btn{
+
+.detail_nav-btn {
   width: 70%;
   height: 100rpx;
 }
+
 .button-green {
-  background-color: #d30d0da6; /* Green */
+  background-color: #d30d0da6;
+  /* Green */
 }
+
 .button-red {
-  background-color: #f44336; /* 红色 */
+  background-color: #f44336;
+  /* 红色 */
 }
+
 .image_detail {
   width: 100%;
 }
+
 button {
   color: white;
   text-align: center;
@@ -261,20 +295,25 @@ button {
   height: 100%;
   line-height: 100rpx;
 }
+
 .detail-nav image {
   width: 70rpx;
   height: 50rpx;
   margin: 20rpx 40rpx;
 }
+
 .line_nav {
   width: 5rpx;
   height: 100%;
   background-color: gainsboro;
 }
+
 /* 占位 */
+
 .temp {
   height: 100rpx;
 }
+
 text {
   display: block;
   height: 60rpx;
@@ -282,6 +321,7 @@ text {
   font-size: 25rpx;
   margin: 10rpx;
 }
+
 .text-remark {
   display: block;
   font-size: 25rpx;

@@ -2,21 +2,42 @@
 .address{
     font-size: 28rpx;
     color: #151516;
+    margin-top: 10rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 28rpx;
+    color: #151516;
+    padding-left: 10rpx;
 
 }
+
 .shoplist{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
 }
+
 .pay_count{
     font-size: 28rpx;
     color: #151516;
+    flex:10;
 }
 .removeCount{
     background-color: #F2F2F2;
     width: 62rpx;
     height: 50rpx;
+    text-align: center;
+    line-height: 50rpx;
+    flex:1;
+}
+.count{
+    flex:1;
+    width: 74rpx;
+    height: 50rpx;
+    background: #fff;
     text-align: center;
     line-height: 50rpx;
 }
@@ -26,8 +47,11 @@
     height: 50rpx;
     text-align: center;
     line-height: 50rpx;
+    flex:1;
 }
-
+.youhui{
+    margin: 10rpx 10rpx;
+}
 .detail_nav{
      width: 100%;
      position: fixed;

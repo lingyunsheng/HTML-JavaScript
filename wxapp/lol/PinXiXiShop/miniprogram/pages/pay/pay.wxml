@@ -2,30 +2,30 @@
 <view class="container">
     <view class="address">
         <navigator url="../address/address">
-            手动添加地址
+            <view wx:if="{{hasAddress}}" class="orders-address">
+                <text class="orders-address-name">收货人：{{address.name}}</text>
+                <text class="orders-address-phone">电话：{{address.phone}}</text>
+                <text class="orders-address-detail">{{address.detail}}</text>
+            </view>
+            <view wx:else class="orders-no-address">添加收货地址</view>
         </navigator>
     </view>
     <view class="shoplist">
         <text class="pay_count">购买数量</text>
-        <button class="removeCount">-</button>
+        <button class="removeCount" bindatap="minusCount">-</button>
         <text class="count">1</text>
-        <button class="addCount">+</button>
+        <button class="addCount" bindtap="addCount">+</button>
     </view>
-     <view class="youhui">
+    <view class="youhui">
         <text class="dianpu_youhui">店铺优惠</text>
     </view>
     <view class="detail_nav">
-    
-     <view class="detail_nav-btn">
-         <view class="left">
-   <span class="real_pay">实付款：</span> <text class="pay_num">￥188 免运费</text>
-
-         </view>
-    
-        <button class="button-red" bindtap="immeBuy" formType="submit">立即支付</button>
+        <view class="detail_nav-btn">
+            <view class="left">
+                <span class="real_pay">实付款：</span>
+                <text class="pay_num">￥{{totalPrice}} 免运费</text>
+            </view>
+            <button class="button-red" bindtap="immeBuy" formType="submit">立即支付</button>
+        </view>
     </view>
-   
-    
-    </view>
-   
 </view>

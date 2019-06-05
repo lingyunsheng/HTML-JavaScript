@@ -1,0 +1,9 @@
+<!--miniprogram/pages/618/618.wxml-->
+<view class="container">
+    <navigator url="../searchInfo/searchInfo">
+          <view class="search_icon" style="background:url('../../images/618.webp')no-repeat center center;">
+       
+    </view>
+    </navigator>
+  
+</view>

@@ -1,0 +1,6 @@
+/* miniprogram/pages/618/618.wxss */
+.search_icon{
+    width: 512rpx;
+    height: 62px;
+    margin: 0 auto;
+}

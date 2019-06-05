@@ -23,7 +23,7 @@
         <view class="scroll-view">
             <scroll-view class="scrollView" scroll-x scroll-left="{{scrollLeft}}" bindscroll="scrollMove">
                 <view class="block1">
-                    <block wx:for="{{block1lists}}" bindtap="getCategory">
+                    <block wx:for="{{block1lists}}" bindtap="getCategory" wx:key="{{index}}">
                         <ul class="items">
                             <li class="item">
                                 <image class="image" src="{{item.icons}}" />
@@ -69,10 +69,10 @@
         </view>
         <view class="returnTop"></view>
     </view>
-    <navigator >
+    <navigator url="../618/618">
         <image src="{{icoImg}}" hidden="{{showTop}}" class="banner" />
     </navigator>
-    <image class="top" class="goTop" hidden="{{showTop}}"  bindtap="goTop" src="{{icoSrc}}"/>
+    <image class="top" class="goTop" hidden="{{showTop}}" bindtap="goTop" src="{{icoSrc}}" />
     <!-- 男装 -->
     <view hidden='{{curNum!==1}}'>
         我是男装

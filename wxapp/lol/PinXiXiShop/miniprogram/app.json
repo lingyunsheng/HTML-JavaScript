@@ -10,7 +10,8 @@
     "pages/mans/mans",
     "pages/myOrder/myOrder",
     "pages/pay/pay",
-    "pages/address/address"
+    "pages/address/address",
+    "pages/618/618"
   ],
   "window": {
     "backgroundTextStyle": "light",

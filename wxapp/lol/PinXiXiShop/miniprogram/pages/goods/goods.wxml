@@ -66,7 +66,7 @@
       <text class="chat" bindtap="chat">客服</text>
   </view>
   <view class="detail_nav-btn"> 
-  <navigator url="../pay/pay" >
+  <navigator url="../pay/pay?id==={{item.id}}" >
    <button class="button-green" bindtap="addCar" formType="submit">单独购买</button>
   
     <button class="button-red" bindtap="immeBuy" formType="submit">发起拼单</button>

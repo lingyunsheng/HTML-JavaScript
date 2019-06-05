@@ -1,6 +1,6 @@
 <!--pages/mans/mans.wxml-->
 <view class="container">
-    <view class="mans-category" wx:for="{{mans}}">
+    <view class="mans-category" wx:for="{{mans}}" wx:key="{{index}}">
         <image src="{{item.src}}" />
         <view class="title">{{item.title}}</view>
     </view>

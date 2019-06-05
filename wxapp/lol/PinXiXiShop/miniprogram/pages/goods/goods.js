@@ -1,20 +1,20 @@
 Page({
   data: {
-    remarkList:[
+    remarkList: [
       {
-        src:'../../images/pay.png',
-        username:'一个潇洒的小可爱',
-        remark:'该用户觉得商品好，给了五星好评'
+        src: '../../images/pay.png',
+        username: '一个潇洒的小可爱',
+        remark: '该用户觉得商品好，给了五星好评'
       },
       {
-        src:'../../images/pay.png',
-        username:'一个潇洒的小可爱',
-        remark:'该用户觉得商品好，给了五星好评'
+        src: '../../images/pay.png',
+        username: '一个潇洒的小可爱',
+        remark: '该用户觉得商品好，给了五星好评'
       },
       {
-        src:'../../images/pay.png',
-        username:'一个潇洒的小可爱',
-        remark:'该用户觉得商品好，给了五星好评'
+        src: '../../images/pay.png',
+        username: '一个潇洒的小可爱',
+        remark: '该用户觉得商品好，给了五星好评'
       }
     ],
     pindanList: [
@@ -120,4 +120,9 @@ Page({
     })
 
   },
+  index(e) {
+    wx.switchTab({
+      url: '../index/index'
+    })
+  }
 })
