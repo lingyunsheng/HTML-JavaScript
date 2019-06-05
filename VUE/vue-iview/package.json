@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "iview": "^3.4.2",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.5.1"
+  }
+}
