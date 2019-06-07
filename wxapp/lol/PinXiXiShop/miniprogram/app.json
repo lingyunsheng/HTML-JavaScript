@@ -1,5 +1,6 @@
 {
   "pages": [
+   
     "pages/index/index",
     "pages/recommend/recommend",
     "pages/search/search",
@@ -11,7 +12,9 @@
     "pages/myOrder/myOrder",
     "pages/pay/pay",
     "pages/address/address",
-    "pages/618/618"
+    "pages/618/618",
+    "components/components",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",

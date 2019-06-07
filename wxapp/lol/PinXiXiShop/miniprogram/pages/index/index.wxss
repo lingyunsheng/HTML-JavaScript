@@ -189,7 +189,7 @@ swiper image {
   position: absolute;
   top: 30rpx;
   left: 88rpx;
-  font-size: 30rpx;
+  font-size: 28rpx;
   padding-left: 8rpx;
 }
 .goTop{
