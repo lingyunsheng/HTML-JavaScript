@@ -1,15 +1,16 @@
-.form-box{
-    padding-left: 30rpx;
+@import '../../weui/weui';
+
+.weui-cells:before{
+  top:0;
+  border-top:1rpx solid white;
+  }
+.weui-cell{
+  line-height: 3.5rem;
 }
-.form-box input{
-    height: 90rpx;
-    border-bottom: 1rpx solid #ededed;
-    font-size: 28rpx;
-    color: #000;
+.weui-cells:after{
+  bottom:0;border-bottom:1rpx solid white
 }
-.form-box .input-placeholder{
-    color: #aaa;
-}
-.form-box button{
-    margin:30rpx 30rpx 0 0;
+
+.weui-btn{
+  width: 80%;
 }

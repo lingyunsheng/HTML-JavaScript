@@ -272,5 +272,20 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  goOrder: function (e) {
+    wx.navigateTo({
+      url: "../order-list/index?type=" + e.currentTarget.dataset.type
+    })
+  },
+  coupons:function(e){
+    wx.navigateTo({
+      url:'../coupons/index'
+    })
+  },
+updateUserInfo:function(e){
+  wx.navigateTo({
+    url:'../update/update'
+  })
+}
 })

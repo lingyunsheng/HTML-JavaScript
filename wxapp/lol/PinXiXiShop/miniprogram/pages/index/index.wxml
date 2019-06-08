@@ -56,6 +56,10 @@
                     <text class="pin">{{item.pin}}</text>
                 </view>
             </navigator>
+            <view class="weui-loadmore" hidden="{{hidden}}">
+                <view class="weui-loading"></view>
+                <view class="weui-loadmore__tips">努力加载中</view>
+            </view>
         </view>
         <view class="invite" wx:if="{{show}}">
             <navigator class="invitation" animation="{{animationData}}">

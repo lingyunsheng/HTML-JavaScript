@@ -1,12 +1,11 @@
-<!--index.wxml-->
-<view class="container" hidden="{{route === 'main'}}">
-  <login-component weui-btn="weui-btn" text="登录/注册" bind:loginsuccess="onLoginSuccess"></login-component>
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userinfo-btn">
+      点击微信授权
+    </button>
+    <block wx:else bindtap="switchTab">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname" bindtap="switchTab">{{userInfo.nickName}}</text>
+    </block>
+  </view>
 </view>
-<view class="container" hidden="{{route === 'index'}}">
-  <image class="img" src="{{avatarUrl}}"/>
-  <text>昵称:{{nickName}}</text>
-  <text>性别:{{index.transform(gender)}}</text>
-  <button class="weui-btn" type="primary" bindtap="bindTap">校验身份</button>
-  <button class="weui-btn" type="default" bindtap="bindLogout">注销</button>
-</view>
-<wxs src="../login/login.wxs" module="index" />

@@ -1,21 +1,16 @@
-// miniprogram/pages/pay/pay.js
+// pages/addressList/addressList.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    totalPrice: ''
-  },
- 
-  minusCount(e){
-
+    addressList:[]
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getTotalPrice();
     var arr = wx.getStorageSync('addressList') || [];
     console.info("缓存数据：" + arr);
     // 更新数据  
@@ -23,31 +18,12 @@ Page({
       addressList: arr
     });
   },
-  getTotalPrice(){},
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
     this.onLoad();
-    const that = this
-    wx.getStorage({
-      key: 'address',
-      success:(result) => {
-        // console.log(result)
-        that.setData({
-          address: result.data,
-          hasAddress: true
-        })
-      }
-    })
-
   },
   addAddress:function(){
     wx.navigateTo({ url: '../address/address' });
@@ -67,40 +43,6 @@ Page({
       })
       wx.setStorageSync('addressList', []);
     }
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   }
+
 })

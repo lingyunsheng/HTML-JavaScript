@@ -1,0 +1,33 @@
+<!--miniprogram/pages/update/update.wxml-->
+<view class="container">
+    <view class="userInfo">
+        <view class="avatal">
+              <text>头像</text>
+              <image src="../../images/touxiang.png" />
+        </view>
+        <view class="nickname">
+            <text >昵称</text>
+            <text >之</text>
+        </view>
+        <view class="sex">
+            <text >性别</text>
+            <text >男</text>
+        </view>
+        <view class="address">
+            <text >常住地</text>
+            <text >南昌</text>
+        </view>
+        <view class="bit">
+            <text >生日</text>
+            <text >1990</text>
+        </view>
+        <view class="qianming">
+            <text >个性签名</text>
+            <text >未填写</text>
+        </view>
+      
+    </view>
+    <view class="update" bindtap="update">
+        同步微信资料
+    </view>
+</view>

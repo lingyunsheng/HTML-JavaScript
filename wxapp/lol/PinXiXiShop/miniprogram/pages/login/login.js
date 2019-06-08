@@ -1,107 +1,55 @@
-const regeneratorRuntime = require('../../lib/runtime');
+// pages/mine/mine.js
+var app = getApp()
 Page({
-  data: {
-    route: 'index', // or main
-    avatarUrl: '',
-    nickName: '',
-    gender: 0
-  },
+	data: {
+		userInfo: {},
+		hasUserInfo: false,
+		canIUse: wx.canIUse('button.open-type.getUserInfo'),
 
-  onLoad () {
-    let that = this
-    wx.checkSession({
-      async success () {
-        // 当前仍然有效的话直接去云函数获取用户信息
-        const { result } = await wx.cloud.callFunction({
-          // 要调用的云函数名称
-          name: 'verifyIdentity',
-          // 传递给云函数的参数
-          data: {
-            session: wx.getStorageSync('session')
-          }
-        });
+	},
 
-        if (result.code === 0) {
-          const { avatarUrl, gender, nickName } = result.data
-          that.setData({ avatarUrl, nickName, gender, route: 'main' })
-        }
-        // 登陆态失效
-        else if (result.code === 401) {
-          wx.removeStorageSync('session');
-        }
-      },
-      fail () {
-        wx.showToast({
-          title: '会话过期....',
-          icon: 'none',
-          duration: 1500,
-          complete () {
-            wx.removeStorageSync('session');
-            that.setData({ route: 'index' });
-          }
-        })
-      }
-    })
-  },
-  onLoginSuccess (e) {
-    // 登录成功的回调
-    const { avatarUrl, nickName, gender } = e.detail
-    this.setData({ route: 'main', avatarUrl, nickName, gender })
-  },
-  async bindLogout () {
-    const that = this
-    const { result } = await wx.cloud.callFunction({
-      // 要调用的云函数名称
-      name: 'loginRegister',
-      // 传递给云函数的参数
-      data: {
-        session: wx.getStorageSync('session'),
-        isLogout: true
-      }
-    });
-    if (result.code === 0) {
-      wx.showToast({
-        title: result.message,
-        icon: 'none',
-        duration: 1500,
-        complete () {
-          wx.removeStorageSync('session');
-          that.setData({ route: 'index' });
-        }
-      });
-    }
-  },
-  async bindTap () {
-    let that = this
-    wx.showLoading({
-      title: '请求调用云函数中...'
-    });
-    const { result } = await wx.cloud.callFunction({
-      // 要调用的云函数名称
-      name: 'verifyIdentity',
-      // 传递给云函数的参数
-      data: {
-        session: wx.getStorageSync('session')
-      }
-    });
-    wx.hideLoading()
-    const { message } = result
-    if (result.code === 0) {
-      wx.showToast({
-        title: message,
-        icon: 'none',
-        duration: 2000
-      });
-    } else {
-      wx.showToast({
-        title: message,
-        icon: 'none',
-        duration: 2000,
-        complete () {
-          wx.removeStorageSync('session')
-          that.setData({ route: 'index' })
-        }
-      });
-    }
-  }
+	onLoad: function () {
+		if (app.globalData.userInfo) {
+			this.setData({
+				userInfo: app.globalData.userInfo,
+				hasUserInfo: true
+			})
+		} else if (this.data.canIUse) {
+			// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+			// 所以此处加入 callback 以防止这种情况
+			app.userInfoReadyCallback = res => {
+				this.setData({
+					userInfo: res.userInfo,
+					hasUserInfo: true
+				})
+			}
+		} else {
+			// 在没有 open-type=getUserInfo 版本的兼容处理
+			wx.getUserInfo({
+				success: res => {
+
+					app.globalData.userInfo = res.userInfo
+					this.setData({
+						userInfo: res.userInfo,
+						hasUserInfo: true
+					})
+				
+				}
+			})
+		}
+	},
+	getUserInfo: function (e) {
+		console.log(e)
+		app.globalData.userInfo = e.detail.userInfo
+		this.setData({
+			userInfo: e.detail.userInfo,
+			hasUserInfo: true
+		})
+	},
+	switchTab(){
+		wx.switchTab({
+			url:'../index/index'
+		})
+	}
+
 })

@@ -1,9 +1,9 @@
 <view class="container">
   <view class="userInfo">
-    <view class="header">
+    <view class="header" bindtap="updateUserInfo">
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
     </view>
-    <view class="name">
+    <view class="name" bindtap="updateUserInfo">
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
       <button class="update" bindtap='update'>更新资料</button>
     </view>
@@ -17,38 +17,38 @@
     <button>床品套件27元抢</button>
   </view>
   <view class="my_order">
-    <navigator url="../myOrder/myOrder">
+    <navigator url="../order-list/index">
       <view class="my_order-header">
         <text class="order">我的订单</text>
         <text class="readAll">查看全部</text>
       </view>
     </navigator>
     <view class="my_order_content">
-      <view class="Pay">
+      <view class="Pay"  bindtap='goOrder'>
         <image src="../../images/pay.png" />
-        <text class="pay">待付款</text>
+        <text class="pay" >待付款</text>
       </view>
-      <view class="Share">
-        <image src="../../images/share.png" />
-        <text class="share">待分享</text>
-      </view>
-      <view class="Send">
+      <view class="Send"  bindtap='goOrder'>
         <image src="../../images/send.png" />
         <text class="send">待发货</text>
       </view>
-      <view class="Recive">
+      <view class="Recive"  bindtap='goOrder'>
         <image src="../../images/recive.png" />
         <text class="recive">待收货</text>
       </view>
-      <view class="Command">
+      <view class="Command"  bindtap='goOrder'>
         <image src="../../images/command.png" />
         <text class="command">待评价</text>
+      </view>
+        <view class="Share"  bindtap='goOrder'>
+        <image src="../../images/share.png" />
+        <text class="share">待分享</text>
       </view>
     </view>
   </view>
   <view class="my_order">
     <view class="my_order_content">
-      <view class="Pay">
+      <view class="Pay" bindtap="coupons">
         <image src="../../images/youhuiquan.png" />
         <text class="pay">优惠券</text>
       </view>
@@ -80,7 +80,7 @@
       <text class="invite_content">邀请好友</text>
     </view>
     <view class="shouhuo">
-      <navigator url="../address/address">
+      <navigator url="../addressList/addressList">
         <image src="../../images/shouhuo.webp" style="width:54rpx;height:54rpx" />
         <text class="shouhuo_content">收货</text>
       </navigator>

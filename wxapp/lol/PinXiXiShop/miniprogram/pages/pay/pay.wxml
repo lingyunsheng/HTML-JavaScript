@@ -1,14 +1,27 @@
 <!-- miniprogram/pages/pay/pay.wxml -->
 <view class="container">
     <view class="address">
-        <navigator url="../address/address">
-            <view wx:if="{{hasAddress}}" class="orders-address">
-                <text class="orders-address-name">收货人：{{address.name}}</text>
-                <text class="orders-address-phone">电话：{{address.phone}}</text>
-                <text class="orders-address-detail">{{address.detail}}</text>
+        <scroll-view class="scroll" scroll-y="true">
+            <view wx:for="{{addressList}}">
+                <view class="product-name-wrap">
+                    <view class="ui-list-item-info">
+                        {{item.consignee}}
+                        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+                        {{item.mobile}}
+                    </view>
+                    <view class="ui-list-item-address">{{item.address}}</view>
+                    <view class="ui-list-item-time">
+                        <p>{{item.transportDay}}</p>
+                        <p class="ui-list-item-del" data-id="{{index}}" bindtap="delAddress">删除</p>
+                    </view>
+                    <view class="separate"></view>
+                </view>
             </view>
-            <view wx:else class="orders-no-address">添加收货地址</view>
-        </navigator>
+        </scroll-view>
+        <view class="add-address" bindtap="addAddress">
+            <image class="add-img" src="../../images/add.png"></image>
+            新增地址
+        </view>
     </view>
     <view class="shoplist">
         <text class="pay_count">购买数量</text>

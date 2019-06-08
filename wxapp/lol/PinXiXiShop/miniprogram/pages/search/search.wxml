@@ -21,7 +21,7 @@
       </navigator>
       <view class='con-wrap-boxRight-classify'>
         <view class='classify' wx:for="{{item.content}}" wx:for-item="items">
-          <icon class='iconfont {{items.ic}}'></icon>
+          <icon class='iconfont {{items.ic}}' src="{{item.img}}"></icon>
           <view class='classify-font'>{{items.icname}}</view>
         </view>
       </view>
