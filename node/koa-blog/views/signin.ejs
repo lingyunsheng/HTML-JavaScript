@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/index.css">
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <form method="post" class="form create">
+      <div>
+        <label for="name">用户名</label>
+        <input type="text" id="name" name="name" placeholder="请输入用户名">
+      </div>
+      <div>
+        <label for="password">密码</label>
+        <input type="password" id="password" name="password" placeholder="请输入密码">
+      </div>
+      <div>
+        <label for="repeatpass">重复密码</label>
+        <input type="password" id="repeatpass" name="repeatpass" placeholder="请输入密码">
+      </div>
+      <div>
+        <label >上传头像</label>
+        <input type="file"
+          name="avatar"
+          id="avatar">
+      </div>
+      <div class="submit">
+        注册
+      </div>
+
+    </form>
+  </div>
+  <script>
+  $(window).keyup(function (e) {
+    if (e.keyCode == 13) {
+      $('.submit').click();
+    }
+  })
+  $('.submit').click(() => {
+    const name = $('input[name=name]').val().trim();
+    const password = $('input[name=password]').val().trim();
+    const repeatPass = $('#repeatpass').val().trim();
+    const avatar = $('#avatar').val();
+    console.log({name, password, repeatPass, avatar});
+    // 拿到值告诉服务器node ajax发请求
+    $.ajax({
+      // 发到服务端的signin，请求方式不一样
+      url: '/signin',
+      // post方式fasong到signin
+      type: 'POST',
+      data: {
+        name, password, repeatPass, avatar
+      }, 
+      // 以json方式发送
+      dataType: 'json',
+      success: function(data) {
+        console.log('服务器返回的数据', data)
+      },
+      error: function() {
+        console.log(err);
+        alert('注册异常');
+      }
+    })
+  })
+  </script>
+</body>
+
+</html>
