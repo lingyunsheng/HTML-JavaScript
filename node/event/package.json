@@ -1,0 +1,20 @@
+{
+  "name": "event",
+  "version": "1.0.0",
+  "description": "click\r http((req,res)=>{\r     res.on('data')\r     res.on('end')\r })\r onClick\r onDbClick",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.3.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {}
+}
