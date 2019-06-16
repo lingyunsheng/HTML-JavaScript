@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
     "pages/recommend/recommend",
     "pages/search/search",
@@ -13,7 +14,6 @@
     "pages/address/address",
     "pages/addressList/addressList",
     "pages/618/618",
-    "pages/login/login",
     "pages/order/refundApply",
     "pages/order-list/index",
     "pages/order-details/index",

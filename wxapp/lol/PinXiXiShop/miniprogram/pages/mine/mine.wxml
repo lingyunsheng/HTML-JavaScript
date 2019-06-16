@@ -24,23 +24,23 @@
       </view>
     </navigator>
     <view class="my_order_content">
-      <view class="Pay"  bindtap='goOrder'>
+      <view class="Pay" bindtap='goOrder'>
         <image src="../../images/pay.png" />
-        <text class="pay" >待付款</text>
+        <text class="pay">待付款</text>
       </view>
-      <view class="Send"  bindtap='goOrder'>
+      <view class="Send" bindtap='goOrder'>
         <image src="../../images/send.png" />
         <text class="send">待发货</text>
       </view>
-      <view class="Recive"  bindtap='goOrder'>
+      <view class="Recive" bindtap='goOrder'>
         <image src="../../images/recive.png" />
         <text class="recive">待收货</text>
       </view>
-      <view class="Command"  bindtap='goOrder'>
+      <view class="Command" bindtap='goOrder'>
         <image src="../../images/command.png" />
         <text class="command">待评价</text>
       </view>
-        <view class="Share"  bindtap='goOrder'>
+      <view class="Share" bindtap='goOrder'>
         <image src="../../images/share.png" />
         <text class="share">待分享</text>
       </view>
@@ -86,8 +86,10 @@
       </navigator>
     </view>
     <view class="myRemark">
-      <image src="../../images/redbag.webp" style="width:54rpx;height:54rpx" />
-      <text class="myRemark_content">我的评价</text>
+      <navigator url="../uploader/uploader">
+        <image src="../../images/redbag.webp" style="width:54rpx;height:54rpx" />
+        <text class="myRemark_content">我的评价</text>
+      </navigator>
     </view>
     <view class="kefu">
       <image src="../../images/gfkefu.webp" style="width:54rpx;height:54rpx" />

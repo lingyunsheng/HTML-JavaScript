@@ -1,9 +1,8 @@
-<!--miniprogram/pages/618/618.wxml-->
+<!-- miniprogram/pages/618/618.wxml -->
 <view class="container">
     <navigator url="../searchInfo/searchInfo">
-          <view class="search_icon" style="background:url('../../images/618.webp')no-repeat center center;">
-       
-    </view>
+        <view class="search_icon" >
+         看什么 ，618 不要剁手 年轻人不要冲动
+        </view>
     </navigator>
-  
 </view>

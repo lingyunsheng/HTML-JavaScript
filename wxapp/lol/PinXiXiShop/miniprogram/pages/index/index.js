@@ -446,18 +446,18 @@ Page({
 
   },
   getBanners() {
-    WXAPI
-      .getBanners({
-        type: 'new'
-      })
-      .then(res => {
-        console.log(res);
-        if (res.code === 0) {
-          this.setData({
-            banners: res.data
-          })
-        }
-      })
+    // WXAPI
+    //   .getBanners({
+    //     type: 'new'
+    //   })
+    //   .then(res => {
+    //     console.log(res);
+    //     if (res.code === 0) {
+    //       this.setData({
+    //         banners: res.data
+    //       })
+    //     }
+    //   })
   },
   getCategory() { },
   listGoods() { }

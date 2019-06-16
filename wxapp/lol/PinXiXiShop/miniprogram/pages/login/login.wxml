@@ -1,11 +1,23 @@
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userinfo-btn">
-      点击微信授权
+<view class="login-container">
+  <view class="login" wx:if="{{ !logged }}">
+    <view class="app-info">
+      <image class="app-logo" src="{{userInfo.avatarUrl}}" />
+      <text class="app-name">欢迎{{userInfo.nickName}}来到</text>
+      <text class="app-name">拼夕夕小商城</text>
+    </view>
+    <view class="alert">
+      <view class="alert-title">网页由该小程序开发，请确认授权以下信息</view>
+      <view class="alert-desc">
+        <view class="alert-text">获得你的公开信息（昵称、头像等）</view>
+      </view>
+    </view>
+    <button wx:if="{{hasUserInfo && canIUse}}" class="weui-btn" type="primary" bindtap="login" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      确认登录
     </button>
-    <block wx:else bindtap="switchTab">
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname" bindtap="switchTab">{{userInfo.nickName}}</text>
-    </block>
+  </view>
+  <view class="logged" wx:else>
+    <image class="logged-icon" src="../../assets/images/iconfont-weixin.png" />
+    <view class="logged-text">近期你已经授权登陆过小商城测试</view>
+    <view class="logged-text">自动登录中</view>
   </view>
 </view>

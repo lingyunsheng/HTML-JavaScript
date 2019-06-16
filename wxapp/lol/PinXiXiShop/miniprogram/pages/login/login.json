@@ -1,5 +1,5 @@
 {
-	"navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "微信登录"
-  
+    "navigationBarBackgroundColor": "#07C160",
+    "navigationBarTitleText": "微信登录",
+    "disableScroll": true
 }
