@@ -1,63 +1,75 @@
-<!-- banner -->
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-    <swiper-item>
-      <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
-    </swiper-item>
-  </block>
-</swiper>
-<scroll-view scroll-y="true">
-  <view class="detail" wx:for="{{goods}}" wx:key="{{index}}">
+<view class="container {{blockclick? 'notscroll': ''}}">
+    <view class="block1">
+        <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <swiper-item class="swiper-item" wx:for="{{blk1Pic}}" wx-key="{{index}}" bindtap="previewImages" >
+                <image class="block1_pic" src="{{item.src}}" ></image>
+            </swiper-item>
+        </swiper>
+    </view>
+   <scroll-view scroll-y="true">
+    <view class="detail" wx:for="{{goods}}" wx:key="{{index}}">
     <view class="price">
       <text class="new_price">￥{{item.newPrice}}</text>
       <text class="old_price">￥{{item.oldPrice}}</text>
       <text class="pin">已拼{{item.pin}}件</text>
     </view>
-    <view class="Content">
+      <view class="Content">
       <text class="content">{{item.content}}</text>
-      <text class="share">分享</text>
+      <text class="share" open-type="share">分享</text>
     </view>
-    <view class="lingquan">
-      <button class="lq">领券</button >
-      <button  class="mq">5元无门槛券</button>
-      <button  class="mj">满100元减5元</button>
+   
     </view>
-    <view class="tips">
-      <text class="quanchang">全场包邮</text>
-      <text class="qitian">7天退换</text>
-      <text class="fahuo">48小时发货</text>
-      <text class="peichang">假一赔十</text>
-    
+    <view class="block3">
+        <view class="block3_content" bindtap="serverContent">
+            <view class="blk3_content1">
+                <text class="blk3_cnt1">名品折扣</text>
+                <text class="blk3_cnt2">大牌名品低价购</text>
+            </view>
+            <view class="blk3_content2">
+                <view class="blk3_box" wx:for="{{lists}}">
+                    <image src="{{item.src}}"></image>
+                    <text class="blk3_cnt3">{{item.title}}</text>
+                </view>
+                <image class="blk3_more" src="../../images/more.png"></image>
+            </view>
+        </view>
+        <view class="block_back" wx:if="{{block3click}}" bindtap="hideModal" wx-key="{{index}}"></view>
+        <view class="block3_out" wx:if="{{block3click}}" animation="{{animationData}}" wx-key="{{index}}">
+            <view class="blk_out_title">服务说明</view>
+            <view class="blk_out_list">
+                <view class="list_item" wx:for="{{lists}}">
+                    <view>
+                        <image src="{{item.src}}"></image>
+                    </view>
+                    <view class="list">
+                        <text class="list_title">{{item.title}}</text>
+                        <text class="list_cnt">{{item.content}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
     </view>
-  </view>
-  <view class="pindan">
-    <view class="pindan_info">
-      <text class="info">这些人刚刚购买成功，可插队拼单</text>
+    <view class="block4">
+        <view class="block4_title">商品详情</view>
+        <view class="block4_content">
+            <view class="blk4_title">商品描述</view>
+            <view class="blk4_content">【同等的价格我们比的是质量，同等的质量我们比的是价格】 绿色原材料，精选原生木浆，
+                高温杀菌，品质优良，纸质细腻柔韧450°高温处理，囤货更放心，
+                三层压花设计，不易分层，擦拭无尘无屑，湿水不易破，亲肤不掉屑，
+                中福抽纸，质优更优惠
+            </view>
+        </view>
     </view>
-    <view class="pindan_arr" wx:for="{{pindanList}}" wx:key="{{index}}">
-      <image src="{{item.src}}" />
-      <text class="user_nickname">{{item.name}}</text>
-      <button>插队拼单</button>
+    <view class="block5">
+        <view class="block5_pic" wx:for="{{blk5pic}}" wx-key="{{index}}">
+            <image src="{{item.src}}" mode="widthFix"></image>
+        </view>
     </view>
-  </view>
-  
-  <view class="remark">
-    <view class="remark_hd">
-      <text class="remark_goods">商品评价</text>
-      <text class="readMore">查看更多</text>
-    </view>
-    <view class="text_remark" wx:for="{{remarkList}}" wx:key="{{index}}">
-      <image src="{{item.src}}" />
-      <text class="username">{{item.username}}</text>
-      <text class="remark_content">{{item.remark}}</text>
-    </view>
-  </view>
-  <view class="goods_detail" wx:for="{{  detailImg}}"wx:key="{{index}}">
-    <image src="{{item}}" />
-  </view>
-  
-</scroll-view>
- <image src="../../images/goTop.png" class="gotop" hidden="{{showTop}}" bindtap="goTop"/>
+    <view class="block6"></view>
+    <view class="block7"></view>
+  </scroll-view>
+
+   <image src="../../images/goTop.png" class="gotop" hidden="{{showTop}}" bindtap="goTop"/>
 <!-- 底部悬浮栏 -->
 <view class="detail-nav">
   <view class="left">
@@ -74,3 +86,5 @@
   </navigator>
   </view>
 </view>
+</view>
+

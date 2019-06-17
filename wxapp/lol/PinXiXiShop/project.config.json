@@ -8,6 +8,7 @@
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": false,
+		"uglifyFileName": false,
 		"checkInvalidKey": true
 	},
 	"appid": "wxeae00915600c9e68",

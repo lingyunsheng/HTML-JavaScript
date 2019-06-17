@@ -3,19 +3,20 @@ const WXAPI = require('../../wxapi/main');
 const app = getApp();
 Page({
   data: {
-    icoImg:'http://t00img.yangkeduo.com/goods/images/2019-06-02/1276dd7070482ef57900a160295f1886.png?imageMogr2/sharpen/1%7CimageView2/2/w/1300/q/70/format/webp',
-    icoSrc:'../../images/goTop.png',
+    icoImg: 'http://t00img.yangkeduo.com/goods/images/2019-06-02/1276dd7070482ef57900a160295f1886.png?imageMogr2/sharpen/1%7CimageView2/2/w/1300/q/70/format/webp',
+    icoSrc: '../../images/goTop.png',
     nav: ['热门', '男装', '美妆', '手机', '食品', '医药', '电器',
       '汽车', '鞋包', '百货', '女装', '水果', '运动', '电脑', '家纺',
       '内衣', '家装', '母婴', '家具'],
     curNum: 0,
     name: 0,
-    viewleft:0,
-    title:0,
-    show:true,
-    animationData:{},
+    viewleft: 0,
+    title: 0,
+    show: true,
+    animationData: {},
     goods: [
-      { isshow:0,
+      {
+        isshow: 0,
         url: '../goods/goods',
         src: '../../images/two.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -24,7 +25,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:1,
+        isshow: 1,
         url: '../goods/goods',
         src: '../../images/three.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -33,7 +34,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:2,
+        isshow: 2,
         url: '../goods/goods',
         src: '../../images/four.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -42,7 +43,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:3,
+        isshow: 3,
         url: '../goods/goods',
         src: '../../images/five.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -50,7 +51,7 @@ Page({
         pin: '已团3万件'
       },
       {
-        isshow:4,
+        isshow: 4,
         url: '../goods/goods',
         src: '../../images/six.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -59,7 +60,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:5,
+        isshow: 5,
         url: '../goods/goods',
         src: '../../images/seven.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
@@ -68,7 +69,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:6,
+        isshow: 6,
         url: '../goods/goods',
         src: '../../images/eight.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -77,7 +78,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:7,
+        isshow: 7,
         url: '../goods/goods',
         src: '../../images/nine.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -86,7 +87,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:8,
+        isshow: 8,
         url: '../goods/goods',
         src: '../../images/ten.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -95,7 +96,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:9,
+        isshow: 9,
         url: '../goods/goods',
         src: '../../images/ten.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -104,7 +105,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:10,
+        isshow: 10,
         url: '../goods/goods',
         src: '../../images/ten.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -112,7 +113,8 @@ Page({
         pin: '已团3万件',
         title: '商品详情'
       },
-      { isshow:11,
+      {
+        isshow: 11,
         url: '../goods/goods',
         src: '../../images/two.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -121,7 +123,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:12,
+        isshow: 12,
         url: '../goods/goods',
         src: '../../images/three.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -130,7 +132,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:13,
+        isshow: 13,
         url: '../goods/goods',
         src: '../../images/four.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -139,7 +141,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:14,
+        isshow: 14,
         url: '../goods/goods',
         src: '../../images/five.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -147,7 +149,7 @@ Page({
         pin: '已团3万件'
       },
       {
-        isshow:15,
+        isshow: 15,
         url: '../goods/goods',
         src: '../../images/six.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -156,7 +158,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:16,
+        isshow: 16,
         url: '../goods/goods',
         src: '../../images/seven.png',
         content: '\xa0\xa0\xa0睡衣女夏短袖丝绸性感夏天女人薄款大码家居服两件套冰',
@@ -165,7 +167,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:17,
+        isshow: 17,
         url: '../goods/goods',
         src: '../../images/eight.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -174,7 +176,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:18,
+        isshow: 18,
         url: '../goods/goods',
         src: '../../images/nine.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -183,7 +185,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:19,
+        isshow: 19,
         url: '../goods/goods',
         src: '../../images/ten.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -192,7 +194,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:20,
+        isshow: 20,
         url: '../goods/goods',
         src: '../../images/ten.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -201,7 +203,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:21,
+        isshow: 21,
         url: '../goods/goods',
         src: '../../images/ten.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -210,7 +212,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:22,
+        isshow: 22,
         url: '../goods/goods',
         src: '../../images/ten.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -219,7 +221,7 @@ Page({
         title: '商品详情'
       },
       {
-        isshow:23,
+        isshow: 23,
         url: '../goods/goods',
         src: '../../images/ten.png',
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
@@ -406,13 +408,13 @@ Page({
       })
     }
   },
-  goTop(){
+  goTop() {
     wx.pageScrollTo({
-      scrollTop:0,
-      duration:300
+      scrollTop: 0,
+      duration: 300
     })
-  
-},
+
+  },
   tabnav: function (e) {
     let index = e.currentTarget.dataset.navindex
     this.setData({
@@ -427,17 +429,17 @@ Page({
     this.getNav();//顶部导航
     this.getBanners();//广告位banners
     this.getCategory();//分类类别
-    this.listGoods();//商品列表
+    // this.listGoods();//商品列表
     var that = this;
     // 动画效果
     var animation = wx.createAnimation();
-    setInterval(function(){
+    setInterval(function () {
       var show = !that.data.show;
       that.setData({
-        animationData:animation.export(),
-        show:show
+        animationData: animation.export(),
+        show: show
       })
-    },9000)
+    }, 9000)
 
 
 
@@ -460,5 +462,10 @@ Page({
     //   })
   },
   getCategory() { },
-  listGoods() { }
+  listGoods(event) {
+    let isshow = event.currentTarget.dataset.isshow
+    wx.navigateTo({
+      url: '../goods/goods?isshow=' + isshow
+    })
+  }
 })

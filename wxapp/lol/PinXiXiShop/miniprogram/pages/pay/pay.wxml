@@ -25,9 +25,20 @@
     </view>
     <view class="shoplist">
         <text class="pay_count">购买数量</text>
-        <button class="removeCount" bindatap="minusCount">-</button>
+        <!-- <button class="removeCount" bindatap="minusCount">-</button>
         <text class="count">1</text>
-        <button class="addCount" bindtap="addCount">+</button>
+        <button class="addCount" bindtap="addCount">+</button> -->
+         <view class="quantity-position">
+           <view class="stepper">
+            <!-- 减号 -->  
+            <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+            <!-- 数值 -->  
+            <input type="number" bindinput='bindManual' value="{{num}}" />
+            <!-- 加号 -->  
+            <text class="normal" bindtap="bindPlus">+</text>
+            </view>
+        </view>
+
     </view>
     <view class="youhui">
         <text class="dianpu_youhui">店铺优惠</text>

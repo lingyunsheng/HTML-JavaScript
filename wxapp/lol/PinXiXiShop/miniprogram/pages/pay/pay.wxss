@@ -63,13 +63,13 @@ page{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 10rpx;
+    margin-top: 0rpx;
     margin-left: 10rpx;
     margin-right: 10rpx;
 }
 
 .pay_count{
-    font-size: 28rpx;
+    font-size: 32rpx;
     color: #151516;
     flex:10;
 }
@@ -96,6 +96,44 @@ page{
     text-align: center;
     line-height: 50rpx;
     flex:1;
+}
+/*数量加减样式*/
+/*主容器*/  
+.stepper {  
+  width: 80px;  
+  height: 26px;  
+  /*给主容器设一个边框*/  
+  border: 1px solid #ccc;  
+  border-radius: 3px;  
+  margin:0 auto;  
+}  
+
+/*加号和减号*/  
+.stepper text {  
+  width: 19px;  
+  line-height: 26px;  
+  text-align: center;  
+  float: left;  
+}  
+
+/*数值*/  
+.stepper input {  
+padding:0px;
+  width: 40px;  
+  height: 26px;  
+  float: left;  
+  margin: 0 auto;  
+  text-align: center;  
+  font-size: 12px;  
+  /*给中间的input设置左右边框即可*/  
+  border-left: 1px solid #ccc;  
+  border-right: 1px solid #ccc;  
+}  
+
+/*普通样式*/  
+.stepper .normal{  
+  color: black;  
+
 }
 .youhui{
     margin: 10rpx 10rpx;

@@ -48,14 +48,16 @@
             </view>
         </view>
         <view class="listGoods">
-            <navigator class="list-goods" wx:for="{{goods}}" wx:key="index" bindtap="listGoods" data-title="{{item.title}}" url="{{item.url}}">
+            <view class="list-goods" wx:for="{{goods}}" wx-for-item="goods" wx:key="index" catchtap="listGoods"
+             data-title="{{item.title}}" url="{{item.url}}"  data-newPrice="{{item.newPrice}}" 
+        data-oldPrice="{{item.oldPrice}}" data-content="{{item.content}}" data-index="{{item.isshow}}" data-postId="{{item.isshow}}">
                 <image class="goods-image" src="{{item.src}}" />
                 <view class="content">{{item.content}}</view>
                 <view class="Price">
                     <text class="price">￥{{item.price}}</text>
                     <text class="pin">{{item.pin}}</text>
                 </view>
-            </navigator>
+            </view>
             <view class="weui-loadmore" hidden="{{hidden}}">
                 <view class="weui-loading"></view>
                 <view class="weui-loadmore__tips">努力加载中</view>
