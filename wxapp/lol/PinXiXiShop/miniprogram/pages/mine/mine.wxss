@@ -108,14 +108,17 @@
 
 }
 
-.my_order-header .order{
+ .order{
   color: #222;
   /* font-size: 30rpx; */
+  font-size: 32rpx;
 
 }
-.my_order_header .readAll{
-  color: #eee;
+ .readAll{
+  color: #666;
   /* font-size: 22rpx; */
+  font-size: 24rpx;
+  padding: 5rpx;
  
 }
 .my_order_content image{

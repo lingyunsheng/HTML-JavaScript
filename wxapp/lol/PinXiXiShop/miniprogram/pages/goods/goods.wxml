@@ -7,11 +7,12 @@
         </swiper>
     </view>
    <scroll-view scroll-y="true">
-    <view class="detail" wx:for="{{goods}}" wx:key="{{index}}">
+    <view class="detail"  wx:for="{{goods}}" wx:key="{{index}}" data-postid="{{item.isshow}}" bindtap="toPay">
+   
     <view class="price">
       <text class="new_price">￥{{item.newPrice}}</text>
       <text class="old_price">￥{{item.oldPrice}}</text>
-      <text class="pin">已拼{{item.pin}}件</text>
+      <text class="pin">已拼{{item.pin}}万件</text>
     </view>
       <view class="Content">
       <text class="content">{{item.content}}</text>
@@ -84,6 +85,37 @@
     <button class="button-red" bindtap="immeBuy" formType="submit">发起拼单</button>
    
   </navigator>
+    <view class="block_back" wx:if="{{block5click}}" bindtap="hideModal2"></view>
+            <view class="purchase" wx:if="{{block5click}}" animation="{{animationData}}">
+                <view class="pur_hd" wx:for="{{purContent}}">
+                    <view class="tabBox pur_pic">
+                        <image class="goodspic" src="{{item.src}}"></image>
+                    </view>
+                    <view class="tabBox">
+                        <view class="price">￥{{item.price}}</view>
+                        <view class="content">{{item.title}}</view>
+                    </view>
+                </view>
+                <view class="pur_bd">
+                    <view class="text">货号</view>
+                    <view class="modalLists {{curNav == index? 'selected' : ''}}" bindtap="selected" 
+                    wx:for="{{modalLists}}" data-index="{{index}}" >{{item.content}}</view>
+                </view>
+                <view class="pur_num">
+                    <view class="text">数量</view>
+                    <view class="stepper">
+                        <!-- 减号 -->
+                        <view class="normal" data-index="{{index}}" bindtap="bindMinus">-</view>
+                        <!-- 数值 -->
+                        <view class="number">{{number}}</view>
+                        <!-- 加号 -->
+                        <view class="normal" data-index="{{index}}" bindtap="bindPlus">+</view>
+                    </view>
+                </view>
+                <view class="confirm" bindtap="purchaseClick">确定</view>
+                <view class="confirmOut" wx:if="{{showOut}}" 
+                animation="{{animationData}}">请选择货号</view>
+            </view>
   </view>
 </view>
 </view>

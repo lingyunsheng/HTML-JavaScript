@@ -154,12 +154,13 @@ swiper image {
 .listGoods .list-goods .Price {
   margin-top: 4rpx;
   vertical-align: top;
+  margin-left: 15rpx;
 }
 
 .listGoods .list-goods .Price .price {
   color: red;
   font-size: 26rpx;
-  padding-right: 4rpx;
+  padding-right: 10rpx;
 }
 
 .listGoods .list-goods .Price .pin {

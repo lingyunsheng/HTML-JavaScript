@@ -22,7 +22,11 @@ Page({
         content: '\xa0\xa0\xa027包18包8包\xa0\xa0植物原木抽纸300张整箱批发（可点击）',
         price: '10.9',
         pin: '已团114万件',
-        title: '商品详情'
+        title: '商品详情',
+        newPrice: 158,
+        oldPrice: 358,
+        // pin: 4,
+        // content: 'LANCOME兰蔻小黑瓶精华肌底液'
       },
       {
         isshow: 1,
@@ -464,8 +468,12 @@ Page({
   getCategory() { },
   listGoods(event) {
     let isshow = event.currentTarget.dataset.isshow
+    let content = event.currentTarget.dataset.content
+    let newPrice = event.currentTarget.dataset.newPrice
+    let oldPrice = event.currentTarget.dataset.oldPrice
+    let pin = event.currentTarget.dataset.pin
     wx.navigateTo({
-      url: '../goods/goods?isshow=' + isshow
+      url: '../goods/goods?isshow=' + isshow+'&content'+content+'&newPrice'+newPrice+'&oldPrice'+oldPrice+'&pin'+pin
     })
   }
 })

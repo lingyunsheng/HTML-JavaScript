@@ -50,7 +50,7 @@
         <view class="listGoods">
             <view class="list-goods" wx:for="{{goods}}" wx-for-item="goods" wx:key="index" catchtap="listGoods"
              data-title="{{item.title}}" url="{{item.url}}"  data-newPrice="{{item.newPrice}}" 
-        data-oldPrice="{{item.oldPrice}}" data-content="{{item.content}}" data-index="{{item.isshow}}" data-postId="{{item.isshow}}">
+        data-oldPrice="{{item.oldPrice}}" data-content="{{item.content}}"  data-postid="{{item.isshow}}">
                 <image class="goods-image" src="{{item.src}}" />
                 <view class="content">{{item.content}}</view>
                 <view class="Price">

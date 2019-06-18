@@ -13,10 +13,10 @@ Page({
     isshow:null,
     goods: [
       {
-        newPrice: 158,
-        oldPrice: 358,
-        pin: 4,
-        content: 'LANCOME兰蔻小黑瓶精华肌底液'
+        newPrice: 10.9,
+        oldPrice: 33,
+        pin: 10,
+        content: '植物原木抽纸300张整箱批发'
       }
     ],
     indicatorDots: false, //是否显示面板指示点
@@ -94,129 +94,6 @@ Page({
       },
     ],
   },
-  serverContent: function (e) {
-    var that = this;
-    // console.log(e);
-    var animation = wx.createAnimation({
-      // 动画持续时间
-      duration: 200,
-      // 定义动画效果，当前是匀速
-      timingFunction: 'linear'
-    });
-    that.animation = animation
-    // 先在y轴偏移，然后用step()完成一个动画
-    animation.translateY(400).step()
-    // 用setData改变当前动画
-    that.setData({
-      block3click: true,
-      blockclick: true,
-      animationData: animation.export()
-    });
-    setTimeout(function () {
-      animation.translateY(0).step()
-      that.setData({
-        animationData: animation.export()
-      })
-    }, 100)
-  },
-  hideModal: function () {
-    this.setData({
-      block3click: false,
-      blockclick: false
-    })
-  },
-  purchase: function (e) {
-    var that = this;
-    // console.log(e);
-    var animation = wx.createAnimation({
-      // 动画持续时间
-      duration: 200,
-      // 定义动画效果，当前是匀速
-      timingFunction: 'linear'
-    });
-    that.animation = animation
-    // 先在y轴偏移，然后用step()完成一个动画
-    animation.translateY(400).step()
-    // 用setData改变当前动画
-    that.setData({
-      block5click: true,
-      blockclick: true,
-      animationData: animation.export()
-    });
-    setTimeout(function () {
-      animation.translateY(0).step()
-      that.setData({
-        animationData: animation.export()
-      })
-    }, 100)
-  },
-  hideModal2: function () {
-    this.setData({
-      block5click: false,
-      blockclick: false
-    })
-  },
-  selected: function (e) {
-    var index = e.currentTarget.dataset.index;
-    var list = new Array;
-    list[0] = this.data.modalLists[index];
-    // console.log(list);
-    this.setData({
-      curNav: index,
-      purContent: list,
-    });
-    wx.setStorage({
-      key: 'list',
-      data: list[0]
-    })
-  },
-  bindMinus: function () {
-    var num = parseInt(this.data.number);
-    // 字符串转数字类
-    // console.log(typeof num);  
-    var that = this;
-    if (num > 1) {
-      num = num - 1;
-      that.setData({
-        number: num
-      })
-    }
-    wx.setStorage({
-      key: 'number',
-      data: num
-    })
-  },
-  bindPlus: function () {
-    var num = parseInt(this.data.number);
-    num = num + 1;
-    this.setData({
-      number: num
-    })
-    wx.setStorage({
-      key: 'number',
-      data: num
-    })
-  },
-  purchaseClick: function () {
-    var a = this.data.curNav;
-    var that = this;
-    if (a == null) {
-      that.setData({
-        showOut: true
-      })
-    } else {
-      wx.navigateTo({
-        url: '../pay/pay',
-      })
-    };
-    var animation = wx.createAnimation();
-    setTimeout(function () {
-      that.setData({
-        animationData: animation.export(),
-        showOut: false
-      })
-    }, 1500)
-  },
   onShow: function (options) {
     var that = this;
     wx.getStorage({
@@ -242,7 +119,49 @@ Page({
       // goods:datas.goods.isshow,
       // isshow:isshow
       isshow:options.isshow,
+      // content:options.content,
+      // newPrice:options.newPrice,
+      // oldPrice:options.oldPrice,
+      // pin:options
      
+    })
+
+  },
+  serverContent: function(e) {
+    var that = this;
+    // console.log(e);
+    var animation  = wx.createAnimation({
+      // 动画持续时间
+        duration:200,
+        // 定义动画效果，当前是匀速
+        timingFunction:'linear'
+    });
+    that.animation = animation
+    // 先在y轴偏移，然后用step()完成一个动画
+    animation.translateY(400).step()
+    // 用setData改变当前动画
+    that.setData({
+      block3click: true,
+      blockclick: true,
+      animationData: animation.export()
+    });
+    setTimeout(function(){
+      animation.translateY(0).step()
+      that.setData({
+        animationData: animation.export()
+      })
+    },100)
+  },
+  hideModal: function() {
+    this.setData({
+      block3click: false,
+      blockclick: false
+    })
+  },
+  hideModal2: function() {
+    this.setData({
+      block5click: false,
+      blockclick: false
     })
   },
   previewImage: function (e) {
@@ -261,6 +180,29 @@ Page({
   },
   // 跳到购物车
   toCar() {
+    var that = this;
+    // console.log(e);
+    var animation  = wx.createAnimation({
+      // 动画持续时间
+        duration:200,
+        // 定义动画效果，当前是匀速
+        timingFunction:'linear'
+    });
+    that.animation = animation
+    // 先在y轴偏移，然后用step()完成一个动画
+    animation.translateY(400).step()
+    // 用setData改变当前动画
+    that.setData({
+      block5click: true,
+      blockclick: true,
+      animationData: animation.export()
+    });
+    setTimeout(function(){
+      animation.translateY(0).step()
+      that.setData({
+        animationData: animation.export()
+      })
+    },100)
     wx.switchTab({
       url: '/pages/cart/cart'
     })
@@ -320,6 +262,13 @@ Page({
       }
     }
   },
+  toPay(event){
+    let postId=event.currentTarget.dataset.postid
+    wx.navigateTo({
+      url:'../pay/pay?id='+postId
+    })
+
+  }
 
 
 

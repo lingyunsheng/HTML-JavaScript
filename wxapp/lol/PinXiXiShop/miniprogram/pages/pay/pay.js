@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    totalPrice: '189',
+    totalPrice: '10.9',
     num:1
   },
  
@@ -22,7 +22,12 @@ Page({
     // 更新数据  
     this.setData({
       addressList: arr
-    });
+    })
+    this.setData({
+      // totalPrice:totalPrice
+
+
+    })
   },
   getTotalPrice(){},
   /**
