@@ -1,6 +1,7 @@
 // 任何页面导入React
 import React from 'react'
 import Child from './Child'
+import './index.less'
 
 // 导出 Life 类 继承 React 组件
 export default class Life extends React.Component{
@@ -28,10 +29,10 @@ export default class Life extends React.Component{
     // 最重要的语法 渲染
     render(){
         // 里面括号对象
-        let style={
-            padding:50
-        }
-        return <div style={style}>
+        // let style={
+        //     padding:50
+        // }
+        return <div className="content">
             <p>React生命周期介绍</p>
             <button onClick={this.handleAdd}>点击一下</button>
             <button onClick={this.handleClick.bind(this)}>点击一下</button>
