@@ -402,7 +402,7 @@
     "mime-db": "^1.40.0",
     "mimic-fn": "^2.1.0",
     "minimalistic-assert": "^1.0.1",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "minimalistic-crypto-utils": "^1.0.1",
     "minimatch": "^3.0.4",
     "mississippi": "^3.0.0",
