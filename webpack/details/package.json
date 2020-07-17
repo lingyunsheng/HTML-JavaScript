@@ -23,7 +23,7 @@
   "dependencies": {
     "babel-loader": "^7.1.4",
     "css-loader": "^2.1.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "style-loader": "^0.23.1",
     "webpack": "^4.32.2"
   }
