@@ -543,7 +543,7 @@
     "semver": "^5.7.0",
     "selfsigned": "^1.10.4",
     "send": "^0.17.1",
-    "serialize-javascript": "^1.7.0",
+    "serialize-javascript": "^3.1.0",
     "serve-index": "^1.9.1",
     "serve-static": "^1.14.1",
     "select-hose": "^2.0.0",
