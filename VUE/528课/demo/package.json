@@ -305,7 +305,7 @@
     "htmlparser2": "^3.10.1",
     "http-deceiver": "^1.2.7",
     "http-errors": "^1.7.2",
-    "http-proxy": "^1.17.0",
+    "http-proxy": "^1.18.1",
     "http-parser-js": "^0.5.0",
     "iconv-lite": "^0.4.24",
     "icss-replace-symbols": "^1.1.0",
