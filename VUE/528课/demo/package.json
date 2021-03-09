@@ -214,7 +214,7 @@
     "duplexify": "^3.7.1",
     "ee-first": "^1.1.1",
     "electron-to-chromium": "^1.3.137",
-    "elliptic": "^6.4.1",
+    "elliptic": "^6.5.4",
     "emoji-regex": "^7.0.3",
     "emojis-list": "^2.1.0",
     "encodeurl": "^1.0.2",
