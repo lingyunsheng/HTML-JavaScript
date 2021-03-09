@@ -141,7 +141,7 @@
     "domutils": "^1.5.1",
     "duplexify": "^3.7.1",
     "ee-first": "^1.1.1",
-    "elliptic": "^6.4.1",
+    "elliptic": "^6.5.4",
     "emojis-list": "^2.1.0",
     "encodeurl": "^1.0.2",
     "end-of-stream": "^1.4.1",
