@@ -385,7 +385,7 @@
     "lru-cache": "^5.1.1",
     "make-dir": "^1.3.0",
     "map-age-cleaner": "^0.1.3",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "mamacro": "^0.0.3",
     "map-cache": "^0.2.2",
     "md5.js": "^1.3.5",
