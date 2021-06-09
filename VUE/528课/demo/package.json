@@ -180,7 +180,7 @@
     "create-hmac": "^1.1.7",
     "cross-spawn": "^6.0.5",
     "crypto-browserify": "^3.12.0",
-    "css-what": "^2.1.3",
+    "css-what": "^5.0.1",
     "css-select": "^1.2.0",
     "cssesc": "^3.0.0",
     "cyclist": "^0.2.2",
