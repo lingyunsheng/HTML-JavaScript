@@ -327,7 +327,7 @@
     "inquirer": "^6.3.1",
     "http-proxy-middleware": "^0.19.1",
     "interpret": "^1.2.0",
-    "glob-parent": "^2.0.0",
+    "glob-parent": "^5.1.2",
     "invert-kv": "^2.0.0",
     "invariant": "^2.2.4",
     "ip": "^1.1.5",
