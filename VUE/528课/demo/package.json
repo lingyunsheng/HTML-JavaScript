@@ -477,7 +477,7 @@
     "pinkie-promise": "^2.0.1",
     "posix-character-classes": "^0.1.1",
     "postcss-modules-extract-imports": "^2.0.0",
-    "postcss": "^7.0.16",
+    "postcss": "^7.0.36",
     "postcss-modules-local-by-default": "^2.0.6",
     "postcss-modules-scope": "^2.1.0",
     "postcss-modules-values": "^2.0.0",
