@@ -422,7 +422,7 @@
     "node-forge": "^0.7.5",
     "node-libs-browser": "^2.2.0",
     "npm-run-path": "^2.0.2",
-    "nth-check": "^1.0.2",
+    "nth-check": "^2.0.1",
     "normalize-path": "^2.1.1",
     "number-is-nan": "^1.0.1",
     "object-assign": "^4.1.1",
