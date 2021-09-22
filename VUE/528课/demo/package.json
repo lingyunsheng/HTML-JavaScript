@@ -38,7 +38,7 @@
     "ansi-colors": "^3.2.4",
     "ansi-escapes": "^3.2.0",
     "ansi-html": "^0.0.7",
-    "ansi-regex": "^2.1.1",
+    "ansi-regex": "^6.0.1",
     "ansi-styles": "^3.2.1",
     "anymatch": "^2.0.0",
     "aproba": "^1.2.0",
