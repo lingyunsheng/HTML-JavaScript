@@ -163,7 +163,7 @@
     "execa": "^1.0.0",
     "expand-brackets": "^2.1.4",
     "expand-tilde": "^2.0.2",
-    "express": "^4.17.0",
+    "express": "^4.17.3",
     "extend-shallow": "^2.0.1",
     "extglob": "^2.0.4",
     "fast-deep-equal": "^2.0.1",
